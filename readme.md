@@ -1,9 +1,11 @@
 
 
+#### New blog
 ```
 gem install jekyll bundler
 jekyll new myblog
 ```
 
 
-[](https://www.jekyll.com.cn/docs/)
+#### 参考
+[jekyll](https://www.jekyll.com.cn/docs/)

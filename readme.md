@@ -1,6 +1,6 @@
 
 
-<theseu-s.github.io>
+[blog home](theseu-s.github.io)
 
 
 #### New blog

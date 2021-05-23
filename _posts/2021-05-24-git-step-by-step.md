@@ -19,6 +19,12 @@ git clone git@github.com:.../blog.git
 ### 配置默认编辑器为vim
 ``` bash
 git config --global core.editor vim
+
+# --edit 编辑配置
+git config -e
+
+# 编辑全局配置
+git config --global -e
 ```
 
 ### 配置保存帐号密码

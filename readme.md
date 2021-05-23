@@ -1,12 +1,11 @@
 
 
-[blog home](https://theseu-s.github.io)
 
-
-#### New blog
+#### New blog, [blog home](https://theseu-s.github.io)
 ```
 gem install jekyll bundler
 jekyll new myblog
+bundle exec jekyll serv
 ```
 
 

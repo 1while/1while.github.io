@@ -2,7 +2,7 @@
 title: Debian step by step
 layout: post
 author: Theseus
-categories: 
+categories: debian
 tags: debian
 date: 2021-05-25 22:00:00 +0800
 ---

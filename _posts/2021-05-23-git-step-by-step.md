@@ -117,6 +117,9 @@ git checkout -b new_local_branch_name origin/remote_branch_name
 # 查看本地分支 local branch
 git branch
 
+# 查看本地远程分支 remote-tracking branch
+git branch -r
+
 # 查看本地所有分支 local branch & remote-tracking branch
 git branch -a
 

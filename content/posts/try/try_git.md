@@ -146,7 +146,11 @@ git log --stat --summary
 
 # 设置别名
 ``` bash
-git config --global alias.lg "log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)&lt;%an&gt;%Creset' --abbrev-commit"  
+# git log -> git lg
+git config --global alias.lg "log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) %C(bold green)%as%C(reset) %C(white)%s%C(reset) %C(dim white)%an<%ae>%C(reset)%C(bold yellow)%d%C(reset)' --all"
+
+# git status -> git st
+git config --global alias.st status
 ```
 
 
@@ -177,3 +181,4 @@ git config --global paper.branch false
 
 # 参考
 * [git add](https://git-scm.com/docs/git-add)
+* [git log](https://git-scm.com/docs/git-log)

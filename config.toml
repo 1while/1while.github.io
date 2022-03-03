@@ -1,4 +1,4 @@
-baseurl = "https://example.com"
+baseurl = "https://theseusf.github.io/"
 languageCode = "en-us"
 title = "周末杂货铺💤"
 theme = "hugo-tania"
@@ -8,10 +8,10 @@ paginate = 10
 
 [params]
   # Emoji will show before the blog title on site navbar.
-  titleEmoji  = "💤"
+  titleEmoji  = ""
 
   # Logo will show before the blog title on site navbar.
-  titleLogo = ""
+  titleLogo = "https://avatars.githubusercontent.com/u/22488581?s=96&v=4"
 
   # Enable float footnotes.
   # Default to true

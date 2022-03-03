@@ -1,19 +1,21 @@
-
+<!DOCTYPE html>
+<html lang="en-us">
+    
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="theme-color" content="dark">
-    <title>404 Page not found | 周末杂货铺💤</title>
+    <title>hugo | 周末杂货铺💤</title>
 
     
     
     
     <meta property="og:site_name" content="周末杂货铺💤" />
-    <meta property="og:title" content="404 Page not found | 周末杂货铺💤"/>
-    <meta itemprop="name" content="404 Page not found | 周末杂货铺💤" />
-    <meta name="twitter:title" content="404 Page not found | 周末杂货铺💤" />
-    <meta name="application-name" content="404 Page not found | 周末杂货铺💤" /><meta name="twitter:card" content="summary"/>
+    <meta property="og:title" content="hugo | 周末杂货铺💤"/>
+    <meta itemprop="name" content="hugo | 周末杂货铺💤" />
+    <meta name="twitter:title" content="hugo | 周末杂货铺💤" />
+    <meta name="application-name" content="hugo | 周末杂货铺💤" /><meta name="twitter:card" content="summary"/>
 
     <meta name="description" content="Thanks for all the fish" />
     <meta name="twitter:description" content="Thanks for all the fish"/>
@@ -28,7 +30,33 @@
     <link rel="stylesheet" href="/sass/main.min.ab99ff095f832511e24ffb2fba2b51ad473b2f7e9301d674eba2c6c3a6e8bd81.css">
     
 </head>
-<nav class="navbar">
+    
+    <script>
+        (function() {
+            const colorSchemeKey = 'ThemeColorScheme';
+            if(!localStorage.getItem(colorSchemeKey)){
+                localStorage.setItem(colorSchemeKey, "auto");
+            }
+        })();
+    </script><script>
+    (function() {
+        const colorSchemeKey = 'ThemeColorScheme';
+        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
+        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
+
+        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
+            
+
+            document.documentElement.dataset.userColorScheme = 'dark';
+        } else {
+            document.documentElement.dataset.userColorScheme = 'light';
+        }
+    })();
+</script>
+
+
+    <body class="dark">
+        <nav class="navbar">
     <div class="container">
         <div class="flex">
             <div>
@@ -57,14 +85,46 @@
     </div>
 </nav>
 
+        <main>
+            
 
-<div class="container">
-<main>
-<h1>404 NOT FOUND</h1>
-</main>
-</div>
 
-<footer class="footer flex">
+
+
+<header>
+  <div class="container">
+    <h1>hugo</h1>
+    <p class="subtitle">
+      <span class="count">1</span> posts found.
+    </p>
+  </div>
+</header>
+
+<section>
+  <div class="container">
+    <section>
+      <section>
+        <div class="posts">
+          
+          <div class="post">
+            <a href="/posts/try/try_hugo/">
+              <div class="post-row">
+                <time>Jan 12</time>
+                <h3>Try hugo</h3>
+              </div>
+              
+            </a>
+          </div>
+          
+        </div>
+      </section>
+    </section>
+  </div>
+</section>
+
+
+        </main>
+        <footer class="footer flex">
     <section class="container">
         <nav class="footer-links">
             
@@ -79,3 +139,5 @@
     ></script>
 </footer>
 
+    </body>
+</html>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>git on 周末杂货铺💤</title>
+    <link>https://example.com/tags/git/</link>
+    <description>Recent content in git on 周末杂货铺💤</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 23 May 2021 19:00:00 +0800</lastBuildDate><atom:link href="https://example.com/tags/git/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Try git</title>
+      <link>https://example.com/posts/try/try_git/</link>
+      <pubDate>Sun, 23 May 2021 19:00:00 +0800</pubDate>
+      
+      <guid>https://example.com/posts/try/try_git/</guid>
+      <description>下载仓库  1  git clone git@github.com:.../blog.git      配置默认编辑器为vim  1 2 3 4 5 6 7  git config --global core.editor vim # --edit 编辑配置 git config -e # 编辑全局配置 git config --global -e      配置保存帐号密码  1  git config --global credential.helper store      显示当前仓库改动状态  1  git status      改动完成后暂存文件（暂存了才能commit，命令行操作注意路径，git status会显示路径）  1  git add README.</description>
+    </item>
+    
+  </channel>
+</rss>

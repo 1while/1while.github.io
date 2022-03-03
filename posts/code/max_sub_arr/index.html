@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en-us">
+    
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="theme-color" content="dark">
+    <title>连续子数组最大和 | 周末杂货铺💤</title>
+
+    
+    
+    
+    <meta property="og:site_name" content="周末杂货铺💤" />
+    <meta property="og:title" content="连续子数组最大和 | 周末杂货铺💤"/>
+    <meta itemprop="name" content="连续子数组最大和 | 周末杂货铺💤" />
+    <meta name="twitter:title" content="连续子数组最大和 | 周末杂货铺💤" />
+    <meta name="application-name" content="连续子数组最大和 | 周末杂货铺💤" /><meta name="twitter:card" content="summary"/>
+
+    <meta name="description" content="Thanks for all the fish" />
+    <meta name="twitter:description" content="Thanks for all the fish"/>
+    <meta itemprop="description" content="Thanks for all the fish"/>
+    <meta property="og:description" content="Thanks for all the fish" />
+
+    
+
+
+    <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+    
+    <link rel="stylesheet" href="/sass/main.min.ab99ff095f832511e24ffb2fba2b51ad473b2f7e9301d674eba2c6c3a6e8bd81.css">
+    
+</head>
+    
+    <script>
+        (function() {
+            const colorSchemeKey = 'ThemeColorScheme';
+            if(!localStorage.getItem(colorSchemeKey)){
+                localStorage.setItem(colorSchemeKey, "auto");
+            }
+        })();
+    </script><script>
+    (function() {
+        const colorSchemeKey = 'ThemeColorScheme';
+        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
+        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
+
+        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
+            
+
+            document.documentElement.dataset.userColorScheme = 'dark';
+        } else {
+            document.documentElement.dataset.userColorScheme = 'light';
+        }
+    })();
+</script>
+
+
+    <body class="dark">
+        <nav class="navbar">
+    <div class="container">
+        <div class="flex">
+            <div>
+                <a class="brand" href="/">
+                    
+                    <span class="emoji">
+                        💤
+                    </span>
+                    
+                    
+                    周末杂货铺💤
+                    </a>
+            </div>
+            <div class="flex">
+                
+                <a href="/articles/">Articles</a>
+                
+                
+                    <button id="dark-mode-button">
+                    <svg class="light" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" focusable="false" width="1em" height="1em" style="-ms-transform: rotate(360deg); -webkit-transform: rotate(360deg); transform: rotate(360deg);" preserveAspectRatio="xMidYMid meet" viewBox="0 0 36 36"><path fill="#FFD983" d="M30.312.776C32 19 20 32 .776 30.312c8.199 7.717 21.091 7.588 29.107-.429C37.9 21.867 38.03 8.975 30.312.776z"/><path d="M30.705 15.915a1.163 1.163 0 1 0 1.643 1.641a1.163 1.163 0 0 0-1.643-1.641zm-16.022 14.38a1.74 1.74 0 0 0 0 2.465a1.742 1.742 0 1 0 0-2.465zm13.968-2.147a2.904 2.904 0 0 1-4.108 0a2.902 2.902 0 0 1 0-4.107a2.902 2.902 0 0 1 4.108 0a2.902 2.902 0 0 1 0 4.107z" fill="#FFCC4D"/><rect x="0" y="0" width="36" height="36" fill="rgba(0, 0, 0, 0)" /></svg>
+                    <svg class="dark" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" focusable="false" width="1em" height="1em" style="-ms-transform: rotate(360deg); -webkit-transform: rotate(360deg); transform: rotate(360deg);" preserveAspectRatio="xMidYMid meet" viewBox="0 0 36 36"><path fill="#FFD983" d="M16 2s0-2 2-2s2 2 2 2v2s0 2-2 2s-2-2-2-2V2zm18 14s2 0 2 2s-2 2-2 2h-2s-2 0-2-2s2-2 2-2h2zM4 16s2 0 2 2s-2 2-2 2H2s-2 0-2-2s2-2 2-2h2zm5.121-8.707s1.414 1.414 0 2.828s-2.828 0-2.828 0L4.878 8.708s-1.414-1.414 0-2.829c1.415-1.414 2.829 0 2.829 0l1.414 1.414zm21 21s1.414 1.414 0 2.828s-2.828 0-2.828 0l-1.414-1.414s-1.414-1.414 0-2.828s2.828 0 2.828 0l1.414 1.414zm-.413-18.172s-1.414 1.414-2.828 0s0-2.828 0-2.828l1.414-1.414s1.414-1.414 2.828 0s0 2.828 0 2.828l-1.414 1.414zm-21 21s-1.414 1.414-2.828 0s0-2.828 0-2.828l1.414-1.414s1.414-1.414 2.828 0s0 2.828 0 2.828l-1.414 1.414zM16 32s0-2 2-2s2 2 2 2v2s0 2-2 2s-2-2-2-2v-2z"/><circle fill="#FFD983" cx="18" cy="18" r="10"/><rect x="0" y="0" width="36" height="36" fill="rgba(0, 0, 0, 0)" /></svg>
+                    </button>
+                
+            </div>
+            </div>
+    </div>
+</nav>
+
+        <main>
+            
+<div class="container">
+    <article>
+        <header class="article-header">
+            <div class="thumb">
+                <div>
+                    <h1>连续子数组最大和</h1>
+                    <div class="post-meta">
+                        <div>
+                            
+                            
+                              
+                            
+                            By 周末💤 | <time>February 08, 2022</time>
+                            | 2 minutes
+                        </div>
+                        <div class="tags">
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+    </article>
+
+    <div class="article-post">
+    <h2 id="题目描述">
+    <a href="#%e9%a2%98%e7%9b%ae%e6%8f%8f%e8%bf%b0" class="anchor">
+        <svg class="icon" aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16">
+            <path fill-rule="evenodd"
+                d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z">
+            </path>
+        </svg>
+    </a>
+    题目描述
+</h2>
+<p>给定一个长度为 n n\ n 的数组，数组中的数为整数。
+请你选择一个非空连续子数组，使该子数组所有数之和尽可能大。求这个最大值。</p>
+<h2 id="输入描述">
+    <a href="#%e8%be%93%e5%85%a5%e6%8f%8f%e8%bf%b0" class="anchor">
+        <svg class="icon" aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16">
+            <path fill-rule="evenodd"
+                d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z">
+            </path>
+        </svg>
+    </a>
+    输入描述
+</h2>
+<p>第一行为一个正整数 n n\ n ，代表数组的长度。 1≤n≤2∗1051\leq n \leq2*10^51≤n≤2∗105
+第二行为 n n\ n 个整数 aia_iai​，用空格隔开，代表数组中的每一个数。 ∣ai∣≤102|a_i| \leq 10^2∣ai​∣≤102</p>
+<h2 id="输出描述">
+    <a href="#%e8%be%93%e5%87%ba%e6%8f%8f%e8%bf%b0" class="anchor">
+        <svg class="icon" aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16">
+            <path fill-rule="evenodd"
+                d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z">
+            </path>
+        </svg>
+    </a>
+    输出描述
+</h2>
+<p>连续子数组的最大之和。</p>
+<h2 id="解题">
+    <a href="#%e8%a7%a3%e9%a2%98" class="anchor">
+        <svg class="icon" aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16">
+            <path fill-rule="evenodd"
+                d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z">
+            </path>
+        </svg>
+    </a>
+    解题
+</h2>
+<h3 id="1-一般思路-完全遍历所有字数组-时间复杂度n3">
+    <a href="#1-%e4%b8%80%e8%88%ac%e6%80%9d%e8%b7%af-%e5%ae%8c%e5%85%a8%e9%81%8d%e5%8e%86%e6%89%80%e6%9c%89%e5%ad%97%e6%95%b0%e7%bb%84-%e6%97%b6%e9%97%b4%e5%a4%8d%e6%9d%82%e5%ba%a6n3" class="anchor">
+        <svg class="icon" aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16">
+            <path fill-rule="evenodd"
+                d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z">
+            </path>
+        </svg>
+    </a>
+    1. 一般思路, 完全遍历所有字数组, 时间复杂度n^3
+</h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-c" data-lang="c"><span class="kt">int</span> <span class="nf">maxSubArray</span><span class="p">(</span><span class="kt">int</span><span class="o">*</span> <span class="n">nums</span><span class="p">,</span> <span class="kt">int</span> <span class="n">numsSize</span><span class="p">){</span>
+  <span class="kt">int</span> <span class="n">maxSub</span> <span class="o">=</span> <span class="n">nums</span><span class="p">[</span><span class="mi">0</span><span class="p">];</span>
+  <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span> <span class="n">i</span><span class="o">&lt;</span><span class="n">numsSize</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">){</span>
+    <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">j</span><span class="o">=</span><span class="n">i</span><span class="p">;</span> <span class="n">j</span><span class="o">&lt;</span><span class="n">numsSize</span><span class="p">;</span> <span class="n">j</span><span class="o">++</span><span class="p">){</span>
+      <span class="kt">int</span> <span class="n">sum</span> <span class="o">=</span> <span class="n">nums</span><span class="p">[</span><span class="n">i</span><span class="p">];</span>
+      <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">k</span><span class="o">=</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">;</span> <span class="n">k</span><span class="o">&lt;=</span><span class="n">j</span><span class="p">;</span> <span class="n">k</span><span class="o">++</span><span class="p">){</span>
+        <span class="n">sum</span> <span class="o">+=</span> <span class="n">nums</span><span class="p">[</span><span class="n">k</span><span class="p">];</span>
+      <span class="p">}</span>
+      <span class="n">maxSub</span> <span class="o">=</span> <span class="n">maxSub</span><span class="o">&lt;</span><span class="n">sum</span> <span class="o">?</span> <span class="nl">sum</span><span class="p">:</span> <span class="n">maxSub</span><span class="p">;</span>
+    <span class="p">}</span>
+  <span class="p">}</span>
+  <span class="k">return</span> <span class="n">maxSub</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></td></tr></table>
+</div>
+</div><h3 id="2-动态规划-时间复杂度n">
+    <a href="#2-%e5%8a%a8%e6%80%81%e8%a7%84%e5%88%92-%e6%97%b6%e9%97%b4%e5%a4%8d%e6%9d%82%e5%ba%a6n" class="anchor">
+        <svg class="icon" aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16">
+            <path fill-rule="evenodd"
+                d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z">
+            </path>
+        </svg>
+    </a>
+    2. 动态规划, 时间复杂度n
+</h3>
+<ul>
+<li>f(i) 代表以第 i 个数结尾的连续子数组的最大和</li>
+<li>f(i) = max{f(i-1) + nums[i], nums[i]}
+n个数可以简化为两个数, n1和n2, 若n1大于0, n1+n2是有可能更大的, 若n1小于0, 则肯定会更小, 所以需要从n2开始重新累加子数组的和
+扩展到3个数, 当n1+n2&gt;0, 但n1+n2+n3&lt;0, 对于n3之前的子数组[n1, n2], 如果n1&lt;0, 则一开始就被丢弃了, maxSum已经记录n1, n1+n2, 且max(n1, n1+n2)&gt;n2, 也就不用单独回头遍历计算子数组[n2]了, 这里n1, n2可以扩展为任意长度连续子数组</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span><span class="lnt">9
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-c" data-lang="c"><span class="kt">int</span> <span class="nf">maxSubArray</span><span class="p">(</span><span class="kt">int</span><span class="o">*</span> <span class="n">nums</span><span class="p">,</span> <span class="kt">int</span> <span class="n">numsSize</span><span class="p">){</span>
+  <span class="kt">int</span> <span class="n">sum</span> <span class="o">=</span> <span class="n">nums</span><span class="p">[</span><span class="mi">0</span><span class="p">];</span>
+  <span class="kt">int</span> <span class="n">max</span> <span class="o">=</span> <span class="n">nums</span><span class="p">[</span><span class="mi">0</span><span class="p">];</span>
+  <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="mi">1</span><span class="p">;</span> <span class="n">i</span><span class="o">&lt;</span><span class="n">numsSize</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+    <span class="n">sum</span> <span class="o">=</span> <span class="n">sum</span><span class="o">&gt;</span><span class="mi">0</span> <span class="o">?</span> <span class="n">sum</span><span class="o">+</span><span class="n">nums</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">:</span> <span class="n">nums</span><span class="p">[</span><span class="n">i</span><span class="p">];</span>
+    <span class="n">max</span> <span class="o">=</span> <span class="n">max</span><span class="o">&lt;</span><span class="n">sum</span> <span class="o">?</span> <span class="nl">sum</span><span class="p">:</span> <span class="n">max</span><span class="p">;</span>
+  <span class="p">}</span>
+  <span class="k">return</span> <span class="n">max</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></td></tr></table>
+</div>
+</div><h3 id="3-分治法">
+    <a href="#3-%e5%88%86%e6%b2%bb%e6%b3%95" class="anchor">
+        <svg class="icon" aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16">
+            <path fill-rule="evenodd"
+                d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z">
+            </path>
+        </svg>
+    </a>
+    3. 分治法
+</h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-c" data-lang="c"><span class="cp">#define MAX(a,b) ((a)&gt;(b)?a:b)
+</span><span class="cp"></span>
+<span class="k">typedef</span> <span class="k">struct</span> <span class="n">Status</span><span class="p">{</span>
+    <span class="kt">int</span> <span class="n">lmax</span><span class="p">;</span> <span class="c1">// 左端点为起点的最大子数组和
+</span><span class="c1"></span>    <span class="kt">int</span> <span class="n">rmax</span><span class="p">;</span> <span class="c1">// 右端点为终点的最大子数组和
+</span><span class="c1"></span>    <span class="kt">int</span> <span class="n">max</span><span class="p">;</span> <span class="c1">// 最大子数组和
+</span><span class="c1"></span>    <span class="kt">int</span> <span class="n">sum</span><span class="p">;</span> <span class="c1">// 当前数组和
+</span><span class="c1"></span><span class="p">}</span><span class="n">status</span><span class="p">;</span>
+
+<span class="n">status</span> <span class="nf">maxSub</span><span class="p">(</span><span class="kt">int</span><span class="o">*</span> <span class="n">nums</span><span class="p">,</span> <span class="kt">int</span> <span class="n">begin</span><span class="p">,</span> <span class="kt">int</span> <span class="n">end</span><span class="p">){</span>
+    <span class="k">if</span><span class="p">(</span><span class="n">begin</span><span class="o">==</span><span class="n">end</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">return</span> <span class="p">(</span><span class="n">status</span><span class="p">){</span><span class="n">nums</span><span class="p">[</span><span class="n">begin</span><span class="p">],</span> <span class="n">nums</span><span class="p">[</span><span class="n">begin</span><span class="p">],</span> <span class="n">nums</span><span class="p">[</span><span class="n">begin</span><span class="p">],</span> <span class="n">nums</span><span class="p">[</span><span class="n">begin</span><span class="p">]};</span>
+    <span class="p">}</span>
+    <span class="kt">int</span> <span class="n">mid</span> <span class="o">=</span> <span class="p">(</span><span class="n">begin</span><span class="o">+</span><span class="n">end</span><span class="p">)</span><span class="o">/</span><span class="mi">2</span><span class="p">;</span>
+    <span class="n">status</span> <span class="n">larr</span> <span class="o">=</span> <span class="n">maxSub</span><span class="p">(</span><span class="n">nums</span><span class="p">,</span> <span class="n">begin</span><span class="p">,</span> <span class="n">mid</span><span class="p">);</span>
+    <span class="n">status</span> <span class="n">rarr</span> <span class="o">=</span> <span class="n">maxSub</span><span class="p">(</span><span class="n">nums</span><span class="p">,</span> <span class="n">mid</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span> <span class="n">end</span><span class="p">);</span>
+    <span class="n">status</span> <span class="n">marr</span><span class="p">;</span>
+    <span class="n">marr</span><span class="p">.</span><span class="n">lmax</span> <span class="o">=</span> <span class="n">MAX</span><span class="p">(</span><span class="n">larr</span><span class="p">.</span><span class="n">lmax</span><span class="p">,</span> <span class="n">larr</span><span class="p">.</span><span class="n">sum</span><span class="o">+</span><span class="n">rarr</span><span class="p">.</span><span class="n">lmax</span><span class="p">);</span>
+    <span class="n">marr</span><span class="p">.</span><span class="n">rmax</span> <span class="o">=</span> <span class="n">MAX</span><span class="p">(</span><span class="n">rarr</span><span class="p">.</span><span class="n">rmax</span><span class="p">,</span> <span class="n">rarr</span><span class="p">.</span><span class="n">sum</span><span class="o">+</span><span class="n">larr</span><span class="p">.</span><span class="n">rmax</span><span class="p">);</span>
+    <span class="n">marr</span><span class="p">.</span><span class="n">sum</span> <span class="o">=</span> <span class="n">larr</span><span class="p">.</span><span class="n">sum</span> <span class="o">+</span> <span class="n">rarr</span><span class="p">.</span><span class="n">sum</span><span class="p">;</span>
+    <span class="n">marr</span><span class="p">.</span><span class="n">max</span> <span class="o">=</span> <span class="n">MAX</span><span class="p">(</span><span class="n">MAX</span><span class="p">(</span><span class="n">larr</span><span class="p">.</span><span class="n">max</span><span class="p">,</span> <span class="n">rarr</span><span class="p">.</span><span class="n">max</span><span class="p">),</span> <span class="n">larr</span><span class="p">.</span><span class="n">rmax</span><span class="o">+</span><span class="n">rarr</span><span class="p">.</span><span class="n">lmax</span><span class="p">);</span>
+    <span class="k">return</span> <span class="n">marr</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kt">int</span> <span class="nf">maxSubArray</span><span class="p">(</span><span class="kt">int</span><span class="o">*</span> <span class="n">nums</span><span class="p">,</span> <span class="kt">int</span> <span class="n">numsSize</span><span class="p">){</span>
+    <span class="k">return</span> <span class="n">maxSub</span><span class="p">(</span><span class="n">nums</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">numsSize</span><span class="o">-</span><span class="mi">1</span><span class="p">).</span><span class="n">max</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></td></tr></table>
+</div>
+</div>
+    </div>
+</div>
+
+<div class="container">
+    
+    <nav class="flex container suggested">
+        
+        <a rel="prev" href="/posts/try/try_hugo/" title="Previous post (older)">
+            <span>Previous</span>
+            Try hugo
+            </a>
+        
+        
+        
+        <a rel="next" href="/posts/try/try_gitbook/" title="Next post (newer)">
+            <span>Next</span>
+            Try gitbook
+            </a> 
+        
+    </nav>
+    
+</div>
+ 
+<div class="container">
+    
+    <div class="disqus-container">
+    
+</div>
+
+<script>
+    window.addEventListener('onColorSchemeChange', (e) => {
+        if (DISQUS) {
+            DISQUS.reset({
+                reload: true
+            })
+        }
+    })
+</script>
+
+</div>
+
+</main>
+
+
+        </main>
+        <footer class="footer flex">
+    <section class="container">
+        <nav class="footer-links">
+            
+            <a href="/index.xml">RSS</a>
+            
+        </nav>
+
+        
+    </section>
+    <script defer src="/ts/features.b5dd131a0edaee3a1ea7f438180d25732cb2b08fb611b89278078888098c092e.js" 
+    data-enable-footnotes="true"
+    ></script>
+</footer>
+
+    </body>
+</html>

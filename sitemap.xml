@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  
+  <url>
+    <loc>https://example.com/</loc>
+    <lastmod>2022-03-02T23:39:47+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://example.com/posts/</loc>
+    <lastmod>2022-03-02T23:39:47+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://example.com/posts/try/try_mac_homebrew/</loc>
+    <lastmod>2022-03-02T23:39:47+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://example.com/posts/split/tip_chrome/</loc>
+    <lastmod>2022-03-02T23:39:47+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://example.com/posts/try/try_clash/</loc>
+    <lastmod>2022-03-02T01:39:49+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://example.com/posts/try/try_p10k/</loc>
+    <lastmod>2022-02-08T22:58:37+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://example.com/posts/try/try_gitbook/</loc>
+    <lastmod>2022-02-08T22:58:37+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://example.com/posts/code/max_sub_arr/</loc>
+    <lastmod>2022-02-08T22:58:37+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://example.com/categories/</loc>
+    <lastmod>2022-01-07T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://example.com/tags/hugo/</loc>
+    <lastmod>2022-01-07T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://example.com/tags/</loc>
+    <lastmod>2022-01-07T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://example.com/categories/try/</loc>
+    <lastmod>2022-01-07T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://example.com/posts/try/try_hugo/</loc>
+    <lastmod>2022-01-07T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://example.com/tags/git/</loc>
+    <lastmod>2021-05-23T19:00:00+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://example.com/posts/try/try_git/</loc>
+    <lastmod>2021-05-23T19:00:00+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://example.com/articles/</loc>
+  </url>
+  
+</urlset>

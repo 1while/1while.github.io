@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>try on 周末杂货铺💤</title>
+    <link>https://example.com/categories/try/</link>
+    <description>Recent content in try on 周末杂货铺💤</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 12 Jan 2022 23:59:49 +0800</lastBuildDate><atom:link href="https://example.com/categories/try/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Try hugo</title>
+      <link>https://example.com/posts/try/try_hugo/</link>
+      <pubDate>Wed, 12 Jan 2022 23:59:49 +0800</pubDate>
+      
+      <guid>https://example.com/posts/try/try_hugo/</guid>
+      <description>Install  1 2 3 4 5 6 7 8 9 10  # MacOS brew install hugo # Fedora dnf install hugo # 查看版本 $ hugo version Hugo Static Site Generator v0.80.0/extended linux/amd64 BuildDate: unknown      Build from source  1 2 3 4 5 6  git clone git@github.com:gohugoio/hugo.git CGO_ENABLED=1 go install -v --tags extended # You can run go clean -modcache and then go mod tidy which will re-download all deps with the correct checksum (this updates the pkg cache in $GOPATH/pkg/mod/).</description>
+    </item>
+    
+  </channel>
+</rss>

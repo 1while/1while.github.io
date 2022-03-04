@@ -11,6 +11,7 @@ wget https://github.com/Dreamacro/clash/releases/download/v1.9.0/clash-linux-amd
 
 # extract
 gunzip clash-linux-amd64-v1.9.0.gz
+cd clash-linux-amd64-v1.9.0
 
 # config
 curl https://update.glados-config.com/clash/137440/9039f80/13763/glados.yaml > config.yaml 
@@ -26,3 +27,4 @@ http://clash.razord.top/#/proxies
 # 参考
 * https://glados.one/console/clash
 * https://github.com/Dreamacro/clash
+* https://github.com/Dreamacro/clash/releases

@@ -32,6 +32,11 @@ Hugo Static Site Generator v0.80.0/extended linux/amd64 BuildDate: unknown
 ```bash
 git clone git@github.com:gohugoio/hugo.git
 
+mkdir -p src/github.com/gohugoio
+ln -sf $(pwd) src/github.com/gohugoio/hugo
+go get
+go build -o hugo main.go
+
 CGO_ENABLED=1 go install -v --tags extended
 # You can run go clean -modcache and then go mod tidy which will re-download all deps with the correct checksum (this updates the pkg cache in $GOPATH/pkg/mod/).
 

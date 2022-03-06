@@ -178,6 +178,10 @@ git clean -df
 git config --global paper.branch false
 ```
 
+# 字模块submodule
+```
+git submodule update --init --recursive 
+```
 
 # 参考
 * [git add](https://git-scm.com/docs/git-add)

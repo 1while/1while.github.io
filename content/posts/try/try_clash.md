@@ -70,6 +70,11 @@ sudo systemctl start clash
 sudo systemctl status clash
 ```
 
+# 查看自己的ip信息
+```
+curl cip.cc
+curl ipinfo.io
+```
 
 # 参考
 * https://glados.one/console/clash

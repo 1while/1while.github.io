@@ -28,6 +28,18 @@ Hugo Static Site Generator v0.80.0/extended linux/amd64 BuildDate: unknown
 
 ```
 
+# latest release
+* https://github.com/gohugoio/hugo/releases
+```
+wget https://github.com/gohugoio/hugo/releases/download/v0.93.2/hugo_extended_0.93.2_macOS-64bit.tar.gz
+
+wget https://github.com/gohugoio/hugo/releases/download/v0.93.2/hugo_extended_0.93.2_Linux-64bit.tar.gz
+
+# 解压
+tar -zxvf hugo_extended_0.93.2_macOS-64bit.tar.gz
+tar -zxvf hugo_extended_0.93.2_Linux-64bit.tar.gz
+```
+
 # Build from source
 ```bash
 git clone git@github.com:gohugoio/hugo.git

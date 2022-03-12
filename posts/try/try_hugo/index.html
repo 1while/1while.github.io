@@ -62,10 +62,8 @@
             <div>
                 <a class="brand" href="/">
                     
-                    <span class="emoji">
-                        💤
-                    </span>
                     
+                        <img src="https://avatars.githubusercontent.com/u/22488581?s=96&amp;v=4" />
                     
                     周末杂货铺💤
                     </a>
@@ -124,31 +122,49 @@
 </h1>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
-</span><span class="lnt"> 2
-</span><span class="lnt"> 3
-</span><span class="lnt"> 4
-</span><span class="lnt"> 5
-</span><span class="lnt"> 6
-</span><span class="lnt"> 7
-</span><span class="lnt"> 8
-</span><span class="lnt"> 9
-</span><span class="lnt">10
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span><span class="lnt">9
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="c1"># MacOS</span>
-brew install hugo
-
-<span class="c1"># Fedora</span>
-dnf install hugo
-
-<span class="c1"># 查看版本</span>
-$ hugo version
-Hugo Static Site Generator v0.80.0/extended linux/amd64 BuildDate: unknown
-
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># MacOS</span>
+</span></span><span class="line"><span class="cl">brew install hugo
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Fedora</span>
+</span></span><span class="line"><span class="cl">dnf install hugo
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 查看版本</span>
+</span></span><span class="line"><span class="cl">$ hugo version
+</span></span><span class="line"><span class="cl">Hugo Static Site Generator v0.80.0/extended linux/amd64 BuildDate: unknown
+</span></span></code></pre></td></tr></table>
 </div>
-</div><h1 id="build-from-source">
+</div><h1 id="latest-release">
+    <a href="#latest-release" class="anchor">
+        <svg class="icon" aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16">
+            <path fill-rule="evenodd"
+                d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z">
+            </path>
+        </svg>
+    </a>
+    latest release
+</h1>
+<ul>
+<li><a href="https://github.com/gohugoio/hugo/releases">https://github.com/gohugoio/hugo/releases</a></li>
+</ul>
+<pre tabindex="0"><code>wget https://github.com/gohugoio/hugo/releases/download/v0.93.2/hugo_extended_0.93.2_macOS-64bit.tar.gz
+
+wget https://github.com/gohugoio/hugo/releases/download/v0.93.2/hugo_extended_0.93.2_Linux-64bit.tar.gz
+
+# 解压
+tar -zxvf hugo_extended_0.93.2_macOS-64bit.tar.gz
+tar -zxvf hugo_extended_0.93.2_Linux-64bit.tar.gz
+</code></pre><h1 id="build-from-source">
     <a href="#build-from-source" class="anchor">
         <svg class="icon" aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16">
             <path fill-rule="evenodd"
@@ -160,21 +176,31 @@ Hugo Static Site Generator v0.80.0/extended linux/amd64 BuildDate: unknown
 </h1>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span><span class="lnt">5
-</span><span class="lnt">6
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">git clone git@github.com:gohugoio/hugo.git
-
-<span class="nv">CGO_ENABLED</span><span class="o">=</span><span class="m">1</span> go install -v --tags extended
-<span class="c1"># You can run go clean -modcache and then go mod tidy which will re-download all deps with the correct checksum (this updates the pkg cache in $GOPATH/pkg/mod/).</span>
-
-<span class="c1"># To update vendor/ folder run: go mod vendor</span>
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">git clone git@github.com:gohugoio/hugo.git
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">mkdir -p src/github.com/gohugoio
+</span></span><span class="line"><span class="cl">ln -sf <span class="k">$(</span><span class="nb">pwd</span><span class="k">)</span> src/github.com/gohugoio/hugo
+</span></span><span class="line"><span class="cl">go get
+</span></span><span class="line"><span class="cl">go build -o hugo main.go
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nv">CGO_ENABLED</span><span class="o">=</span><span class="m">1</span> go install -v --tags extended
+</span></span><span class="line"><span class="cl"><span class="c1"># You can run go clean -modcache and then go mod tidy which will re-download all deps with the correct checksum (this updates the pkg cache in $GOPATH/pkg/mod/).</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># To update vendor/ folder run: go mod vendor</span>
+</span></span></code></pre></td></tr></table>
 </div>
 </div><h2 id="build-error">
     <a href="#build-error" class="anchor">
@@ -188,7 +214,7 @@ Hugo Static Site Generator v0.80.0/extended linux/amd64 BuildDate: unknown
 </h2>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -204,27 +230,25 @@ Hugo Static Site Generator v0.80.0/extended linux/amd64 BuildDate: unknown
 </span><span class="lnt">14
 </span><span class="lnt">15
 </span><span class="lnt">16
-</span><span class="lnt">17
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">$ <span class="nv">CGO_ENABLED</span><span class="o">=</span><span class="m">1</span> go install -v --tags extended
-go: downloading github.com/dlclark/regexp2 v1.4.0
-go: downloading golang.org/x/sys v0.0.0-20220209214540-3681064d5158
-go: downloading github.com/pelletier/go-toml/v2 v2.0.0-beta.6
-go: downloading github.com/aws/aws-sdk-go v1.43.5
-get <span class="s2">&#34;golang.org/x/sys&#34;</span>: found meta tag vcs.metaImport<span class="o">{</span>Prefix:<span class="s2">&#34;golang.org/x/sys&#34;</span>, VCS:<span class="s2">&#34;git&#34;</span>, RepoRoot:<span class="s2">&#34;https://go.googlesource.com/sys&#34;</span><span class="o">}</span> at //golang.org/x/sys?go-get<span class="o">=</span><span class="m">1</span>
-verifying github.com/pelletier/go-toml/v2@v2.0.0-beta.6: checksum mismatch
-	downloaded: h1:TA3qh4Cq1VOjh4AJnMHrUFbAsIbD7OnOvpaIRYsU0sI<span class="o">=</span>
-	go.sum:     h1:JFNqj2afbbhCqTiyN16D7Tudc/aaDzE2FBDk+VlBQnE<span class="o">=</span>
-
-SECURITY ERROR
-This download does NOT match an earlier download recorded in go.sum.
-The bits may have been replaced on the origin server, or an attacker may
-have intercepted the download attempt.
-
-For more information, see <span class="s1">&#39;go help module-auth&#39;</span>.
-
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">$ <span class="nv">CGO_ENABLED</span><span class="o">=</span><span class="m">1</span> go install -v --tags extended
+</span></span><span class="line"><span class="cl">go: downloading github.com/dlclark/regexp2 v1.4.0
+</span></span><span class="line"><span class="cl">go: downloading golang.org/x/sys v0.0.0-20220209214540-3681064d5158
+</span></span><span class="line"><span class="cl">go: downloading github.com/pelletier/go-toml/v2 v2.0.0-beta.6
+</span></span><span class="line"><span class="cl">go: downloading github.com/aws/aws-sdk-go v1.43.5
+</span></span><span class="line"><span class="cl">get <span class="s2">&#34;golang.org/x/sys&#34;</span>: found meta tag vcs.metaImport<span class="o">{</span>Prefix:<span class="s2">&#34;golang.org/x/sys&#34;</span>, VCS:<span class="s2">&#34;git&#34;</span>, RepoRoot:<span class="s2">&#34;https://go.googlesource.com/sys&#34;</span><span class="o">}</span> at //golang.org/x/sys?go-get<span class="o">=</span><span class="m">1</span>
+</span></span><span class="line"><span class="cl">verifying github.com/pelletier/go-toml/v2@v2.0.0-beta.6: checksum mismatch
+</span></span><span class="line"><span class="cl">	downloaded: h1:TA3qh4Cq1VOjh4AJnMHrUFbAsIbD7OnOvpaIRYsU0sI<span class="o">=</span>
+</span></span><span class="line"><span class="cl">	go.sum:     h1:JFNqj2afbbhCqTiyN16D7Tudc/aaDzE2FBDk+VlBQnE<span class="o">=</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">SECURITY ERROR
+</span></span><span class="line"><span class="cl">This download does NOT match an earlier download recorded in go.sum.
+</span></span><span class="line"><span class="cl">The bits may have been replaced on the origin server, or an attacker may
+</span></span><span class="line"><span class="cl">have intercepted the download attempt.
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">For more information, see <span class="s1">&#39;go help module-auth&#39;</span>.
+</span></span></code></pre></td></tr></table>
 </div>
 </div><blockquote>
 <p>fix: 手动修改downloaded中的checksum到go.sum</p>
@@ -241,7 +265,7 @@ For more information, see <span class="s1">&#39;go help module-auth&#39;</span>.
 </h1>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
@@ -249,13 +273,13 @@ For more information, see <span class="s1">&#39;go help module-auth&#39;</span>.
 </span><span class="lnt">6
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="c1"># try hogo-book theme</span>
-git submodule add git@github.com:alex-shpak/hugo-book themes/hugo-book
-cp -R themes/hugo-book/exampleSite/content .
-
-<span class="c1"># run with -D draft enabled, --theme theme specified, -p port specified</span>
-hugo server --minify -D --theme hugo-book -p <span class="m">1314</span>
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># try hogo-book theme</span>
+</span></span><span class="line"><span class="cl">git submodule add git@github.com:alex-shpak/hugo-book themes/hugo-book
+</span></span><span class="line"><span class="cl">cp -R themes/hugo-book/exampleSite/content .
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># run with -D draft enabled, --theme theme specified, -p port specified</span>
+</span></span><span class="line"><span class="cl">hugo server --minify -D --theme hugo-book -p <span class="m">1314</span>
+</span></span></code></pre></td></tr></table>
 </div>
 </div><h1 id="new-site">
     <a href="#new-site" class="anchor">
@@ -269,7 +293,7 @@ hugo server --minify -D --theme hugo-book -p <span class="m">1314</span>
 </h1>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -288,24 +312,24 @@ hugo server --minify -D --theme hugo-book -p <span class="m">1314</span>
 </span><span class="lnt">17
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="c1"># init a new site</span>
-hugo new site myblog
-
-<span class="c1"># add a theme</span>
-git submodule add git@github.com:WingLim/hugo-tania themes/hugo-tania
-
-<span class="c1"># update the theme to config.toml</span>
-<span class="nv">theme</span> <span class="o">=</span> <span class="s2">&#34;paper&#34;</span>
-
-<span class="c1"># run</span>
-hugo server --minify -D 
-
-<span class="c1"># first page</span>
-hugo new posts/my-first-post.md
-
-<span class="c1"># about page</span>
-hugo new about.md
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># init a new site</span>
+</span></span><span class="line"><span class="cl">hugo new site myblog
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># add a theme</span>
+</span></span><span class="line"><span class="cl">git submodule add git@github.com:WingLim/hugo-tania themes/hugo-tania
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># update the theme to config.toml</span>
+</span></span><span class="line"><span class="cl"><span class="nv">theme</span> <span class="o">=</span> <span class="s2">&#34;paper&#34;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># run</span>
+</span></span><span class="line"><span class="cl">hugo server --minify -D 
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># first page</span>
+</span></span><span class="line"><span class="cl">hugo new posts/my-first-post.md
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># about page</span>
+</span></span><span class="line"><span class="cl">hugo new about.md
+</span></span></code></pre></td></tr></table>
 </div>
 </div><h1 id="katex">
     <a href="#katex" class="anchor">
@@ -319,24 +343,24 @@ hugo new about.md
 </h1>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-latex" data-lang="latex">Inline math: <span class="s">$</span><span class="nb"> </span><span class="nv">\varphi</span><span class="nb"> </span><span class="o">=</span><span class="nb"> </span><span class="nv">\dfrac</span><span class="nb">{</span><span class="m">1</span><span class="o">+</span><span class="nv">\sqrt</span><span class="m">5</span><span class="nb">}{</span><span class="m">2</span><span class="nb">}</span><span class="o">=</span><span class="nb"> </span><span class="m">1</span><span class="nb">.</span><span class="m">6180339887</span><span class="nb">… </span><span class="s">$</span>
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-latex" data-lang="latex"><span class="line"><span class="cl">Inline math: <span class="s">$</span><span class="nb"> </span><span class="nv">\varphi</span><span class="nb"> </span><span class="o">=</span><span class="nb"> </span><span class="nv">\dfrac</span><span class="nb">{</span><span class="m">1</span><span class="o">+</span><span class="nv">\sqrt</span><span class="m">5</span><span class="nb">}{</span><span class="m">2</span><span class="nb">}</span><span class="o">=</span><span class="nb"> </span><span class="m">1</span><span class="nb">.</span><span class="m">6180339887</span><span class="nb">… </span><span class="s">$</span>
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>Inline math: $ \varphi = \dfrac{1+\sqrt5}{2}= 1.6180339887… $</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-latex" data-lang="latex">Block math:
-
-<span class="sb">$$</span><span class="nb"> </span><span class="nv">\varphi</span><span class="nb"> </span><span class="o">=</span><span class="nb"> </span><span class="m">1</span><span class="o">+</span><span class="nv">\frac</span><span class="nb">{</span><span class="m">1</span><span class="nb">} {</span><span class="m">1</span><span class="o">+</span><span class="nv">\frac</span><span class="nb">{</span><span class="m">1</span><span class="nb">} {</span><span class="m">1</span><span class="o">+</span><span class="nv">\frac</span><span class="nb">{</span><span class="m">1</span><span class="nb">} {</span><span class="m">1</span><span class="o">+</span><span class="nv">\cdots</span><span class="nb">} } } </span><span class="s">$$</span>
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-latex" data-lang="latex"><span class="line"><span class="cl">Block math:
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="sb">$$</span><span class="nb"> </span><span class="nv">\varphi</span><span class="nb"> </span><span class="o">=</span><span class="nb"> </span><span class="m">1</span><span class="o">+</span><span class="nv">\frac</span><span class="nb">{</span><span class="m">1</span><span class="nb">} {</span><span class="m">1</span><span class="o">+</span><span class="nv">\frac</span><span class="nb">{</span><span class="m">1</span><span class="nb">} {</span><span class="m">1</span><span class="o">+</span><span class="nv">\frac</span><span class="nb">{</span><span class="m">1</span><span class="nb">} {</span><span class="m">1</span><span class="o">+</span><span class="nv">\cdots</span><span class="nb">} } } </span><span class="s">$$</span>
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>Block math:</p>
 <p>$$ \varphi = 1+\frac{1} {1+\frac{1} {1+\frac{1} {1+\cdots} } } $$</p>
@@ -409,7 +433,7 @@ hugo new about.md
                 ]
             }
             );"></script>
-    <script defer src="/ts/features.b5dd131a0edaee3a1ea7f438180d25732cb2b08fb611b89278078888098c092e.js" 
+    <script defer src="/ts/features.a534d05c446023fa2ae2a638f87cc2443ad8e49f6aaeb4d9f24ed61d53766712.js" 
     data-enable-footnotes="true"
     ></script>
 </footer>

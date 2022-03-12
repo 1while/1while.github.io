@@ -62,10 +62,8 @@
             <div>
                 <a class="brand" href="/">
                     
-                    <span class="emoji">
-                        💤
-                    </span>
                     
+                        <img src="https://avatars.githubusercontent.com/u/22488581?s=96&amp;v=4" />
                     
                     周末杂货铺💤
                     </a>
@@ -169,7 +167,7 @@
 </h3>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -184,20 +182,20 @@
 </span><span class="lnt">13
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-c" data-lang="c"><span class="kt">int</span> <span class="nf">maxSubArray</span><span class="p">(</span><span class="kt">int</span><span class="o">*</span> <span class="n">nums</span><span class="p">,</span> <span class="kt">int</span> <span class="n">numsSize</span><span class="p">){</span>
-  <span class="kt">int</span> <span class="n">maxSub</span> <span class="o">=</span> <span class="n">nums</span><span class="p">[</span><span class="mi">0</span><span class="p">];</span>
-  <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span> <span class="n">i</span><span class="o">&lt;</span><span class="n">numsSize</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">){</span>
-    <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">j</span><span class="o">=</span><span class="n">i</span><span class="p">;</span> <span class="n">j</span><span class="o">&lt;</span><span class="n">numsSize</span><span class="p">;</span> <span class="n">j</span><span class="o">++</span><span class="p">){</span>
-      <span class="kt">int</span> <span class="n">sum</span> <span class="o">=</span> <span class="n">nums</span><span class="p">[</span><span class="n">i</span><span class="p">];</span>
-      <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">k</span><span class="o">=</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">;</span> <span class="n">k</span><span class="o">&lt;=</span><span class="n">j</span><span class="p">;</span> <span class="n">k</span><span class="o">++</span><span class="p">){</span>
-        <span class="n">sum</span> <span class="o">+=</span> <span class="n">nums</span><span class="p">[</span><span class="n">k</span><span class="p">];</span>
-      <span class="p">}</span>
-      <span class="n">maxSub</span> <span class="o">=</span> <span class="n">maxSub</span><span class="o">&lt;</span><span class="n">sum</span> <span class="o">?</span> <span class="nl">sum</span><span class="p">:</span> <span class="n">maxSub</span><span class="p">;</span>
-    <span class="p">}</span>
-  <span class="p">}</span>
-  <span class="k">return</span> <span class="n">maxSub</span><span class="p">;</span>
-<span class="p">}</span>
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-c" data-lang="c"><span class="line"><span class="cl"><span class="kt">int</span> <span class="nf">maxSubArray</span><span class="p">(</span><span class="kt">int</span><span class="o">*</span> <span class="n">nums</span><span class="p">,</span> <span class="kt">int</span> <span class="n">numsSize</span><span class="p">){</span>
+</span></span><span class="line"><span class="cl">  <span class="kt">int</span> <span class="n">maxSub</span> <span class="o">=</span> <span class="n">nums</span><span class="p">[</span><span class="mi">0</span><span class="p">];</span>
+</span></span><span class="line"><span class="cl">  <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span> <span class="n">i</span><span class="o">&lt;</span><span class="n">numsSize</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">){</span>
+</span></span><span class="line"><span class="cl">    <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">j</span><span class="o">=</span><span class="n">i</span><span class="p">;</span> <span class="n">j</span><span class="o">&lt;</span><span class="n">numsSize</span><span class="p">;</span> <span class="n">j</span><span class="o">++</span><span class="p">){</span>
+</span></span><span class="line"><span class="cl">      <span class="kt">int</span> <span class="n">sum</span> <span class="o">=</span> <span class="n">nums</span><span class="p">[</span><span class="n">i</span><span class="p">];</span>
+</span></span><span class="line"><span class="cl">      <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">k</span><span class="o">=</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">;</span> <span class="n">k</span><span class="o">&lt;=</span><span class="n">j</span><span class="p">;</span> <span class="n">k</span><span class="o">++</span><span class="p">){</span>
+</span></span><span class="line"><span class="cl">        <span class="n">sum</span> <span class="o">+=</span> <span class="n">nums</span><span class="p">[</span><span class="n">k</span><span class="p">];</span>
+</span></span><span class="line"><span class="cl">      <span class="p">}</span>
+</span></span><span class="line"><span class="cl">      <span class="n">maxSub</span> <span class="o">=</span> <span class="n">maxSub</span><span class="o">&lt;</span><span class="n">sum</span> <span class="o">?</span> <span class="nl">sum</span><span class="p">:</span> <span class="n">maxSub</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">  <span class="p">}</span>
+</span></span><span class="line"><span class="cl">  <span class="k">return</span> <span class="n">maxSub</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></td></tr></table>
 </div>
 </div><h3 id="2-动态规划-时间复杂度n">
     <a href="#2-%e5%8a%a8%e6%80%81%e8%a7%84%e5%88%92-%e6%97%b6%e9%97%b4%e5%a4%8d%e6%9d%82%e5%ba%a6n" class="anchor">
@@ -217,7 +215,7 @@ n个数可以简化为两个数, n1和n2, 若n1大于0, n1+n2是有可能更大�
 </ul>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
@@ -228,16 +226,16 @@ n个数可以简化为两个数, n1和n2, 若n1大于0, n1+n2是有可能更大�
 </span><span class="lnt">9
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-c" data-lang="c"><span class="kt">int</span> <span class="nf">maxSubArray</span><span class="p">(</span><span class="kt">int</span><span class="o">*</span> <span class="n">nums</span><span class="p">,</span> <span class="kt">int</span> <span class="n">numsSize</span><span class="p">){</span>
-  <span class="kt">int</span> <span class="n">sum</span> <span class="o">=</span> <span class="n">nums</span><span class="p">[</span><span class="mi">0</span><span class="p">];</span>
-  <span class="kt">int</span> <span class="n">max</span> <span class="o">=</span> <span class="n">nums</span><span class="p">[</span><span class="mi">0</span><span class="p">];</span>
-  <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="mi">1</span><span class="p">;</span> <span class="n">i</span><span class="o">&lt;</span><span class="n">numsSize</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
-    <span class="n">sum</span> <span class="o">=</span> <span class="n">sum</span><span class="o">&gt;</span><span class="mi">0</span> <span class="o">?</span> <span class="n">sum</span><span class="o">+</span><span class="n">nums</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">:</span> <span class="n">nums</span><span class="p">[</span><span class="n">i</span><span class="p">];</span>
-    <span class="n">max</span> <span class="o">=</span> <span class="n">max</span><span class="o">&lt;</span><span class="n">sum</span> <span class="o">?</span> <span class="nl">sum</span><span class="p">:</span> <span class="n">max</span><span class="p">;</span>
-  <span class="p">}</span>
-  <span class="k">return</span> <span class="n">max</span><span class="p">;</span>
-<span class="p">}</span>
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-c" data-lang="c"><span class="line"><span class="cl"><span class="kt">int</span> <span class="nf">maxSubArray</span><span class="p">(</span><span class="kt">int</span><span class="o">*</span> <span class="n">nums</span><span class="p">,</span> <span class="kt">int</span> <span class="n">numsSize</span><span class="p">){</span>
+</span></span><span class="line"><span class="cl">  <span class="kt">int</span> <span class="n">sum</span> <span class="o">=</span> <span class="n">nums</span><span class="p">[</span><span class="mi">0</span><span class="p">];</span>
+</span></span><span class="line"><span class="cl">  <span class="kt">int</span> <span class="n">max</span> <span class="o">=</span> <span class="n">nums</span><span class="p">[</span><span class="mi">0</span><span class="p">];</span>
+</span></span><span class="line"><span class="cl">  <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="mi">1</span><span class="p">;</span> <span class="n">i</span><span class="o">&lt;</span><span class="n">numsSize</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="n">sum</span> <span class="o">=</span> <span class="n">sum</span><span class="o">&gt;</span><span class="mi">0</span> <span class="o">?</span> <span class="n">sum</span><span class="o">+</span><span class="n">nums</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">:</span> <span class="n">nums</span><span class="p">[</span><span class="n">i</span><span class="p">];</span>
+</span></span><span class="line"><span class="cl">    <span class="n">max</span> <span class="o">=</span> <span class="n">max</span><span class="o">&lt;</span><span class="n">sum</span> <span class="o">?</span> <span class="nl">sum</span><span class="p">:</span> <span class="n">max</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">}</span>
+</span></span><span class="line"><span class="cl">  <span class="k">return</span> <span class="n">max</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></td></tr></table>
 </div>
 </div><h3 id="3-分治法">
     <a href="#3-%e5%88%86%e6%b2%bb%e6%b3%95" class="anchor">
@@ -251,7 +249,7 @@ n个数可以简化为两个数, n1和n2, 若n1大于0, n1+n2是有可能更大�
 </h3>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -280,34 +278,34 @@ n个数可以简化为两个数, n1和n2, 若n1大于0, n1+n2是有可能更大�
 </span><span class="lnt">27
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-c" data-lang="c"><span class="cp">#define MAX(a,b) ((a)&gt;(b)?a:b)
-</span><span class="cp"></span>
-<span class="k">typedef</span> <span class="k">struct</span> <span class="n">Status</span><span class="p">{</span>
-    <span class="kt">int</span> <span class="n">lmax</span><span class="p">;</span> <span class="c1">// 左端点为起点的最大子数组和
-</span><span class="c1"></span>    <span class="kt">int</span> <span class="n">rmax</span><span class="p">;</span> <span class="c1">// 右端点为终点的最大子数组和
-</span><span class="c1"></span>    <span class="kt">int</span> <span class="n">max</span><span class="p">;</span> <span class="c1">// 最大子数组和
-</span><span class="c1"></span>    <span class="kt">int</span> <span class="n">sum</span><span class="p">;</span> <span class="c1">// 当前数组和
-</span><span class="c1"></span><span class="p">}</span><span class="n">status</span><span class="p">;</span>
-
-<span class="n">status</span> <span class="nf">maxSub</span><span class="p">(</span><span class="kt">int</span><span class="o">*</span> <span class="n">nums</span><span class="p">,</span> <span class="kt">int</span> <span class="n">begin</span><span class="p">,</span> <span class="kt">int</span> <span class="n">end</span><span class="p">){</span>
-    <span class="k">if</span><span class="p">(</span><span class="n">begin</span><span class="o">==</span><span class="n">end</span><span class="p">)</span> <span class="p">{</span>
-        <span class="k">return</span> <span class="p">(</span><span class="n">status</span><span class="p">){</span><span class="n">nums</span><span class="p">[</span><span class="n">begin</span><span class="p">],</span> <span class="n">nums</span><span class="p">[</span><span class="n">begin</span><span class="p">],</span> <span class="n">nums</span><span class="p">[</span><span class="n">begin</span><span class="p">],</span> <span class="n">nums</span><span class="p">[</span><span class="n">begin</span><span class="p">]};</span>
-    <span class="p">}</span>
-    <span class="kt">int</span> <span class="n">mid</span> <span class="o">=</span> <span class="p">(</span><span class="n">begin</span><span class="o">+</span><span class="n">end</span><span class="p">)</span><span class="o">/</span><span class="mi">2</span><span class="p">;</span>
-    <span class="n">status</span> <span class="n">larr</span> <span class="o">=</span> <span class="n">maxSub</span><span class="p">(</span><span class="n">nums</span><span class="p">,</span> <span class="n">begin</span><span class="p">,</span> <span class="n">mid</span><span class="p">);</span>
-    <span class="n">status</span> <span class="n">rarr</span> <span class="o">=</span> <span class="n">maxSub</span><span class="p">(</span><span class="n">nums</span><span class="p">,</span> <span class="n">mid</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span> <span class="n">end</span><span class="p">);</span>
-    <span class="n">status</span> <span class="n">marr</span><span class="p">;</span>
-    <span class="n">marr</span><span class="p">.</span><span class="n">lmax</span> <span class="o">=</span> <span class="n">MAX</span><span class="p">(</span><span class="n">larr</span><span class="p">.</span><span class="n">lmax</span><span class="p">,</span> <span class="n">larr</span><span class="p">.</span><span class="n">sum</span><span class="o">+</span><span class="n">rarr</span><span class="p">.</span><span class="n">lmax</span><span class="p">);</span>
-    <span class="n">marr</span><span class="p">.</span><span class="n">rmax</span> <span class="o">=</span> <span class="n">MAX</span><span class="p">(</span><span class="n">rarr</span><span class="p">.</span><span class="n">rmax</span><span class="p">,</span> <span class="n">rarr</span><span class="p">.</span><span class="n">sum</span><span class="o">+</span><span class="n">larr</span><span class="p">.</span><span class="n">rmax</span><span class="p">);</span>
-    <span class="n">marr</span><span class="p">.</span><span class="n">sum</span> <span class="o">=</span> <span class="n">larr</span><span class="p">.</span><span class="n">sum</span> <span class="o">+</span> <span class="n">rarr</span><span class="p">.</span><span class="n">sum</span><span class="p">;</span>
-    <span class="n">marr</span><span class="p">.</span><span class="n">max</span> <span class="o">=</span> <span class="n">MAX</span><span class="p">(</span><span class="n">MAX</span><span class="p">(</span><span class="n">larr</span><span class="p">.</span><span class="n">max</span><span class="p">,</span> <span class="n">rarr</span><span class="p">.</span><span class="n">max</span><span class="p">),</span> <span class="n">larr</span><span class="p">.</span><span class="n">rmax</span><span class="o">+</span><span class="n">rarr</span><span class="p">.</span><span class="n">lmax</span><span class="p">);</span>
-    <span class="k">return</span> <span class="n">marr</span><span class="p">;</span>
-<span class="p">}</span>
-
-<span class="kt">int</span> <span class="nf">maxSubArray</span><span class="p">(</span><span class="kt">int</span><span class="o">*</span> <span class="n">nums</span><span class="p">,</span> <span class="kt">int</span> <span class="n">numsSize</span><span class="p">){</span>
-    <span class="k">return</span> <span class="n">maxSub</span><span class="p">(</span><span class="n">nums</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">numsSize</span><span class="o">-</span><span class="mi">1</span><span class="p">).</span><span class="n">max</span><span class="p">;</span>
-<span class="p">}</span>
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-c" data-lang="c"><span class="line"><span class="cl"><span class="cp">#define MAX(a,b) ((a)&gt;(b)?a:b)
+</span></span></span><span class="line"><span class="cl"><span class="cp"></span>
+</span></span><span class="line"><span class="cl"><span class="k">typedef</span> <span class="k">struct</span> <span class="n">Status</span><span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="kt">int</span> <span class="n">lmax</span><span class="p">;</span> <span class="c1">// 左端点为起点的最大子数组和
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="kt">int</span> <span class="n">rmax</span><span class="p">;</span> <span class="c1">// 右端点为终点的最大子数组和
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="kt">int</span> <span class="n">max</span><span class="p">;</span> <span class="c1">// 最大子数组和
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="kt">int</span> <span class="n">sum</span><span class="p">;</span> <span class="c1">// 当前数组和
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="p">}</span><span class="n">status</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">status</span> <span class="nf">maxSub</span><span class="p">(</span><span class="kt">int</span><span class="o">*</span> <span class="n">nums</span><span class="p">,</span> <span class="kt">int</span> <span class="n">begin</span><span class="p">,</span> <span class="kt">int</span> <span class="n">end</span><span class="p">){</span>
+</span></span><span class="line"><span class="cl">    <span class="k">if</span><span class="p">(</span><span class="n">begin</span><span class="o">==</span><span class="n">end</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="p">(</span><span class="n">status</span><span class="p">){</span><span class="n">nums</span><span class="p">[</span><span class="n">begin</span><span class="p">],</span> <span class="n">nums</span><span class="p">[</span><span class="n">begin</span><span class="p">],</span> <span class="n">nums</span><span class="p">[</span><span class="n">begin</span><span class="p">],</span> <span class="n">nums</span><span class="p">[</span><span class="n">begin</span><span class="p">]};</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="kt">int</span> <span class="n">mid</span> <span class="o">=</span> <span class="p">(</span><span class="n">begin</span><span class="o">+</span><span class="n">end</span><span class="p">)</span><span class="o">/</span><span class="mi">2</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="n">status</span> <span class="n">larr</span> <span class="o">=</span> <span class="n">maxSub</span><span class="p">(</span><span class="n">nums</span><span class="p">,</span> <span class="n">begin</span><span class="p">,</span> <span class="n">mid</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="n">status</span> <span class="n">rarr</span> <span class="o">=</span> <span class="n">maxSub</span><span class="p">(</span><span class="n">nums</span><span class="p">,</span> <span class="n">mid</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span> <span class="n">end</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="n">status</span> <span class="n">marr</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="n">marr</span><span class="p">.</span><span class="n">lmax</span> <span class="o">=</span> <span class="n">MAX</span><span class="p">(</span><span class="n">larr</span><span class="p">.</span><span class="n">lmax</span><span class="p">,</span> <span class="n">larr</span><span class="p">.</span><span class="n">sum</span><span class="o">+</span><span class="n">rarr</span><span class="p">.</span><span class="n">lmax</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="n">marr</span><span class="p">.</span><span class="n">rmax</span> <span class="o">=</span> <span class="n">MAX</span><span class="p">(</span><span class="n">rarr</span><span class="p">.</span><span class="n">rmax</span><span class="p">,</span> <span class="n">rarr</span><span class="p">.</span><span class="n">sum</span><span class="o">+</span><span class="n">larr</span><span class="p">.</span><span class="n">rmax</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="n">marr</span><span class="p">.</span><span class="n">sum</span> <span class="o">=</span> <span class="n">larr</span><span class="p">.</span><span class="n">sum</span> <span class="o">+</span> <span class="n">rarr</span><span class="p">.</span><span class="n">sum</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="n">marr</span><span class="p">.</span><span class="n">max</span> <span class="o">=</span> <span class="n">MAX</span><span class="p">(</span><span class="n">MAX</span><span class="p">(</span><span class="n">larr</span><span class="p">.</span><span class="n">max</span><span class="p">,</span> <span class="n">rarr</span><span class="p">.</span><span class="n">max</span><span class="p">),</span> <span class="n">larr</span><span class="p">.</span><span class="n">rmax</span><span class="o">+</span><span class="n">rarr</span><span class="p">.</span><span class="n">lmax</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="n">marr</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kt">int</span> <span class="nf">maxSubArray</span><span class="p">(</span><span class="kt">int</span><span class="o">*</span> <span class="n">nums</span><span class="p">,</span> <span class="kt">int</span> <span class="n">numsSize</span><span class="p">){</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="n">maxSub</span><span class="p">(</span><span class="n">nums</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">numsSize</span><span class="o">-</span><span class="mi">1</span><span class="p">).</span><span class="n">max</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></td></tr></table>
 </div>
 </div>
     </div>
@@ -365,7 +363,7 @@ n个数可以简化为两个数, n1和n2, 若n1大于0, n1+n2是有可能更大�
 
         
     </section>
-    <script defer src="/ts/features.b5dd131a0edaee3a1ea7f438180d25732cb2b08fb611b89278078888098c092e.js" 
+    <script defer src="/ts/features.a534d05c446023fa2ae2a638f87cc2443ad8e49f6aaeb4d9f24ed61d53766712.js" 
     data-enable-footnotes="true"
     ></script>
 </footer>

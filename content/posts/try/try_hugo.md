@@ -106,7 +106,7 @@ hugo new site myblog
 git submodule add git@github.com:WingLim/hugo-tania themes/hugo-tania
 
 # update the theme to config.toml
-theme = "paper"
+theme = "hugo-tania"
 
 # run
 hugo server --minify -D 

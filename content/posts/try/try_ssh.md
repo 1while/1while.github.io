@@ -24,6 +24,18 @@ ssh-copy-id -p 12345 -i id_key.pub username@hostname
 
 ```
 
+# 加载私钥
+```bash
+# 加载私钥
+ssh-add id_key_name
+
+# 卸载所有私钥
+ssh-add -D
+
+# 列出所有已加载密钥
+ssh-add -l
+```
+
 # ssh执行远程命令
 ```bash
 # 复制公钥到远程机器

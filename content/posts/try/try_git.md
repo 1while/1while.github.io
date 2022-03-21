@@ -166,11 +166,15 @@ git remote set-url origin git@github.com:.../blog.git
 git remote rename origin origin2
 ```
 
-
-# 清理目录
+# 删除未被托管的新增文件
 ``` bash
 # -d 清理untracked目录和文件，-f 强制清理
 git clean -df
+```
+
+# 垃圾回收
+```bash
+git gc
 ```
 
 # git branch像less一样显示问题
@@ -178,9 +182,18 @@ git clean -df
 git config --global paper.branch false
 ```
 
-# 字模块submodule
+# 子模块submodule
 ```
+# 添加子模块到指定目录
+git submodule add git@github.com:alex-shpak/hugo-book themes/hugo-book
+
+# 初始化，更新
 git submodule update --init --recursive 
+git submodule init
+git submodule update
+
+# 更新所有子模块
+git submodule foreach git pull 
 ```
 
 # 参考

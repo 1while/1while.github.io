@@ -25,7 +25,6 @@ dnf install hugo
 # 查看版本
 $ hugo version
 Hugo Static Site Generator v0.80.0/extended linux/amd64 BuildDate: unknown
-
 ```
 
 # latest release
@@ -38,6 +37,15 @@ wget https://github.com/gohugoio/hugo/releases/download/v0.93.2/hugo_extended_0.
 # 解压
 tar -zxvf hugo_extended_0.93.2_macOS-64bit.tar.gz
 tar -zxvf hugo_extended_0.93.2_Linux-64bit.tar.gz
+
+# 创建软连接
+ln -s /Users/zhou/Documents/app/hugo0.93.2/hugo /usr/local/bin/hugo
+
+# 确认软连接
+which hugo
+
+# 查看版本
+hugo version
 ```
 
 # Build from source
@@ -98,7 +106,7 @@ hugo new site myblog
 git submodule add git@github.com:WingLim/hugo-tania themes/hugo-tania
 
 # update the theme to config.toml
-theme = "paper"
+theme = "hugo-tania"
 
 # run
 hugo server --minify -D 

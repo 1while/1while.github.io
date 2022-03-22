@@ -47,27 +47,37 @@ cfw-bypass:
 ```
 # 添加启动服务
 ```
-$ sudo vi /etc/systemd/system/clash.service
+$ sudo vi /etc/systemd/system/clashd.service
+
 [Unit]
 Description=Clash service
 After=network.target
 
 [Service]
 Type=simple
-User=theseus
-ExecStart=/var/services/homes/theseus/clash/clash-linux-armv8-v1.9.0 -d /var/services/homes/theseus/clash
-Restart=on-failure
-RestartPreventExitStatus=23
+ExecStart=/usr/local/bin/clash -f /opt/clash/config.yaml -d /opt/clash/config
+
 
 [Install]
 WantedBy=multi-user.target
 ```
 
+## 服务控制
 ```
+# 重新加载服务
 sudo systemctl daemon-reload
-sudo systemctl enable clash
-sudo systemctl start clash
-sudo systemctl status clash
+# 开机启动
+sudo systemctl enable clashd
+# 启动服务
+sudo systemctl start clashd
+# 关闭服务
+sudo systemctl status clashd
+```
+
+## 启动服务失败出现Permission denied问题
+```bash
+# 修改selinux模式为Permissive
+sudo setenforce Permissive 
 ```
 
 # 查看自己的ip信息

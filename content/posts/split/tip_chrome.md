@@ -9,4 +9,4 @@ draft: false
 1. chrome访问`chrome://flags/`
 2. 搜索dark
 3. 将`Force Dark Mode for Web Contents`设置为enabled
-![dark mode](/img/chrome_dark_mode.png)
+![dark mode](img/chrome_dark_mode.png)

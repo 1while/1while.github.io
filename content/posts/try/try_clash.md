@@ -36,6 +36,12 @@ $ source /etc/profile
 
 # 取消终端代理配置
 unset http_proxy https_proxy all_proxy
+
+# git代理
+git config --global http.proxy http://127.0.0.1:7890
+git config --global https.proxy https://127.0.0.1:7890
+git config --global --unset http.proxy
+git config --global --unset https.proxy
 ```
 
 ## 白名单（没生效）
@@ -75,6 +81,8 @@ sudo systemctl status clashd
 ```
 
 ## 启动服务失败出现Permission denied问题
+> # 错误提示
+> Failed at step EXEC spawning ... Permission denied
 ```bash
 # 修改selinux模式为Permissive
 sudo setenforce Permissive 

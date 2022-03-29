@@ -1,6 +1,7 @@
 ---
 title: "Try gitbook"
 date: 2022-02-08T22:58:37+08:00
+draft: true
 ---
 
 # gitbook常用配置

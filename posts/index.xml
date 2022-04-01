@@ -6,14 +6,32 @@
     <description>Recent content in Posts on 周末杂货铺💤</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 08 Feb 2022 22:58:37 +0800</lastBuildDate><atom:link href="https://theseusf.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 02 Apr 2022 02:32:58 +0800</lastBuildDate><atom:link href="https://theseusf.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Try vim</title>
+      <link>https://theseusf.github.io/posts/try/try_vim/</link>
+      <pubDate>Sat, 02 Apr 2022 02:32:58 +0800</pubDate>
+      
+      <guid>https://theseusf.github.io/posts/try/try_vim/</guid>
+      <description>怎么退出VIM  先按ESC键 然后英文键盘下输入:q!(注意冒号也是指令的一部分)  </description>
+    </item>
+    
+    <item>
+      <title>Try emacs</title>
+      <link>https://theseusf.github.io/posts/try/try_emacs/</link>
+      <pubDate>Wed, 30 Mar 2022 23:59:38 +0800</pubDate>
+      
+      <guid>https://theseusf.github.io/posts/try/try_emacs/</guid>
+      <description>安装 1  sudo dnf install emacs   怎么退出emacs 1 2  # 先后输入组合键Ctrl+x, Ctrl+c C-x C-c   参考  https://www.gnu.org/software/emacs/download.html#gnu-linux https://github.com/redguardtoo/mastering-emacs-in-one-year-guide/blob/master/guide-zh.org https://www.orgmode.org/  </description>
+    </item>
+    
     <item>
       <title>ohmyzsh安装powerlevel10k主题</title>
       <link>https://theseusf.github.io/posts/try/try_p10k/</link>
       <pubDate>Tue, 08 Feb 2022 22:58:37 +0800</pubDate>
       
       <guid>https://theseusf.github.io/posts/try/try_p10k/</guid>
-      <description>ohmyzsh 安装p10k主题     1. 下载仓库  1  git clone --depth=1 git@github.com:romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k      2. 设置主题  1 2  $ vi ~/.zshrc ZSH_THEME=&amp;#34;powerlevel10k/powerlevel10k&amp;#34;      3. 重新加载配置生效  1  $ source ~/.zshrc      4. 加载完配置后默认会自动执行一次个性配置引导  1 2  # 手动执行引导 $ p10k configure      推荐字体安装     nerd   https://github.</description>
+      <description>ohmyzsh 安装p10k主题 1. 下载仓库 1  git clone --depth=1 git@github.com:romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k   2. 设置主题 1 2  $ vi ~/.zshrc ZSH_THEME=&amp;#34;powerlevel10k/powerlevel10k&amp;#34;   3. 重新加载配置生效 1  $ source ~/.zshrc   4. 加载完配置后默认会自动执行一次个性配置引导 1 2  # 手动执行引导 $ p10k configure   推荐字体安装 nerd  https://github.com/ryanoasis/nerd-fonts  1 2  git clone --depth=1 git@github.com:ryanoasis/nerd-fonts.git ./install   参考 powerlevel10k</description>
     </item>
     
     <item>
@@ -22,7 +40,7 @@
       <pubDate>Wed, 12 Jan 2022 23:59:49 +0800</pubDate>
       
       <guid>https://theseusf.github.io/posts/try/try_hugo/</guid>
-      <description>Install  1 2 3 4 5  # MacOS brew install hugo # Fedora dnf install hugo      latest release   https://github.com/gohugoio/hugo/releases  1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18  # for macos wget https://github.com/gohugoio/hugo/releases/download/v0.93.2/hugo_extended_0.93.2_macOS-64bit.tar.gz # for linux wget https://github.com/gohugoio/hugo/releases/download/v0.93.2/hugo_extended_0.93.2_Linux-64bit.tar.gz # 解压 tar -zxvf hugo_extended_0.93.2_macOS-64bit.tar.gz tar -zxvf hugo_extended_0.93.2_Linux-64bit.tar.gz # 创建软连接 ln -s /Users/zhou/Documents/app/hugo0.</description>
+      <description>Install 1 2 3 4 5  # MacOS brew install hugo # Fedora dnf install hugo   latest release  https://github.com/gohugoio/hugo/releases  1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18  # for macos wget https://github.com/gohugoio/hugo/releases/download/v0.93.2/hugo_extended_0.93.2_macOS-64bit.tar.gz # for linux wget https://github.com/gohugoio/hugo/releases/download/v0.93.2/hugo_extended_0.93.2_Linux-64bit.tar.gz # 解压 tar -zxvf hugo_extended_0.93.2_macOS-64bit.tar.gz tar -zxvf hugo_extended_0.93.2_Linux-64bit.tar.gz # 创建软连接 ln -s /Users/zhou/Documents/app/hugo0.93.2/hugo /usr/local/bin/hugo # 确认软连接 which hugo # 查看版本 hugo version   Theme 1 2 3 4 5 6  # try hogo-book theme git submodule add git@github.</description>
     </item>
     
   </channel>

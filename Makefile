@@ -5,11 +5,24 @@ a:
 	hugo server --minify -D -p 1313
 
 # generate site to the public folder
-.PHONY: b
-b:
+.PHONY: build
+build:
 	hugo
 
+# commit
+.PHONY: commit
+commit:
+	cd public
+	git add .
+	git commit -m "public"
+	git push
+
 # clean
-.PHONY: c
-c:
-	@-rm -rf public
+.PHONY: clean
+clean:
+	cd public
+	find . -maxdepth 1 -not -name .git -print -exec rm -rf {} +
+
+# public
+.PHONY: p
+p: clean build commit

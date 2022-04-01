@@ -12,7 +12,7 @@ draft: true
 # install
 sudo npm i super-tinypng -g
 
-# usage,在图片所在目录执行命令
+# usage, 在图片所在目录执行命令即可将整个文件夹下的图片进行压缩
 super-tinypng
 ```
 

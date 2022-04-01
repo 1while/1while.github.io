@@ -20,7 +20,7 @@ https://go.googlesource.com/
 
 ## 安装Golang Code Review
 ```bash
-# -u update, update & install
+# -u update, update & install to $GOPATH/bin
 go get -u golang.org/x/review/git-codereview
 
 # 验证
@@ -42,8 +42,16 @@ cd go/src
 /all.bash # 执行测试
 ```
 
+## tools
+```bash
+# go pls, Language Server Protocol
+go get golang.org/x/tools/gopls@latest
+go install -v github.com/ramya-rao-a/go-outline@latest 
+```
 
 
 # 参考
 * https://www.ixiqin.com/2021/08/21/how-to-become-golang-contributors/
 * https://pkg.go.dev/golang.org/x/review/git-codereview
+* https://golang.google.cn/doc/contribute
+* https://microsoft.github.io/language-server-protocol/

@@ -1,5 +1,5 @@
 ---
-title: "Try_systemctl"
+title: "Try systemctl"
 date: 2022-03-21T22:38:27+08:00
 draft: true
 ---

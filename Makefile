@@ -7,22 +7,20 @@ a:
 # generate site to the public folder
 .PHONY: build
 build:
+	@pwd
 	hugo
-
-# commit
-.PHONY: commit
-commit:
-	cd public
-	git add .
-	git commit -m "public"
-	git push
 
 # clean
 .PHONY: clean
 clean:
-	cd public
-	find . -maxdepth 1 -not -name .git -print -exec rm -rf {} +
+	@pwd
+	-cd public && find ./ -maxdepth 1 -not -name .git -print -exec rm -rf {} +
 
 # public
 .PHONY: p
-p: clean build commit
+p: clean build
+	@pwd
+	cd public && \
+	git add . && \
+	git commit -m "public" && \
+	git push

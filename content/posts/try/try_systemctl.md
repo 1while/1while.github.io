@@ -7,11 +7,14 @@ draft: true
 
 # unit管理
 ```bash
-
-
+# 重新加载服务
+sudo systemctl daemon-reload
 # 激活服务并设置为开机启动
-systemctl enable <service>
-
+sudo systemctl enable clashd
+# 启动服务
+sudo systemctl start clashd
+# 关闭服务
+sudo systemctl status clashd
 ```
 
 

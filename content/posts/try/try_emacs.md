@@ -6,7 +6,11 @@ draft: false
 
 # 安装
 ```bash
+# for fedora
 sudo dnf install emacs
+
+# for macos
+brew install emacs
 ```
 
 # 怎么退出emacs

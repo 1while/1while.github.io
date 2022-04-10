@@ -2,7 +2,7 @@ baseurl = "https://theseusf.github.io/"
 languageCode = "en-us"
 title = "周末杂货铺💤"
 theme = "hugo-tania"
-paginate = 10
+paginate = 30
 
 # disqusShortname = "https-hugo-tania-netlify-app"
 

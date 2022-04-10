@@ -1,20 +1,3 @@
-<head><style type="text/css">
-::-webkit-scrollbar {
-  width: 8px;
-  height: 8px;
-}
-::-webkit-scrollbar-thumb {
-  height: 40px;
-  background-color: #eee;
-  border-radius: 16px;
-  &:hover {
-    background-color: #ddd;
-  }
-}
-</style></head>
-<div style="position: fixed; right:5px;max-width:300px; overflow:auto; top: 100px; width: 10vw; bottom:50px">
-    {{ partial "toc.html" . }}
-</div>
 {{ define "main" }}
 <div class="container">
     <article>
@@ -41,7 +24,9 @@
             </div>
         </header>
     </article>
-
+    <aside>
+        {{ .TableOfContents }}
+    </aside>
     <div class="article-post">
     {{ .Content }}
     </div>

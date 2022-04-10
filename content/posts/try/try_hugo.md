@@ -91,3 +91,6 @@ $$ \varphi = 1+\frac{1} {1+\frac{1} {1+\frac{1} {1+\cdots} } } $$
 Block math:
 
 $$ \varphi = 1+\frac{1} {1+\frac{1} {1+\frac{1} {1+\cdots} } } $$
+
+# 参考
+* https://www.andbible.com/tags/hugo/

@@ -21,7 +21,7 @@ commit:
 .PHONY: clean
 clean:
 	echo "clean"
-	@-rm -rf public
+	#@-rm -rf public
 
 # public
 .PHONY: p

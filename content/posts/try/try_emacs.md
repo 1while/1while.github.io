@@ -13,6 +13,9 @@ sudo dnf install emacs
 ```bash
 # 先后输入组合键Ctrl+x, Ctrl+c
 C-x C-c
+
+# 关闭当前缓冲区
+C-x k Enter
 ```
 
 # 参考

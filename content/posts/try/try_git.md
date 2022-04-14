@@ -197,6 +197,19 @@ git submodule update
 git submodule foreach git pull 
 ```
 
+# 搜索历史记录脚本
+```bash
+search_str='some messages for search'
+search_path='./filename_or_pathname'
+
+commits=$(git log --pretty=format:"%h")
+while IFS= read -r commit
+do
+	echo $commit
+	git show $commit | grep "$search_str"
+done <<< $commits
+```
+
 # 参考
 * [git add](https://git-scm.com/docs/git-add)
 * [git log](https://git-scm.com/docs/git-log)

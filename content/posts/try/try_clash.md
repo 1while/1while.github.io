@@ -45,14 +45,14 @@ git config --global --unset https.proxy
 ```
 
 ## 白名单（没生效）
-```
+```bash
 $ vi config.yaml
 cfw-bypass:
   - '*.taobao.com'
   - '*.xiaohongshu.com'
 ```
 # 添加启动服务
-```
+```bash
 $ sudo vi /etc/systemd/system/clashd.service
 
 [Unit]

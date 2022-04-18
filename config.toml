@@ -7,6 +7,8 @@ paginate = 30
 # disqusShortname = "https-hugo-tania-netlify-app"
 
 [params]
+  toc = true
+  
   # Emoji will show before the blog title on site navbar.
   titleEmoji  = ""
 

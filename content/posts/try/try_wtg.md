@@ -5,12 +5,3 @@ draft: true
 ---
 
 
-# python2 http server
-```bash
-python
-```
-
-# python3 http server with port 12345
-```bash
-python -m http.server 12345
-```

@@ -7,8 +7,15 @@ a:
 # generate site to the public folder
 .PHONY: build
 build:
-	@pwd
 	hugo
+
+# commit
+.PHONY: commit
+commit:
+	cd public
+	git add .
+	git commit
+	git push
 
 # clean
 .PHONY: clean

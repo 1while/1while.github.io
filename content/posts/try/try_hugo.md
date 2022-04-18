@@ -16,28 +16,24 @@ katex: true
 
 # Install
 ```bash
-# MacOS
+# for MacOS
 brew install hugo
 
-# Fedora
+# for Fedora
 dnf install hugo
 ```
 
 # latest release
 * https://github.com/gohugoio/hugo/releases
 ```bash
-# for macos
-wget https://github.com/gohugoio/hugo/releases/download/v0.93.2/hugo_extended_0.93.2_macOS-64bit.tar.gz
-
-# for linux
+# download
 wget https://github.com/gohugoio/hugo/releases/download/v0.93.2/hugo_extended_0.93.2_Linux-64bit.tar.gz
 
 # 解压
-tar -zxvf hugo_extended_0.93.2_macOS-64bit.tar.gz
 tar -zxvf hugo_extended_0.93.2_Linux-64bit.tar.gz
 
 # 创建软连接
-ln -s /Users/zhou/Documents/app/hugo0.93.2/hugo /usr/local/bin/hugo
+ln -s /Users/Root/Documents/app/hugo0.93.2/hugo /usr/local/bin/hugo
 
 # 确认软连接
 which hugo
@@ -95,3 +91,6 @@ $$ \varphi = 1+\frac{1} {1+\frac{1} {1+\frac{1} {1+\cdots} } } $$
 Block math:
 
 $$ \varphi = 1+\frac{1} {1+\frac{1} {1+\frac{1} {1+\cdots} } } $$
+
+# 参考
+* https://www.andbible.com/tags/hugo/

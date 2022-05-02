@@ -44,10 +44,15 @@ ssh user@host 'mkdir -p .ssh && cat >> .ssh/authorized_keys' < ~/.ssh/id_rsa.pub
 
 # ssh config
 ```bash
+# 别名登录
+$ vi ~/.ssh/config
 Host host1
 HostName 192.168.0.123
 User username
 IdentityFile ~/.ssh/id_private
+
+# 登录
+ssh host1
 ```
 
 ## 通过config中设置的别名登录

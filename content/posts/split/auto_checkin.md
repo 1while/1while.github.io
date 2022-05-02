@@ -8,8 +8,8 @@ draft: true
 # 自动签到脚本
 ```checkin.sh
 #!/usr/bin/bash
-checkin_cookies=$(cat Cookies)
 checkin_folder=$(dirname $0)
+checkin_cookies=$(cat $checkin_folder/Cookies)
 checkin_success_msg='Please Try Tomorrow'
 checkin_file=$checkin_folder/$checkin_success_msg
 checkin_cookies=$(cat "$checkin_folder/Cookies")

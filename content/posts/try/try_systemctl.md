@@ -4,6 +4,11 @@ date: 2022-03-21T22:38:27+08:00
 draft: true
 ---
 
+# Systemd目录（目录有优先级，三个目录中有同名文件时只取最高优先级的目录）
+1. /etc/systemd/system：系统或用户自定义的配置文件
+2. /run/systemd/system：软件运行时生成的配置文件
+3. /usr/lib/systemd/system：系统或第三方软件安装时添加的配置文件。
+
 
 # unit管理
 ```bash

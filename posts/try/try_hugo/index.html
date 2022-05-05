@@ -108,7 +108,9 @@
             </div>
         </header>
     </article>
-
+    <aside>
+        <nav id="TableOfContents"></nav>
+    </aside>
     <div class="article-post">
     <h1 id="install">
     <a href="#install" class="anchor">
@@ -129,10 +131,10 @@
 </span><span class="lnt">5
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># MacOS</span>
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># for MacOS</span>
 </span></span><span class="line"><span class="cl">brew install hugo
 </span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="c1"># Fedora</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># for Fedora</span>
 </span></span><span class="line"><span class="cl">dnf install hugo
 </span></span></code></pre></td></tr></table>
 </div>
@@ -165,24 +167,16 @@
 </span><span class="lnt">12
 </span><span class="lnt">13
 </span><span class="lnt">14
-</span><span class="lnt">15
-</span><span class="lnt">16
-</span><span class="lnt">17
-</span><span class="lnt">18
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># for macos</span>
-</span></span><span class="line"><span class="cl">wget https://github.com/gohugoio/hugo/releases/download/v0.93.2/hugo_extended_0.93.2_macOS-64bit.tar.gz
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="c1"># for linux</span>
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># download</span>
 </span></span><span class="line"><span class="cl">wget https://github.com/gohugoio/hugo/releases/download/v0.93.2/hugo_extended_0.93.2_Linux-64bit.tar.gz
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="c1"># 解压</span>
-</span></span><span class="line"><span class="cl">tar -zxvf hugo_extended_0.93.2_macOS-64bit.tar.gz
 </span></span><span class="line"><span class="cl">tar -zxvf hugo_extended_0.93.2_Linux-64bit.tar.gz
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="c1"># 创建软连接</span>
-</span></span><span class="line"><span class="cl">ln -s /Users/zhou/Documents/app/hugo0.93.2/hugo /usr/local/bin/hugo
+</span></span><span class="line"><span class="cl">ln -s /Users/Root/Documents/app/hugo0.93.2/hugo /usr/local/bin/hugo
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="c1"># 确认软连接</span>
 </span></span><span class="line"><span class="cl">which hugo
@@ -302,6 +296,19 @@
 </div>
 </div><p>Block math:</p>
 <p>$$ \varphi = 1+\frac{1} {1+\frac{1} {1+\frac{1} {1+\cdots} } } $$</p>
+<h1 id="参考">
+    <a href="#%e5%8f%82%e8%80%83" class="anchor">
+        <svg class="icon" aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16">
+            <path fill-rule="evenodd"
+                d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z">
+            </path>
+        </svg>
+    </a>
+    参考
+</h1>
+<ul>
+<li><a href="https://www.andbible.com/tags/hugo/">https://www.andbible.com/tags/hugo/</a></li>
+</ul>
 
     </div>
 </div>
@@ -309,6 +316,11 @@
 <div class="container">
     
     <nav class="flex container suggested">
+        
+        <a rel="prev" href="/posts/try/try_emacs2/" title="Previous post (older)">
+            <span>Previous</span>
+            Surrive in emacs
+            </a>
         
         
         

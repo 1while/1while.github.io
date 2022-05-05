@@ -6,7 +6,22 @@
     <description>Recent content in Posts on 周末杂货铺💤</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 02 Apr 2022 02:32:58 +0800</lastBuildDate><atom:link href="https://vedbaek.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 05 May 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://vedbaek.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Surrive in emacs</title>
+      <link>https://vedbaek.github.io/posts/try/try_emacs2/</link>
+      <pubDate>Thu, 05 May 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://vedbaek.github.io/posts/try/try_emacs2/</guid>
+      <description>Org mode  fold/unfold   展开: tab 展开-全局: s-tab    movement  下一个标题: c-c c-n 下一个同级标题: c-c c-f
+ 上一个标题: c-c c-p 上一个同级标题: c-c c-b
+ 回到上层标题: c-c c-u
+  视图  只显示当前子树: c-c n s 显示全部子树: c-c n w
+    Exit  退出: c-x c-c 挂起: c-z
+  Movement:  上: c-p 下: c-n 前: c-f 后: c-b
+ 前-单词: m-f 后-单词: m-b</description>
+    </item>
+    
     <item>
       <title>Try vim</title>
       <link>https://vedbaek.github.io/posts/try/try_vim/</link>
@@ -50,21 +65,6 @@
       
       <guid>https://vedbaek.github.io/posts/try/try_hugo/</guid>
       <description>Install  1 2 3 4 5  # for MacOS brew install hugo # for Fedora dnf install hugo      latest release   https://github.com/gohugoio/hugo/releases  1 2 3 4 5 6 7 8 9 10 11 12 13 14  # download wget https://github.com/gohugoio/hugo/releases/download/v0.93.2/hugo_extended_0.93.2_Linux-64bit.tar.gz # 解压 tar -zxvf hugo_extended_0.93.2_Linux-64bit.tar.gz # 创建软连接 ln -s /Users/Root/Documents/app/hugo0.93.2/hugo /usr/local/bin/hugo # 确认软连接 which hugo # 查看版本 hugo version      Theme  1 2 3 4 5 6  # try hogo-book theme git submodule add git@github.</description>
-    </item>
-    
-    <item>
-      <title>Surrive in emacs</title>
-      <link>https://vedbaek.github.io/posts/try/try_emacs2/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://vedbaek.github.io/posts/try/try_emacs2/</guid>
-      <description>Org mode  fold/unfold   展开: tab 展开-全局: s-tab    movement  下一个标题: c-c c-n 下一个同级标题: c-c c-f
- 上一个标题: c-c c-p 上一个同级标题: c-c c-b
- 回到上层标题: c-c c-u
-  视图  只显示当前子树: c-c n s 显示全部子树: c-c n w
-    Exit  退出: c-x c-c 挂起: c-z
-  Movement:  上: c-p 下: c-n 前: c-f 后: c-b
- 前-单词: m-f 后-单词: m-b</description>
     </item>
     
   </channel>

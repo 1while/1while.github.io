@@ -3,11 +3,14 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://vedbaek.github.io/</loc>
-    <lastmod>2022-04-02T02:32:58+08:00</lastmod>
+    <lastmod>2022-05-05T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url><url>
     <loc>https://vedbaek.github.io/posts/</loc>
-    <lastmod>2022-04-02T02:32:58+08:00</lastmod>
+    <lastmod>2022-05-05T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://vedbaek.github.io/posts/try/try_emacs2/</loc>
+    <lastmod>2022-05-05T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://vedbaek.github.io/posts/try/try_vim/</loc>
     <lastmod>2022-04-02T02:32:58+08:00</lastmod>
@@ -37,7 +40,5 @@
     <lastmod>2022-01-07T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://vedbaek.github.io/articles/</loc>
-  </url><url>
-    <loc>https://vedbaek.github.io/posts/try/try_emacs2/</loc>
   </url>
 </urlset>

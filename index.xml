@@ -5,7 +5,155 @@
     <description>Recent content on 周末杂货铺💤</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 02 Apr 2022 02:32:58 +0800</lastBuildDate><atom:link href="https://vedbaek.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 05 May 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://vedbaek.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+    <title>Surrive in emacs</title>
+    <link>https://vedbaek.github.io/posts/try/try_emacs2/</link>
+    <pubDate>Thu, 05 May 2022 00:00:00 +0000</pubDate>
+    
+    <guid>https://vedbaek.github.io/posts/try/try_emacs2/</guid>
+    <description>
+        
+&lt;div id=&#34;outline-container-headline-1&#34; class=&#34;outline-2&#34;&gt;
+&lt;h2 id=&#34;headline-1&#34;&gt;
+Org mode
+&lt;/h2&gt;
+&lt;div id=&#34;outline-text-headline-1&#34; class=&#34;outline-text-2&#34;&gt;
+&lt;div id=&#34;outline-container-headline-2&#34; class=&#34;outline-3&#34;&gt;
+&lt;h3 id=&#34;headline-2&#34;&gt;
+fold/unfold
+&lt;/h3&gt;
+&lt;div id=&#34;outline-text-headline-2&#34; class=&#34;outline-text-3&#34;&gt;
+&lt;ul&gt;
+&lt;li&gt;展开: tab&lt;/li&gt;
+&lt;li&gt;展开-全局: s-tab&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&#34;outline-container-headline-3&#34; class=&#34;outline-3&#34;&gt;
+&lt;h3 id=&#34;headline-3&#34;&gt;
+movement
+&lt;/h3&gt;
+&lt;div id=&#34;outline-text-headline-3&#34; class=&#34;outline-text-3&#34;&gt;
+&lt;p&gt;下一个标题: c-c c-n
+下一个同级标题: c-c c-f&lt;/p&gt;
+&lt;p&gt;
+上一个标题: c-c c-p
+上一个同级标题: c-c c-b&lt;/p&gt;
+&lt;p&gt;
+回到上层标题: c-c c-u&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&#34;outline-container-headline-4&#34; class=&#34;outline-3&#34;&gt;
+&lt;h3 id=&#34;headline-4&#34;&gt;
+视图
+&lt;/h3&gt;
+&lt;div id=&#34;outline-text-headline-4&#34; class=&#34;outline-text-3&#34;&gt;
+&lt;p&gt;只显示当前子树: c-c n s
+   显示全部子树: c-c n w&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&#34;outline-container-headline-5&#34; class=&#34;outline-2&#34;&gt;
+&lt;h2 id=&#34;headline-5&#34;&gt;
+Exit
+&lt;/h2&gt;
+&lt;div id=&#34;outline-text-headline-5&#34; class=&#34;outline-text-2&#34;&gt;
+&lt;p&gt;退出: c-x c-c
+挂起: c-z&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&#34;outline-container-headline-6&#34; class=&#34;outline-2&#34;&gt;
+&lt;h2 id=&#34;headline-6&#34;&gt;
+Movement:
+&lt;/h2&gt;
+&lt;div id=&#34;outline-text-headline-6&#34; class=&#34;outline-text-2&#34;&gt;
+&lt;p&gt;上: c-p
+下: c-n
+前: c-f
+后: c-b&lt;/p&gt;
+&lt;p&gt;
+前-单词: m-f
+后-单词: m-b&lt;/p&gt;
+&lt;p&gt;
+文章开始: m-&amp;lt;
+文章末尾: m-&amp;gt;&lt;/p&gt;
+&lt;p&gt;
+上-滚屏: c-v
+下-滚屏: m-v&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&#34;outline-container-headline-7&#34; class=&#34;outline-2&#34;&gt;
+&lt;h2 id=&#34;headline-7&#34;&gt;
+Edit:
+&lt;/h2&gt;
+&lt;div id=&#34;outline-text-headline-7&#34; class=&#34;outline-text-2&#34;&gt;
+&lt;div id=&#34;outline-container-headline-8&#34; class=&#34;outline-3&#34;&gt;
+&lt;h3 id=&#34;headline-8&#34;&gt;
+new/save
+&lt;/h3&gt;
+&lt;div id=&#34;outline-text-headline-8&#34; class=&#34;outline-text-3&#34;&gt;
+&lt;ul&gt;
+&lt;li&gt;新建: c-x c-f&lt;/li&gt;
+&lt;li&gt;保存: c-x c-s&lt;/li&gt;
+&lt;li&gt;只读: c-x c-q&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&#34;outline-container-headline-9&#34; class=&#34;outline-3&#34;&gt;
+&lt;h3 id=&#34;headline-9&#34;&gt;
+undo/redo
+&lt;/h3&gt;
+&lt;div id=&#34;outline-text-headline-9&#34; class=&#34;outline-text-3&#34;&gt;
+&lt;p&gt;撤销上一条指令:  c-x u, c-_, c-/
+重做: c-f + undo&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&#34;outline-container-headline-10&#34; class=&#34;outline-3&#34;&gt;
+&lt;h3 id=&#34;headline-10&#34;&gt;
+cut/paste
+&lt;/h3&gt;
+&lt;div id=&#34;outline-text-headline-10&#34; class=&#34;outline-text-3&#34;&gt;
+&lt;p&gt;删-字符: c-d
+删-单词: m-d
+删-行: c-k
+删-段落: m-k
+光标后增加一行: c-o&lt;/p&gt;
+&lt;p&gt;
+粘贴: c-y
+标记: c-space&lt;/p&gt;
+&lt;p&gt;
+行号-显示: m-x display-line-numbers-mode
+行号-跳转: m-g g&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&#34;outline-container-headline-11&#34; class=&#34;outline-2&#34;&gt;
+&lt;h2 id=&#34;headline-11&#34;&gt;
+buffer
+&lt;/h2&gt;
+&lt;div id=&#34;outline-text-headline-11&#34; class=&#34;outline-text-2&#34;&gt;
+&lt;p&gt;关闭: c-x k&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&#34;outline-container-headline-12&#34; class=&#34;outline-2&#34;&gt;
+&lt;h2 id=&#34;headline-12&#34;&gt;
+window
+&lt;/h2&gt;
+&lt;div id=&#34;outline-text-headline-12&#34; class=&#34;outline-text-2&#34;&gt;
+&lt;p&gt;关闭-当前: c-x 0
+关闭-其它: c-x 1
+分屏-上下: c-x 2
+分屏-左右: c-x 3
+跳转: c-x o&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+    </description>
+    </item>
+    
     <item>
     <title>Try vim</title>
     <link>https://vedbaek.github.io/posts/try/try_vim/</link>
@@ -751,154 +899,6 @@ Failed at step EXEC spawning &amp;hellip; Permission denied&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;https://www.andbible.com/tags/hugo/&#34;&gt;https://www.andbible.com/tags/hugo/&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
-
-    </description>
-    </item>
-    
-    <item>
-    <title>Surrive in emacs</title>
-    <link>https://vedbaek.github.io/posts/try/try_emacs2/</link>
-    <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-    
-    <guid>https://vedbaek.github.io/posts/try/try_emacs2/</guid>
-    <description>
-        
-&lt;div id=&#34;outline-container-headline-1&#34; class=&#34;outline-2&#34;&gt;
-&lt;h2 id=&#34;headline-1&#34;&gt;
-Org mode
-&lt;/h2&gt;
-&lt;div id=&#34;outline-text-headline-1&#34; class=&#34;outline-text-2&#34;&gt;
-&lt;div id=&#34;outline-container-headline-2&#34; class=&#34;outline-3&#34;&gt;
-&lt;h3 id=&#34;headline-2&#34;&gt;
-fold/unfold
-&lt;/h3&gt;
-&lt;div id=&#34;outline-text-headline-2&#34; class=&#34;outline-text-3&#34;&gt;
-&lt;ul&gt;
-&lt;li&gt;展开: tab&lt;/li&gt;
-&lt;li&gt;展开-全局: s-tab&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div id=&#34;outline-container-headline-3&#34; class=&#34;outline-3&#34;&gt;
-&lt;h3 id=&#34;headline-3&#34;&gt;
-movement
-&lt;/h3&gt;
-&lt;div id=&#34;outline-text-headline-3&#34; class=&#34;outline-text-3&#34;&gt;
-&lt;p&gt;下一个标题: c-c c-n
-下一个同级标题: c-c c-f&lt;/p&gt;
-&lt;p&gt;
-上一个标题: c-c c-p
-上一个同级标题: c-c c-b&lt;/p&gt;
-&lt;p&gt;
-回到上层标题: c-c c-u&lt;/p&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div id=&#34;outline-container-headline-4&#34; class=&#34;outline-3&#34;&gt;
-&lt;h3 id=&#34;headline-4&#34;&gt;
-视图
-&lt;/h3&gt;
-&lt;div id=&#34;outline-text-headline-4&#34; class=&#34;outline-text-3&#34;&gt;
-&lt;p&gt;只显示当前子树: c-c n s
-   显示全部子树: c-c n w&lt;/p&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div id=&#34;outline-container-headline-5&#34; class=&#34;outline-2&#34;&gt;
-&lt;h2 id=&#34;headline-5&#34;&gt;
-Exit
-&lt;/h2&gt;
-&lt;div id=&#34;outline-text-headline-5&#34; class=&#34;outline-text-2&#34;&gt;
-&lt;p&gt;退出: c-x c-c
-挂起: c-z&lt;/p&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div id=&#34;outline-container-headline-6&#34; class=&#34;outline-2&#34;&gt;
-&lt;h2 id=&#34;headline-6&#34;&gt;
-Movement:
-&lt;/h2&gt;
-&lt;div id=&#34;outline-text-headline-6&#34; class=&#34;outline-text-2&#34;&gt;
-&lt;p&gt;上: c-p
-下: c-n
-前: c-f
-后: c-b&lt;/p&gt;
-&lt;p&gt;
-前-单词: m-f
-后-单词: m-b&lt;/p&gt;
-&lt;p&gt;
-文章开始: m-&amp;lt;
-文章末尾: m-&amp;gt;&lt;/p&gt;
-&lt;p&gt;
-上-滚屏: c-v
-下-滚屏: m-v&lt;/p&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div id=&#34;outline-container-headline-7&#34; class=&#34;outline-2&#34;&gt;
-&lt;h2 id=&#34;headline-7&#34;&gt;
-Edit:
-&lt;/h2&gt;
-&lt;div id=&#34;outline-text-headline-7&#34; class=&#34;outline-text-2&#34;&gt;
-&lt;div id=&#34;outline-container-headline-8&#34; class=&#34;outline-3&#34;&gt;
-&lt;h3 id=&#34;headline-8&#34;&gt;
-new/save
-&lt;/h3&gt;
-&lt;div id=&#34;outline-text-headline-8&#34; class=&#34;outline-text-3&#34;&gt;
-&lt;ul&gt;
-&lt;li&gt;新建: c-x c-f&lt;/li&gt;
-&lt;li&gt;保存: c-x c-s&lt;/li&gt;
-&lt;li&gt;只读: c-x c-q&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div id=&#34;outline-container-headline-9&#34; class=&#34;outline-3&#34;&gt;
-&lt;h3 id=&#34;headline-9&#34;&gt;
-undo/redo
-&lt;/h3&gt;
-&lt;div id=&#34;outline-text-headline-9&#34; class=&#34;outline-text-3&#34;&gt;
-&lt;p&gt;撤销上一条指令:  c-x u, c-_, c-/
-重做: c-f + undo&lt;/p&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div id=&#34;outline-container-headline-10&#34; class=&#34;outline-3&#34;&gt;
-&lt;h3 id=&#34;headline-10&#34;&gt;
-cut/paste
-&lt;/h3&gt;
-&lt;div id=&#34;outline-text-headline-10&#34; class=&#34;outline-text-3&#34;&gt;
-&lt;p&gt;删-字符: c-d
-删-单词: m-d
-删-行: c-k
-删-段落: m-k
-光标后增加一行: c-o&lt;/p&gt;
-&lt;p&gt;
-粘贴: c-y
-标记: c-space&lt;/p&gt;
-&lt;p&gt;
-行号-显示: m-x display-line-numbers-mode
-行号-跳转: m-g g&lt;/p&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div id=&#34;outline-container-headline-11&#34; class=&#34;outline-2&#34;&gt;
-&lt;h2 id=&#34;headline-11&#34;&gt;
-buffer
-&lt;/h2&gt;
-&lt;div id=&#34;outline-text-headline-11&#34; class=&#34;outline-text-2&#34;&gt;
-&lt;p&gt;关闭: c-x k&lt;/p&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div id=&#34;outline-container-headline-12&#34; class=&#34;outline-2&#34;&gt;
-&lt;h2 id=&#34;headline-12&#34;&gt;
-window
-&lt;/h2&gt;
-&lt;div id=&#34;outline-text-headline-12&#34; class=&#34;outline-text-2&#34;&gt;
-&lt;p&gt;关闭-当前: c-x 0
-关闭-其它: c-x 1
-分屏-上下: c-x 2
-分屏-左右: c-x 3
-跳转: c-x o&lt;/p&gt;
-&lt;/div&gt;
-&lt;/div&gt;
 
     </description>
     </item>

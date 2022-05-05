@@ -2,7 +2,7 @@
 # run server local
 .PHONY: a
 a:
-	hugo server --minify -D -p 1313
+	hugo server --minify -D -v -p 1313
 
 # generate site to the public folder
 .PHONY: build

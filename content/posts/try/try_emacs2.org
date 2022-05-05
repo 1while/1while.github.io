@@ -1,0 +1,77 @@
+#+title: Surrive in emacs
+
+#+date: 2022-05-05
+
+
+* Org mode
+** fold/unfold
+- 展开: tab
+- 展开-全局: s-tab
+
+** movement
+下一个标题: c-c c-n
+下一个同级标题: c-c c-f
+
+上一个标题: c-c c-p
+上一个同级标题: c-c c-b
+
+回到上层标题: c-c c-u
+
+** 视图
+   只显示当前子树: c-c n s
+   显示全部子树: c-c n w
+
+* Exit
+退出: c-x c-c
+挂起: c-z
+
+
+* Movement:
+上: c-p
+下: c-n
+前: c-f
+后: c-b
+
+前-单词: m-f
+后-单词: m-b
+
+文章开始: m-<
+文章末尾: m->
+
+上-滚屏: c-v
+下-滚屏: m-v
+
+* Edit:
+
+** new/save
++ 新建: c-x c-f
++ 保存: c-x c-s
++ 只读: c-x c-q
+
+** undo/redo
+撤销上一条指令:  c-x u, c-_, c-/
+重做: c-f + undo
+
+** cut/paste
+删-字符: c-d
+删-单词: m-d
+删-行: c-k
+删-段落: m-k
+光标后增加一行: c-o
+
+粘贴: c-y
+标记: c-space
+
+行号-显示: m-x display-line-numbers-mode
+行号-跳转: m-g g
+
+* buffer
+关闭: c-x k
+
+* window
+关闭-当前: c-x 0
+关闭-其它: c-x 1
+分屏-上下: c-x 2
+分屏-左右: c-x 3
+跳转: c-x o
+

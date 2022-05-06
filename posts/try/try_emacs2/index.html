@@ -139,6 +139,26 @@
 </li>
 <li><a href="#headline-12">window</a>
 </li>
+<li><a href="#headline-13">insert and replace</a>
+</li>
+<li><a href="#headline-14">multiline edit</a>
+<ul>
+<li><a href="#headline-15">多行指定列插入前缀字符串</a>
+</li>
+<li><a href="#headline-16">多行增加自增数字前缀</a>
+</li>
+<li><a href="#headline-17">多行指定列剪切字符串(可用于yank粘贴, 或者使用delete-rectangle删除)</a>
+</li>
+<li><a href="#headline-18">框选模式删除</a>
+</li>
+<li><a href="#headline-19">框选模式替换</a>
+</li>
+<li><a href="#headline-20">框选模式插入</a>
+</li>
+</ul>
+</li>
+<li><a href="#headline-21">reference</a>
+</li>
 </ul>
 </nav>
     </aside>
@@ -165,13 +185,13 @@ fold/unfold
 movement
 </h3>
 <div id="outline-text-headline-3" class="outline-text-3">
-<p>下一个标题: c-c c-n
-下一个同级标题: c-c c-f</p>
-<p>
-上一个标题: c-c c-p
-上一个同级标题: c-c c-b</p>
-<p>
-回到上层标题: c-c c-u</p>
+<ul>
+<li>下一个标题: c-c c-n</li>
+<li>下一个同级标题: c-c c-f</li>
+<li>上一个标题: c-c c-p</li>
+<li>上一个同级标题: c-c c-b</li>
+<li>回到上层标题: c-c c-u</li>
+</ul>
 </div>
 </div>
 <div id="outline-container-headline-4" class="outline-3">
@@ -179,8 +199,10 @@ movement
 视图
 </h3>
 <div id="outline-text-headline-4" class="outline-text-3">
-<p>只显示当前子树: c-c n s
-   显示全部子树: c-c n w</p>
+<ul>
+<li>只显示当前子树: c-c n s</li>
+<li>显示全部子树: c-c n w</li>
+</ul>
 </div>
 </div>
 </div>
@@ -190,8 +212,10 @@ movement
 Exit
 </h2>
 <div id="outline-text-headline-5" class="outline-text-2">
-<p>退出: c-x c-c
-挂起: c-z</p>
+<ul>
+<li>退出: c-x c-c</li>
+<li>挂起: c-z</li>
+</ul>
 </div>
 </div>
 <div id="outline-container-headline-6" class="outline-2">
@@ -199,19 +223,18 @@ Exit
 Movement:
 </h2>
 <div id="outline-text-headline-6" class="outline-text-2">
-<p>上: c-p
-下: c-n
-前: c-f
-后: c-b</p>
-<p>
-前-单词: m-f
-后-单词: m-b</p>
-<p>
-文章开始: m-&lt;
-文章末尾: m-&gt;</p>
-<p>
-上-滚屏: c-v
-下-滚屏: m-v</p>
+<ul>
+<li>上: c-p</li>
+<li>下: c-n</li>
+<li>前: c-f</li>
+<li>后: c-b</li>
+<li>前-单词: m-f</li>
+<li>后-单词: m-b</li>
+<li>文章开始: m-&lt;</li>
+<li>文章末尾: m-&gt;</li>
+<li>上-滚屏: c-v</li>
+<li>下-滚屏: m-v</li>
+</ul>
 </div>
 </div>
 <div id="outline-container-headline-7" class="outline-2">
@@ -236,8 +259,10 @@ new/save
 undo/redo
 </h3>
 <div id="outline-text-headline-9" class="outline-text-3">
-<p>撤销上一条指令:  c-x u, c-_, c-/
-重做: c-f + undo</p>
+<ul>
+<li>撤销上一条指令:  c-x u, c-_, c-/</li>
+<li>重做: c-f + undo</li>
+</ul>
 </div>
 </div>
 <div id="outline-container-headline-10" class="outline-3">
@@ -245,17 +270,20 @@ undo/redo
 cut/paste
 </h3>
 <div id="outline-text-headline-10" class="outline-text-3">
-<p>删-字符: c-d
-删-单词: m-d
-删-行: c-k
-删-段落: m-k
-光标后增加一行: c-o</p>
-<p>
-粘贴: c-y
-标记: c-space</p>
-<p>
-行号-显示: m-x display-line-numbers-mode
-行号-跳转: m-g g</p>
+<ul>
+<li>删-字符: c-d</li>
+<li>删-单词: m-d</li>
+<li>删-行: c-k</li>
+<li>删-段落: m-k</li>
+<li>光标后增加一行: c-o</li>
+<li>标记: c-space</li>
+<li>剪切: c-w</li>
+<li>复制: m-w</li>
+<li>粘贴: c-y</li>
+<li>粘贴-上一个: m-y (需要先执行c-y)</li>
+<li>行号-显示: m-x display-line-numbers-mode</li>
+<li>行号-跳转: m-g g</li>
+</ul>
 </div>
 </div>
 </div>
@@ -265,7 +293,9 @@ cut/paste
 buffer
 </h2>
 <div id="outline-text-headline-11" class="outline-text-2">
-<p>关闭: c-x k</p>
+<ul>
+<li>关闭: c-x k</li>
+</ul>
 </div>
 </div>
 <div id="outline-container-headline-12" class="outline-2">
@@ -273,11 +303,122 @@ buffer
 window
 </h2>
 <div id="outline-text-headline-12" class="outline-text-2">
-<p>关闭-当前: c-x 0
-关闭-其它: c-x 1
-分屏-上下: c-x 2
-分屏-左右: c-x 3
-跳转: c-x o</p>
+<ul>
+<li>关闭-当前: c-x 0</li>
+<li>关闭-其它: c-x 1</li>
+<li>分屏-上下: c-x 2</li>
+<li>分屏-左右: c-x 3</li>
+<li>跳转: c-x o</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-headline-13" class="outline-2">
+<h2 id="headline-13">
+insert and replace
+</h2>
+<div id="outline-text-headline-13" class="outline-text-2">
+<ul>
+<li>插入/覆盖模式切换: m-x overwrite-mode</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-headline-14" class="outline-2">
+<h2 id="headline-14">
+multiline edit
+</h2>
+<div id="outline-text-headline-14" class="outline-text-2">
+<div id="outline-container-headline-15" class="outline-3">
+<h3 id="headline-15">
+多行指定列插入前缀字符串
+</h3>
+<div id="outline-text-headline-15" class="outline-text-3">
+<ol>
+<li>移动到第一行要插入前缀的列</li>
+<li>设置标记开始: c-space</li>
+<li>移动到最后一行</li>
+<li>设置模式: m-x string-rectangle</li>
+<li>输入要插入的字符</li>
+</ol>
+</div>
+</div>
+<div id="outline-container-headline-16" class="outline-3">
+<h3 id="headline-16">
+多行增加自增数字前缀
+</h3>
+<div id="outline-text-headline-16" class="outline-text-3">
+<ol>
+<li>移动到第一行要插入数字前缀的列</li>
+<li>设置标记开始: c-space</li>
+<li>移动到最后一列</li>
+<li>设置模式: m-x rectangle-number-lines</li>
+</ol>
+</div>
+</div>
+<div id="outline-container-headline-17" class="outline-3">
+<h3 id="headline-17">
+多行指定列剪切字符串(可用于yank粘贴, 或者使用delete-rectangle删除)
+</h3>
+<div id="outline-text-headline-17" class="outline-text-3">
+<ol>
+<li>移动到第一行要删除的起始列</li>
+<li>设置标记开始: c-space</li>
+<li>移动到最后一行要删除的列的后一列</li>
+<li>设置模式: m-x kill-rectangle</li>
+</ol>
+</div>
+</div>
+<div id="outline-container-headline-18" class="outline-3">
+<h3 id="headline-18">
+框选模式删除
+</h3>
+<div id="outline-text-headline-18" class="outline-text-3">
+<ol>
+<li>设置框选标记: c-x space</li>
+<li>移动光标进行框选</li>
+<li>删除被框选的列: delete/backspace/c-w</li>
+</ol>
+</div>
+</div>
+<div id="outline-container-headline-19" class="outline-3">
+<h3 id="headline-19">
+框选模式替换
+</h3>
+<div id="outline-text-headline-19" class="outline-text-3">
+<ol>
+<li>设置框选标记: c-x space</li>
+<li>移动光标进行框选</li>
+<li>设置替换模式: m-x replace-rectangle</li>
+<li>输入要替换的字符串</li>
+</ol>
+</div>
+</div>
+<div id="outline-container-headline-20" class="outline-3">
+<h3 id="headline-20">
+框选模式插入
+</h3>
+<div id="outline-text-headline-20" class="outline-text-3">
+<ol>
+<li>设置框选标记: c-x space</li>
+<li>移动光标进行框选</li>
+<li>设置插入模式: m-x string-rectangle</li>
+<li>输入要插入的字符串</li>
+</ol>
+</div>
+</div>
+</div>
+</div>
+<div id="outline-container-headline-21" class="outline-2">
+<h2 id="headline-21">
+reference
+</h2>
+<div id="outline-text-headline-21" class="outline-text-2">
+<ul>
+<li><a href="https://www.gnu.org/software/emacs/manual/html_node/efaq/Overwrite-mode.html">Overwrite-mode</a></li>
+<li><a href="http://xahlee.info/emacs/emacs/emacs_string-rectangle_ascii-art.html">Edit Column Text, Rectangle Commands</a></li>
+<li><a href="https://www.gnu.org/software/emacs/refcards/pdf/refcard.pdf">GNU Emacs Reference Card</a></li>
+<li><a href="https://www.cnblogs.com/open_source/archive/2011/07/17/2108747.html#sec-1-2">Org-mode 简明手册</a></li>
+<li><a href="http://www.rgrjr.com/emacs/emacs_cheat.html">Emacs Cheat Sheet</a></li>
+</ul>
 </div>
 </div>
 

@@ -9,37 +9,37 @@
 - 展开-全局: s-tab
 
 ** movement
-下一个标题: c-c c-n
-下一个同级标题: c-c c-f
+- 下一个标题: c-c c-n
+- 下一个同级标题: c-c c-f
 
-上一个标题: c-c c-p
-上一个同级标题: c-c c-b
+- 上一个标题: c-c c-p
+- 上一个同级标题: c-c c-b
 
-回到上层标题: c-c c-u
+- 回到上层标题: c-c c-u
 
 ** 视图
-   只显示当前子树: c-c n s
-   显示全部子树: c-c n w
+- 只显示当前子树: c-c n s
+- 显示全部子树: c-c n w
 
 * Exit
-退出: c-x c-c
-挂起: c-z
+- 退出: c-x c-c
+- 挂起: c-z
 
 
 * Movement:
-上: c-p
-下: c-n
-前: c-f
-后: c-b
-
-前-单词: m-f
-后-单词: m-b
-
-文章开始: m-<
-文章末尾: m->
-
-上-滚屏: c-v
-下-滚屏: m-v
+- 上: c-p
+- 下: c-n
+- 前: c-f
+- 后: c-b
+ 
+- 前-单词: m-f
+- 后-单词: m-b
+ 
+- 文章开始: m-<
+- 文章末尾: m->
+ 
+- 上-滚屏: c-v
+- 下-滚屏: m-v
 
 * Edit:
 
@@ -49,29 +49,80 @@
 + 只读: c-x c-q
 
 ** undo/redo
-撤销上一条指令:  c-x u, c-_, c-/
-重做: c-f + undo
+- 撤销上一条指令:  c-x u, c-_, c-/
+- 重做: c-f + undo
 
 ** cut/paste
-删-字符: c-d
-删-单词: m-d
-删-行: c-k
-删-段落: m-k
-光标后增加一行: c-o
+- 删-字符: c-d
+- 删-单词: m-d
+- 删-行: c-k
+- 删-段落: m-k
+- 光标后增加一行: c-o
 
-粘贴: c-y
-标记: c-space
+- 标记: c-space
+- 剪切: c-w
+- 复制: m-w
+- 粘贴: c-y
+- 粘贴-上一个: m-y (需要先执行c-y)
 
-行号-显示: m-x display-line-numbers-mode
-行号-跳转: m-g g
+- 行号-显示: m-x display-line-numbers-mode
+- 行号-跳转: m-g g
 
 * buffer
-关闭: c-x k
+- 关闭: c-x k
 
 * window
-关闭-当前: c-x 0
-关闭-其它: c-x 1
-分屏-上下: c-x 2
-分屏-左右: c-x 3
-跳转: c-x o
+- 关闭-当前: c-x 0
+- 关闭-其它: c-x 1
+- 分屏-上下: c-x 2
+- 分屏-左右: c-x 3
+- 跳转: c-x o
 
+* insert and replace
+- 插入/覆盖模式切换: m-x overwrite-mode
+
+* multiline edit
+
+** 多行指定列插入前缀字符串
+1. 移动到第一行要插入前缀的列
+2. 设置标记开始: c-space
+3. 移动到最后一行
+4. 设置模式: m-x string-rectangle
+5. 输入要插入的字符
+
+** 多行增加自增数字前缀
+1. 移动到第一行要插入数字前缀的列
+2. 设置标记开始: c-space
+3. 移动到最后一列
+4. 设置模式: m-x rectangle-number-lines
+
+** 多行指定列剪切字符串(可用于yank粘贴, 或者使用delete-rectangle删除)
+1. 移动到第一行要删除的起始列
+2. 设置标记开始: c-space
+3. 移动到最后一行要删除的列的后一列
+4. 设置模式: m-x kill-rectangle
+
+** 框选模式删除
+1. 设置框选标记: c-x space
+2. 移动光标进行框选
+3. 删除被框选的列: delete/backspace/c-w
+
+** 框选模式替换
+1. 设置框选标记: c-x space
+2. 移动光标进行框选
+3. 设置替换模式: m-x replace-rectangle
+4. 输入要替换的字符串
+
+** 框选模式插入
+1. 设置框选标记: c-x space
+2. 移动光标进行框选
+3. 设置插入模式: m-x string-rectangle
+4. 输入要插入的字符串
+
+
+* reference
+- [[https://www.gnu.org/software/emacs/manual/html_node/efaq/Overwrite-mode.html][Overwrite-mode]]
+- [[http://xahlee.info/emacs/emacs/emacs_string-rectangle_ascii-art.html][Edit Column Text, Rectangle Commands]]
+- [[https://www.gnu.org/software/emacs/refcards/pdf/refcard.pdf][GNU Emacs Reference Card]]
+- [[https://www.cnblogs.com/open_source/archive/2011/07/17/2108747.html#sec-1-2][Org-mode 简明手册]]
+- [[http://www.rgrjr.com/emacs/emacs_cheat.html][Emacs Cheat Sheet]]

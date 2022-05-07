@@ -96,16 +96,6 @@ curl cip.cc
 curl ipinfo.io
 ```
 
-# glados签到
-```bash
-curl -k \
--H "Accept: application/json, text/plain, */*" \
--H "Content-Type: application/json;charset=utf-8" \
--H "cookie: _ga=GA1.2.58942149.1646152313; koa:sess=eyJ1c2VySWQiOjEzNzQ0MCwiX2V4cGlyZSI6MTY3MjA3MjUwNTUyNSwiX21heEFnZSI6MjU5MjAwMDAwMDB9; koa:sess.sig=9RyyYB5hrzso_s42mjOAlVcXQAI; _gid=GA1.2.1761327286.1649942988; _gat_gtag_UA_104464600_2=1" \
--d '{"token":"glados_network"}' \
--X POST https://glados.rocks/api/user/checkin
-```
-
 
 # 参考
 * https://glados.one/console/clash

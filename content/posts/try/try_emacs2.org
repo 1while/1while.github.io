@@ -3,24 +3,6 @@
 #+date: 2022-05-05
 
 
-* Org mode
-** fold/unfold
-- 展开: tab
-- 展开-全局: s-tab
-
-** movement
-- 下一个标题: c-c c-n
-- 下一个同级标题: c-c c-f
-
-- 上一个标题: c-c c-p
-- 上一个同级标题: c-c c-b
-
-- 回到上层标题: c-c c-u
-
-** 视图
-- 只显示当前子树: c-c n s
-- 显示全部子树: c-c n w
-
 * Exit
 - 退出: c-x c-c
 - 挂起: c-z
@@ -49,7 +31,7 @@
 + 只读: c-x c-q
 
 ** undo/redo
-- 撤销上一条指令:  c-x u, c-_, c-/
+- 撤销上一条指令: c-/
 - 重做: c-f + undo
 
 ** cut/paste
@@ -65,7 +47,7 @@
 - 粘贴: c-y
 - 粘贴-上一个: m-y (需要先执行c-y)
 
-- 行号-显示: m-x display-line-numbers-mode
+- 行号-显示: m-x global-display-line-numbers-mode
 - 行号-跳转: m-g g
 
 * buffer
@@ -80,6 +62,10 @@
 
 * insert and replace
 - 插入/覆盖模式切换: m-x overwrite-mode
+
+* search
+- 向后搜索/继续向后搜索: c-s
+- 向前搜索/继续向前搜索: c-r
 
 * multiline edit
 
@@ -119,6 +105,24 @@
 3. 设置插入模式: m-x string-rectangle
 4. 输入要插入的字符串
 
+
+* Org mode
+** fold/unfold
+- 展开: tab
+- 展开-全局: s-tab
+
+** movement
+- 下一个标题: c-c c-n
+- 下一个同级标题: c-c c-f
+
+- 上一个标题: c-c c-p
+- 上一个同级标题: c-c c-b
+
+- 回到上层标题: c-c c-u
+
+** 视图
+- 只显示当前子树: c-c n s
+- 显示全部子树: c-c n w
 
 * reference
 - [[https://www.gnu.org/software/emacs/manual/html_node/efaq/Overwrite-mode.html][Overwrite-mode]]

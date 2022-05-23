@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="en-us">
+    
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="theme-color" content="dark">
+    <title>Surrive in emacs | 周末杂货铺💤</title>
+
+    
+    
+    
+    <meta property="og:site_name" content="周末杂货铺💤" />
+    <meta property="og:title" content="Surrive in emacs | 周末杂货铺💤"/>
+    <meta itemprop="name" content="Surrive in emacs | 周末杂货铺💤" />
+    <meta name="twitter:title" content="Surrive in emacs | 周末杂货铺💤" />
+    <meta name="application-name" content="Surrive in emacs | 周末杂货铺💤" /><meta name="twitter:card" content="summary"/>
+
+    <meta name="description" content="Thanks for all the fish" />
+    <meta name="twitter:description" content="Thanks for all the fish"/>
+    <meta itemprop="description" content="Thanks for all the fish"/>
+    <meta property="og:description" content="Thanks for all the fish" />
+
+    
+
+
+    <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+    
+    <link rel="stylesheet" href="/sass/main.min.ab99ff095f832511e24ffb2fba2b51ad473b2f7e9301d674eba2c6c3a6e8bd81.css">
+    
+</head>
+    
+    <script>
+        (function() {
+            const colorSchemeKey = 'ThemeColorScheme';
+            if(!localStorage.getItem(colorSchemeKey)){
+                localStorage.setItem(colorSchemeKey, "auto");
+            }
+        })();
+    </script><script>
+    (function() {
+        const colorSchemeKey = 'ThemeColorScheme';
+        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
+        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
+
+        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
+            
+
+            document.documentElement.dataset.userColorScheme = 'dark';
+        } else {
+            document.documentElement.dataset.userColorScheme = 'light';
+        }
+    })();
+</script>
+
+
+    <body class="dark">
+        <nav class="navbar">
+    <div class="container">
+        <div class="flex">
+            <div>
+                <a class="brand" href="/">
+                    
+                    
+                        <img src="https://avatars.githubusercontent.com/u/22488581?s=96&amp;v=4" />
+                    
+                    周末杂货铺💤
+                    </a>
+            </div>
+            <div class="flex">
+                
+                <a href="/articles/">Articles</a>
+                
+                
+                    <button id="dark-mode-button">
+                    <svg class="light" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" focusable="false" width="1em" height="1em" style="-ms-transform: rotate(360deg); -webkit-transform: rotate(360deg); transform: rotate(360deg);" preserveAspectRatio="xMidYMid meet" viewBox="0 0 36 36"><path fill="#FFD983" d="M30.312.776C32 19 20 32 .776 30.312c8.199 7.717 21.091 7.588 29.107-.429C37.9 21.867 38.03 8.975 30.312.776z"/><path d="M30.705 15.915a1.163 1.163 0 1 0 1.643 1.641a1.163 1.163 0 0 0-1.643-1.641zm-16.022 14.38a1.74 1.74 0 0 0 0 2.465a1.742 1.742 0 1 0 0-2.465zm13.968-2.147a2.904 2.904 0 0 1-4.108 0a2.902 2.902 0 0 1 0-4.107a2.902 2.902 0 0 1 4.108 0a2.902 2.902 0 0 1 0 4.107z" fill="#FFCC4D"/><rect x="0" y="0" width="36" height="36" fill="rgba(0, 0, 0, 0)" /></svg>
+                    <svg class="dark" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" focusable="false" width="1em" height="1em" style="-ms-transform: rotate(360deg); -webkit-transform: rotate(360deg); transform: rotate(360deg);" preserveAspectRatio="xMidYMid meet" viewBox="0 0 36 36"><path fill="#FFD983" d="M16 2s0-2 2-2s2 2 2 2v2s0 2-2 2s-2-2-2-2V2zm18 14s2 0 2 2s-2 2-2 2h-2s-2 0-2-2s2-2 2-2h2zM4 16s2 0 2 2s-2 2-2 2H2s-2 0-2-2s2-2 2-2h2zm5.121-8.707s1.414 1.414 0 2.828s-2.828 0-2.828 0L4.878 8.708s-1.414-1.414 0-2.829c1.415-1.414 2.829 0 2.829 0l1.414 1.414zm21 21s1.414 1.414 0 2.828s-2.828 0-2.828 0l-1.414-1.414s-1.414-1.414 0-2.828s2.828 0 2.828 0l1.414 1.414zm-.413-18.172s-1.414 1.414-2.828 0s0-2.828 0-2.828l1.414-1.414s1.414-1.414 2.828 0s0 2.828 0 2.828l-1.414 1.414zm-21 21s-1.414 1.414-2.828 0s0-2.828 0-2.828l1.414-1.414s1.414-1.414 2.828 0s0 2.828 0 2.828l-1.414 1.414zM16 32s0-2 2-2s2 2 2 2v2s0 2-2 2s-2-2-2-2v-2z"/><circle fill="#FFD983" cx="18" cy="18" r="10"/><rect x="0" y="0" width="36" height="36" fill="rgba(0, 0, 0, 0)" /></svg>
+                    </button>
+                
+            </div>
+            </div>
+    </div>
+</nav>
+
+        <main>
+            
+<div class="container">
+    <article>
+        <header class="article-header">
+            <div class="thumb">
+                <div>
+                    <h1>Surrive in emacs</h1>
+                    <div class="post-meta">
+                        <div>
+                            
+                            
+                              
+                            
+                            By 周末💤 | <time>May 05, 2022</time>
+                            | 1 minutes
+                        </div>
+                        <div class="tags">
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+    </article>
+    <aside>
+        <nav id="TableOfContents">
+<ul>
+<li><a href="#headline-1">Exit</a>
+</li>
+<li><a href="#headline-2">Movement:</a>
+</li>
+<li><a href="#headline-3">Edit:</a>
+<ul>
+<li><a href="#headline-4">new/save</a>
+</li>
+<li><a href="#headline-5">undo/redo</a>
+</li>
+<li><a href="#headline-6">cut/paste</a>
+</li>
+</ul>
+</li>
+<li><a href="#headline-7">buffer</a>
+</li>
+<li><a href="#headline-8">window</a>
+</li>
+<li><a href="#headline-9">insert and replace</a>
+</li>
+<li><a href="#headline-10">search</a>
+</li>
+<li><a href="#headline-11">multiline edit</a>
+<ul>
+<li><a href="#headline-12">多行指定列插入前缀字符串</a>
+</li>
+<li><a href="#headline-13">多行增加自增数字前缀</a>
+</li>
+<li><a href="#headline-14">多行指定列剪切字符串(可用于yank粘贴, 或者使用delete-rectangle删除)</a>
+</li>
+<li><a href="#headline-15">框选模式删除</a>
+</li>
+<li><a href="#headline-16">框选模式替换</a>
+</li>
+<li><a href="#headline-17">框选模式插入</a>
+</li>
+</ul>
+</li>
+<li><a href="#headline-18">Org mode</a>
+<ul>
+<li><a href="#headline-19">fold/unfold</a>
+</li>
+<li><a href="#headline-20">movement</a>
+</li>
+<li><a href="#headline-21">视图</a>
+</li>
+</ul>
+</li>
+<li><a href="#headline-22">reference</a>
+</li>
+</ul>
+</nav>
+    </aside>
+    <div class="article-post">
+    
+<div id="outline-container-headline-1" class="outline-2">
+<h2 id="headline-1">
+Exit
+</h2>
+<div id="outline-text-headline-1" class="outline-text-2">
+<ul>
+<li>退出: c-x c-c</li>
+<li>挂起: c-z</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-headline-2" class="outline-2">
+<h2 id="headline-2">
+Movement:
+</h2>
+<div id="outline-text-headline-2" class="outline-text-2">
+<ul>
+<li>上: c-p</li>
+<li>下: c-n</li>
+<li>前: c-f</li>
+<li>后: c-b</li>
+<li>前-单词: m-f</li>
+<li>后-单词: m-b</li>
+<li>文章开始: m-&lt;</li>
+<li>文章末尾: m-&gt;</li>
+<li>上-滚屏: c-v</li>
+<li>下-滚屏: m-v</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-headline-3" class="outline-2">
+<h2 id="headline-3">
+Edit:
+</h2>
+<div id="outline-text-headline-3" class="outline-text-2">
+<div id="outline-container-headline-4" class="outline-3">
+<h3 id="headline-4">
+new/save
+</h3>
+<div id="outline-text-headline-4" class="outline-text-3">
+<ul>
+<li>新建: c-x c-f</li>
+<li>保存: c-x c-s</li>
+<li>只读: c-x c-q</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-headline-5" class="outline-3">
+<h3 id="headline-5">
+undo/redo
+</h3>
+<div id="outline-text-headline-5" class="outline-text-3">
+<ul>
+<li>撤销上一条指令: c-/</li>
+<li>重做: c-f + undo</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-headline-6" class="outline-3">
+<h3 id="headline-6">
+cut/paste
+</h3>
+<div id="outline-text-headline-6" class="outline-text-3">
+<ul>
+<li>删-字符: c-d</li>
+<li>删-单词: m-d</li>
+<li>删-行: c-k</li>
+<li>删-段落: m-k</li>
+<li>光标后增加一行: c-o</li>
+<li>标记: c-space</li>
+<li>剪切: c-w</li>
+<li>复制: m-w</li>
+<li>粘贴: c-y</li>
+<li>粘贴-上一个: m-y (需要先执行c-y)</li>
+<li>行号-显示: m-x global-display-line-numbers-mode</li>
+<li>行号-跳转: m-g g</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div id="outline-container-headline-7" class="outline-2">
+<h2 id="headline-7">
+buffer
+</h2>
+<div id="outline-text-headline-7" class="outline-text-2">
+<ul>
+<li>关闭: c-x k</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-headline-8" class="outline-2">
+<h2 id="headline-8">
+window
+</h2>
+<div id="outline-text-headline-8" class="outline-text-2">
+<ul>
+<li>关闭-当前: c-x 0</li>
+<li>关闭-其它: c-x 1</li>
+<li>分屏-上下: c-x 2</li>
+<li>分屏-左右: c-x 3</li>
+<li>跳转: c-x o</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-headline-9" class="outline-2">
+<h2 id="headline-9">
+insert and replace
+</h2>
+<div id="outline-text-headline-9" class="outline-text-2">
+<ul>
+<li>插入/覆盖模式切换: m-x overwrite-mode</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-headline-10" class="outline-2">
+<h2 id="headline-10">
+search
+</h2>
+<div id="outline-text-headline-10" class="outline-text-2">
+<ul>
+<li>向后搜索/继续向后搜索: c-s</li>
+<li>向前搜索/继续向前搜索: c-r</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-headline-11" class="outline-2">
+<h2 id="headline-11">
+multiline edit
+</h2>
+<div id="outline-text-headline-11" class="outline-text-2">
+<div id="outline-container-headline-12" class="outline-3">
+<h3 id="headline-12">
+多行指定列插入前缀字符串
+</h3>
+<div id="outline-text-headline-12" class="outline-text-3">
+<ol>
+<li>移动到第一行要插入前缀的列</li>
+<li>设置标记开始: c-space</li>
+<li>移动到最后一行</li>
+<li>设置模式: m-x string-rectangle</li>
+<li>输入要插入的字符</li>
+</ol>
+</div>
+</div>
+<div id="outline-container-headline-13" class="outline-3">
+<h3 id="headline-13">
+多行增加自增数字前缀
+</h3>
+<div id="outline-text-headline-13" class="outline-text-3">
+<ol>
+<li>移动到第一行要插入数字前缀的列</li>
+<li>设置标记开始: c-space</li>
+<li>移动到最后一列</li>
+<li>设置模式: m-x rectangle-number-lines</li>
+</ol>
+</div>
+</div>
+<div id="outline-container-headline-14" class="outline-3">
+<h3 id="headline-14">
+多行指定列剪切字符串(可用于yank粘贴, 或者使用delete-rectangle删除)
+</h3>
+<div id="outline-text-headline-14" class="outline-text-3">
+<ol>
+<li>移动到第一行要删除的起始列</li>
+<li>设置标记开始: c-space</li>
+<li>移动到最后一行要删除的列的后一列</li>
+<li>设置模式: m-x kill-rectangle</li>
+</ol>
+</div>
+</div>
+<div id="outline-container-headline-15" class="outline-3">
+<h3 id="headline-15">
+框选模式删除
+</h3>
+<div id="outline-text-headline-15" class="outline-text-3">
+<ol>
+<li>设置框选标记: c-x space</li>
+<li>移动光标进行框选</li>
+<li>删除被框选的列: delete/backspace/c-w</li>
+</ol>
+</div>
+</div>
+<div id="outline-container-headline-16" class="outline-3">
+<h3 id="headline-16">
+框选模式替换
+</h3>
+<div id="outline-text-headline-16" class="outline-text-3">
+<ol>
+<li>设置框选标记: c-x space</li>
+<li>移动光标进行框选</li>
+<li>设置替换模式: m-x replace-rectangle</li>
+<li>输入要替换的字符串</li>
+</ol>
+</div>
+</div>
+<div id="outline-container-headline-17" class="outline-3">
+<h3 id="headline-17">
+框选模式插入
+</h3>
+<div id="outline-text-headline-17" class="outline-text-3">
+<ol>
+<li>设置框选标记: c-x space</li>
+<li>移动光标进行框选</li>
+<li>设置插入模式: m-x string-rectangle</li>
+<li>输入要插入的字符串</li>
+</ol>
+</div>
+</div>
+</div>
+</div>
+<div id="outline-container-headline-18" class="outline-2">
+<h2 id="headline-18">
+Org mode
+</h2>
+<div id="outline-text-headline-18" class="outline-text-2">
+<div id="outline-container-headline-19" class="outline-3">
+<h3 id="headline-19">
+fold/unfold
+</h3>
+<div id="outline-text-headline-19" class="outline-text-3">
+<ul>
+<li>展开: tab</li>
+<li>展开-全局: s-tab</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-headline-20" class="outline-3">
+<h3 id="headline-20">
+movement
+</h3>
+<div id="outline-text-headline-20" class="outline-text-3">
+<ul>
+<li>下一个标题: c-c c-n</li>
+<li>下一个同级标题: c-c c-f</li>
+<li>上一个标题: c-c c-p</li>
+<li>上一个同级标题: c-c c-b</li>
+<li>回到上层标题: c-c c-u</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-headline-21" class="outline-3">
+<h3 id="headline-21">
+视图
+</h3>
+<div id="outline-text-headline-21" class="outline-text-3">
+<ul>
+<li>只显示当前子树: c-c n s</li>
+<li>显示全部子树: c-c n w</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div id="outline-container-headline-22" class="outline-2">
+<h2 id="headline-22">
+reference
+</h2>
+<div id="outline-text-headline-22" class="outline-text-2">
+<ul>
+<li><a href="https://www.gnu.org/software/emacs/manual/html_node/efaq/Overwrite-mode.html">Overwrite-mode</a></li>
+<li><a href="http://xahlee.info/emacs/emacs/emacs_string-rectangle_ascii-art.html">Edit Column Text, Rectangle Commands</a></li>
+<li><a href="https://www.gnu.org/software/emacs/refcards/pdf/refcard.pdf">GNU Emacs Reference Card</a></li>
+<li><a href="https://www.cnblogs.com/open_source/archive/2011/07/17/2108747.html#sec-1-2">Org-mode 简明手册</a></li>
+<li><a href="http://www.rgrjr.com/emacs/emacs_cheat.html">Emacs Cheat Sheet</a></li>
+</ul>
+</div>
+</div>
+
+    </div>
+</div>
+
+<div class="container">
+    
+    <nav class="flex container suggested">
+        
+        <a rel="prev" href="/posts/try/try_vim/" title="Previous post (older)">
+            <span>Previous</span>
+            Try vim
+            </a>
+        
+        
+        
+    </nav>
+    
+</div>
+ 
+<div class="container">
+    
+    <div class="disqus-container">
+    
+</div>
+
+<script>
+    window.addEventListener('onColorSchemeChange', (e) => {
+        if (DISQUS) {
+            DISQUS.reset({
+                reload: true
+            })
+        }
+    })
+</script>
+
+</div>
+
+</main>
+
+
+        </main>
+        <footer class="footer flex">
+    <section class="container">
+        <nav class="footer-links">
+            
+            <a href="/index.xml">RSS</a>
+            
+        </nav>
+
+        
+    </section>
+    <script defer src="/ts/features.a534d05c446023fa2ae2a638f87cc2443ad8e49f6aaeb4d9f24ed61d53766712.js" 
+    data-enable-footnotes="true"
+    ></script>
+</footer>
+
+    </body>
+</html>

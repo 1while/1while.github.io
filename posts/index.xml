@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Posts on 周末杂货铺💤</title>
+    <link>https://vedbaek.github.io/posts/</link>
+    <description>Recent content in Posts on 周末杂货铺💤</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 05 May 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://vedbaek.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Surrive in emacs</title>
+      <link>https://vedbaek.github.io/posts/try/try_emacs2/</link>
+      <pubDate>Thu, 05 May 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://vedbaek.github.io/posts/try/try_emacs2/</guid>
+      <description> Exit   退出: c-x c-c 挂起: c-z    Movement:   上: c-p 下: c-n 前: c-f 后: c-b 前-单词: m-f 后-单词: m-b 文章开始: m-&amp;lt; 文章末尾: m-&amp;gt; 上-滚屏: c-v 下-滚屏: m-v    Edit:  new/save   新建: c-x c-f 保存: c-x c-s 只读: c-x c-q    undo/redo   撤销上一条指令: c-/ 重做: c-f + undo    cut/paste   删-字符: c-d 删-单词: m-d 删-行: c-k 删-段落: m-k 光标后增加一行: c-o 标记: c-space 剪切: c-w 复制: m-w 粘贴: c-y 粘贴-上一个: m-y (需要先执行c-y) 行号-显示: m-x global-display-line-numbers-mode 行号-跳转: m-g g      buffer   关闭: c-x k    window   关闭-当前: c-x 0 关闭-其它: c-x 1 分屏-上下: c-x 2 分屏-左右: c-x 3 跳转: c-x o    insert and replace   插入/覆盖模式切换: m-x overwrite-mode    search   向后搜索/继续向后搜索: c-s 向前搜索/继续向前搜索: c-r    multiline edit  多行指定列插入前缀字符串   移动到第一行要插入前缀的列 设置标记开始: c-space 移动到最后一行 设置模式: m-x string-rectangle 输入要插入的字符    多行增加自增数字前缀   移动到第一行要插入数字前缀的列 设置标记开始: c-space 移动到最后一列 设置模式: m-x rectangle-number-lines    多行指定列剪切字符串(可用于yank粘贴, 或者使用delete-rectangle删除)   移动到第一行要删除的起始列 设置标记开始: c-space 移动到最后一行要删除的列的后一列 设置模式: m-x kill-rectangle    框选模式删除   设置框选标记: c-x space 移动光标进行框选 删除被框选的列: delete/backspace/c-w    框选模式替换   设置框选标记: c-x space 移动光标进行框选 设置替换模式: m-x replace-rectangle 输入要替换的字符串    框选模式插入   设置框选标记: c-x space 移动光标进行框选 设置插入模式: m-x string-rectangle 输入要插入的字符串      Org mode  fold/unfold   展开: tab 展开-全局: s-tab    movement   下一个标题: c-c c-n 下一个同级标题: c-c c-f 上一个标题: c-c c-p 上一个同级标题: c-c c-b 回到上层标题: c-c c-u    视图   只显示当前子树: c-c n s 显示全部子树: c-c n w      reference   Overwrite-mode Edit Column Text, Rectangle Commands GNU Emacs Reference Card Org-mode 简明手册 Emacs Cheat Sheet    </description>
+    </item>
+    
+    <item>
+      <title>Try vim</title>
+      <link>https://vedbaek.github.io/posts/try/try_vim/</link>
+      <pubDate>Sat, 02 Apr 2022 02:32:58 +0800</pubDate>
+      
+      <guid>https://vedbaek.github.io/posts/try/try_vim/</guid>
+      <description>   怎么退出VIM   先按ESC键 然后英文键盘下输入:q!(注意冒号也是指令的一部分)  </description>
+    </item>
+    
+    <item>
+      <title>Try emacs</title>
+      <link>https://vedbaek.github.io/posts/try/try_emacs/</link>
+      <pubDate>Wed, 30 Mar 2022 23:59:38 +0800</pubDate>
+      
+      <guid>https://vedbaek.github.io/posts/try/try_emacs/</guid>
+      <description>   安装  1 2 3 4 5  # for fedora sudo dnf install emacs # for macos brew install emacs      怎么退出emacs  1 2 3 4 5 6 7 8  # 先后输入组合键Ctrl+x, Ctrl+c C-x C-c # 关闭当前缓冲区 C-x k Enter # 怎么关闭帮助窗口 C-x 1      参考   https://www.gnu.org/software/emacs/download.html#gnu-linux https://github.com/redguardtoo/mastering-emacs-in-one-year-guide/blob/master/guide-zh.org https://www.orgmode.org/  </description>
+    </item>
+    
+    <item>
+      <title>Try clash</title>
+      <link>https://vedbaek.github.io/posts/try/try_clash/</link>
+      <pubDate>Wed, 02 Mar 2022 01:39:49 +0800</pubDate>
+      
+      <guid>https://vedbaek.github.io/posts/try/try_clash/</guid>
+      <description>下载安装  1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16  # download wget https://github.com/Dreamacro/clash/releases/download/v1.9.0/clash-linux-amd64-v1.9.0.gz # extract gunzip clash-linux-amd64-v1.9.0.gz cd clash-linux-amd64-v1.9.0 # download config curl https://update.glados-config.com/clash/137440/9039f80/13763/glados.yaml &amp;gt; config.yaml # run clash-linux-amd64-v1.9.0 -d ./ # local clash config http://clash.razord.top/#/proxies http://127.0.0.1:9090      代理配置  1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18  # 全局代理 $ vi /etc/profile export https_proxy=http://127.</description>
+    </item>
+    
+    <item>
+      <title>ohmyzsh安装powerlevel10k主题</title>
+      <link>https://vedbaek.github.io/posts/try/try_p10k/</link>
+      <pubDate>Tue, 08 Feb 2022 22:58:37 +0800</pubDate>
+      
+      <guid>https://vedbaek.github.io/posts/try/try_p10k/</guid>
+      <description>ohmyzsh 安装p10k主题     1. 下载仓库  1  git clone --depth=1 git@github.com:romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k      2. 设置主题  1 2  $ vi ~/.zshrc ZSH_THEME=&amp;#34;powerlevel10k/powerlevel10k&amp;#34;      3. 重新加载配置生效  1  $ source ~/.zshrc      4. 加载完配置后默认会自动执行一次个性配置引导  1 2  # 手动执行引导 $ p10k configure      推荐字体安装     nerd   https://github.</description>
+    </item>
+    
+    <item>
+      <title>Try hugo</title>
+      <link>https://vedbaek.github.io/posts/try/try_hugo/</link>
+      <pubDate>Wed, 12 Jan 2022 23:59:49 +0800</pubDate>
+      
+      <guid>https://vedbaek.github.io/posts/try/try_hugo/</guid>
+      <description>Install  1 2 3 4 5  # for MacOS brew install hugo # for Fedora dnf install hugo      latest release   https://github.com/gohugoio/hugo/releases  1 2 3 4 5 6 7 8 9 10 11 12 13 14  # download wget https://github.com/gohugoio/hugo/releases/download/v0.93.2/hugo_extended_0.93.2_Linux-64bit.tar.gz # 解压 tar -zxvf hugo_extended_0.93.2_Linux-64bit.tar.gz # 创建软连接 ln -s /Users/Root/Documents/app/hugo0.93.2/hugo /usr/local/bin/hugo # 确认软连接 which hugo # 查看版本 hugo version      Theme  1 2 3 4 5 6  # try hogo-book theme git submodule add git@github.</description>
+    </item>
+    
+  </channel>
+</rss>

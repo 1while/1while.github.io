@@ -1,8 +1,103 @@
-{{ if and (gt .WordCount 400 ) (.Params.toc) }}
+<style type="text/css">
+/* #TableOfContents{
+  position: fixed; 
+  right:5px;
+  max-width:300px; 
+  overflow:auto; 
+  top: 100px; 
+  width: 100vw; 
+  bottom:50px
+} */
+
+::-webkit-scrollbar {
+  width: 6px;
+  height: 8px;
+}
+::-webkit-scrollbar-thumb {
+  height: 40px;
+  background-color: #eee;
+  border-radius: 16px;
+  &:hover {
+    background-color: #ddd;
+  }
+}
+
+.post-toc{
+  position: fixed; 
+  right:5px;
+  max-width:300px; 
+  overflow:auto; 
+  top: 100px; 
+  width: 100vw; 
+  bottom:50px;
+}
+
+@media only screen and (max-width: 1224px) {
+  .post-toc {
+      display: none;
+  }
+} 
+
+.toc-wrapper{
+/* ::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-thumb {
+  height: 40px;
+  background-color: #eee;
+  border-radius: 16px;
+  &:hover {
+    background-color: #ddd;
+  }
+} */
+}
+</style>
+
+
+{{ if (.Params.toc | default true ) }}
+<div class="post-toc" id="post-toc">
 <aside>
     <header>
-    <h2>{{.Title}}</h2>
+    <h3>{{.Title}}</h3>
     </header>
-    {{.TableOfContents}}
+    {{ $emtLiPtrn := "(?s)<ul>\\s<li>\\s<ul>(.*)</li>\\s</ul>" }}
+    {{ $rplcEmtLi := "<ul>$1" }}
+    {{ .TableOfContents | replaceRE $emtLiPtrn $rplcEmtLi | safeHTML }}
+    <!-- https://github.com/gohugoio/hugo/issues/1778#issuecomment-483880269 -->
+    <!-- {{.TableOfContents}} -->
 </aside>
+<a href="#" id="toc-toggle"></a>
+</div>
 {{ end }}
+
+<script type="text/javascript">
+  window.onload = function () {
+    var fix = $('.post-toc');
+    var end = $('.post-comment');
+    var fixTop = fix.offset().top, fixHeight = fix.height();
+    var endTop, miss;
+    var offsetTop = fix[0].offsetTop;
+
+    $(window).scroll(function () {
+      var docTop = Math.max(document.body.scrollTop, document.documentElement.scrollTop);
+
+      if (end.length > 0) {
+        endTop = end.offset().top;
+        miss = endTop - docTop - fixHeight;
+      }
+
+      if (fixTop < docTop) {
+        fix.css({ 'position': 'fixed' });
+        if ((end.length > 0) && (endTop < (docTop + fixHeight))) {
+          fix.css({ top: miss });
+        } else {
+          fix.css({ top: 0 });
+        }
+      } else {
+        fix.css({ 'position': 'absolute' });
+        fix.css({ top: offsetTop });
+      }
+    })
+  }
+</script>

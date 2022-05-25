@@ -24,9 +24,9 @@
             </div>
         </header>
     </article>
-    <aside>
-        {{ .TableOfContents }}
-    </aside>
+    <div class = "toc-wrapper">
+    {{ partial "toc.html" . }}
+    </div>
     <div class="article-post">
     {{ .Content }}
     </div>

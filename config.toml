@@ -70,6 +70,10 @@ paginate = 30
   lineNos = true
 [markup.goldmark.renderer]
   unsafe = true
+[markup.tableOfContents]
+  endLevel = 5
+  ordered = false
+  startLevel = 1
 
 [outputs]
   home = ["HTML", "RSS", "JSON"]

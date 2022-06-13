@@ -80,6 +80,12 @@ sudo systemctl enable clashd
 sudo systemctl start clashd
 # 关闭服务
 sudo systemctl status clashd
+
+# 查看服务日志
+# -f --follow 实时显示最新日志
+# -n --lines显示最近的n条日志
+# -u --unit 指定要显示的服务
+journalctl -u clashd -f -n 10 
 ```
 
 ## 启动服务失败出现Permission denied问题

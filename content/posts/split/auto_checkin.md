@@ -9,38 +9,21 @@ draft: true
 ```checkin.sh
 #!/usr/bin/bash
 checkin_folder=$(dirname $0)
-checkin_cookies=$(cat $checkin_folder/Cookies)
-checkin_success_msg='Please Try Tomorrow'
-checkin_file=$checkin_folder/$checkin_success_msg
 checkin_cookies=$(cat "$checkin_folder/Cookies")
 
-# 判断是否已经签到
-if [ -f "${checkin_file}" ]; then
-
-		# 存在签到文件,判断签到日期
-		date_today=$(date -I)
-		date_modify=`date -I -d @$(stat -c %Y "$checkin_file")`
-
-		if [ "$date_today" = "$date_modify" ]; then
-			# 日期相等判断内容
-			msg=`cat "$checkin_file" | jq -r .message`
-			if [ "$msg" = "$checkin_success_msg" ]; then
-				echo $msg
-				exit 0
-			fi
-		fi
-fi
-
 # 签到
+tmp_file=$(mktemp)
 curl -s -k \
 -H "Accept: application/json, text/plain, */*" \
 -H "Content-Type: application/json;charset=utf-8" \
 -H "cookie: $checkin_cookies" \
--d '{"token":"glados_network"}' \
--X POST https://glados.rocks/api/user/checkin > "$checkin_file"
+-d '{"token": "glados.network"}' \
+-X POST https://glados.rocks/api/user/checkin > "$tmp_file"
 
-msg=`cat "$checkin_file" | jq -r .message`
+msg=`cat "$tmp_file" | jq -r .message`
 echo $msg
+
+rm $tmp_file
 ```
 
 

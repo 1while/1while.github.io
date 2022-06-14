@@ -85,3 +85,6 @@ $ sudo vim /etc/dnf/dnf.conf
 [main]
 proxy=http://127.0.0.1:7890
 ```
+
+# 参考
+https://wangchujiang.com/linux-command/c/dnf.html

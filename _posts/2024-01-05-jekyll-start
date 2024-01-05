@@ -1,0 +1,28 @@
+
+---
+layout: post
+title:  "Hello Jekyll!"
+date:   2024-01-05 12:27:21 +0800
+categories: jekyll
+nav_order: 1
+---
+
+
+
+# 更换主题
+```
+# Gemfile中增加主题包
+gem "just-the-docs"
+
+# 安装
+bundle install
+```
+
+# 问题记录
+## Could not find gem 'minima (~> 2.5)' in locally installed gems.
+```
+D:\git\jekyll_blog>jekyll serve
+D:/app/Ruby33-x64/lib/ruby/gems/3.3.0/gems/bundler-2.5.4/lib/bundler/resolver.rb:332:in `raise_not_found!': Could not find gem 'minima (~> 2.5)' in locally installed gems. (Bundler::GemNotFound)
+```
+
+* 执行`bundle install`安装缺失的minima主题即可

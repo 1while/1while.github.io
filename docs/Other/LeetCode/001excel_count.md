@@ -7,7 +7,7 @@ grand_parent: Other
 
 
 
-![](../../../assets/images/001excel01.png)
+![](../../../assets/images/docs/001excel01.png)
 
 # 题解
 ```c++

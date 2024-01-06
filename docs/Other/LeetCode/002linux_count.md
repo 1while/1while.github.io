@@ -5,7 +5,7 @@ parent: LeetCode
 grand_parent: Other
 ---
 
-![](../../../assets/images/002linux01.png)
+![](../../../assets/images/docs/002linux01.png)
 
 # 题解
 ```c++

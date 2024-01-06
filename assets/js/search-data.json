@@ -41,74 +41,123 @@
     
     "relUrl": "/docs/Other/LeetCode/002linux_count.html"
   },"6": {
+    "doc": "利用ImageMagick进行图片压缩",
+    "title": "1. 安装ImageMagick",
+    "content": "sudo apt-get update sudo apt-get install imagemagick . ",
+    "url": "/docs/Other/Tools/ImageMagick.html#1-%E5%AE%89%E8%A3%85imagemagick",
+    
+    "relUrl": "/docs/Other/Tools/ImageMagick.html#1-安装imagemagick"
+  },"7": {
+    "doc": "利用ImageMagick进行图片压缩",
+    "title": "2. 图片压缩基本指令",
+    "content": "# -monitor 显示进度 # -fuzz 5% 颜色容差（color fuzz factor） # -layers Optimize 对图层进行优化处理 convert -monitor timeline05.gif -fuzz 5% -layers Optimize magick_timeline05.gif . ",
+    "url": "/docs/Other/Tools/ImageMagick.html#2-%E5%9B%BE%E7%89%87%E5%8E%8B%E7%BC%A9%E5%9F%BA%E6%9C%AC%E6%8C%87%E4%BB%A4",
+    
+    "relUrl": "/docs/Other/Tools/ImageMagick.html#2-图片压缩基本指令"
+  },"8": {
+    "doc": "利用ImageMagick进行图片压缩",
+    "title": "3. 利用Makefile一键全部压缩成magick_前缀的图片",
+    "content": "# 定义 ImageMagick 命令和压缩质量变量 IMAGEMAGICK = convert FUZZ = 5% # 查找当前目录下所有未压缩的图片文件 ORIGINAL_IMAGES := $(wildcard *.png) $(wildcard *.jpg) $(wildcard *.jpeg) $(wildcard *.gif) # 过滤出需要压缩的图片文件（不包括带有前缀 \"magick_\" 的图片） TO_COMPRESS_IMAGES := $(filter-out magick_%, $(ORIGINAL_IMAGES)) # 将压缩后的图片文件名加上前缀 \"magick_\" COMPRESSED_IMAGES := $(addprefix magick_, $(TO_COMPRESS_IMAGES)) # 定义压缩所有图片的规则 compress: $(COMPRESSED_IMAGES) # 定义每个图片的压缩规则 $(COMPRESSED_IMAGES): magick_% : % @echo \"Compressing $&lt;...\" $(IMAGEMAGICK) -monitor $&lt; -fuzz $(FUZZ) -layers Optimize $@ # 定义清除所有压缩后的图片的规则 clean: rm -f magick_* . ",
+    "url": "/docs/Other/Tools/ImageMagick.html#3-%E5%88%A9%E7%94%A8makefile%E4%B8%80%E9%94%AE%E5%85%A8%E9%83%A8%E5%8E%8B%E7%BC%A9%E6%88%90magick_%E5%89%8D%E7%BC%80%E7%9A%84%E5%9B%BE%E7%89%87",
+    
+    "relUrl": "/docs/Other/Tools/ImageMagick.html#3-利用makefile一键全部压缩成magick_前缀的图片"
+  },"9": {
+    "doc": "利用ImageMagick进行图片压缩",
+    "title": "压缩率非常惊人",
+    "content": ". ",
+    "url": "/docs/Other/Tools/ImageMagick.html#%E5%8E%8B%E7%BC%A9%E7%8E%87%E9%9D%9E%E5%B8%B8%E6%83%8A%E4%BA%BA",
+    
+    "relUrl": "/docs/Other/Tools/ImageMagick.html#压缩率非常惊人"
+  },"10": {
+    "doc": "利用ImageMagick进行图片压缩",
+    "title": "参考",
+    "content": ". | 运行环境：Windows wsl, ubuntu20.04.6 | https://imagemagick.org/script/command-line-options.php | . ",
+    "url": "/docs/Other/Tools/ImageMagick.html#%E5%8F%82%E8%80%83",
+    
+    "relUrl": "/docs/Other/Tools/ImageMagick.html#参考"
+  },"11": {
+    "doc": "利用ImageMagick进行图片压缩",
+    "title": "利用ImageMagick进行图片压缩",
+    "content": " ",
+    "url": "/docs/Other/Tools/ImageMagick.html",
+    
+    "relUrl": "/docs/Other/Tools/ImageMagick.html"
+  },"12": {
     "doc": "About",
     "title": "About",
     "content": "This is the base Jekyll theme. You can find out more info about customizing your Jekyll theme, as well as basic Jekyll usage documentation at jekyllrb.com . You can find the source code for Minima at GitHub: jekyll / minima . You can find the source code for Jekyll at GitHub: jekyll / jekyll . ",
     "url": "/about/",
     
     "relUrl": "/about/"
-  },"7": {
+  },"13": {
     "doc": "Home",
     "title": "Hello World!",
     "content": " ",
     "url": "/#hello-world",
     
     "relUrl": "/#hello-world"
-  },"8": {
+  },"14": {
     "doc": "Home",
     "title": "Home",
     "content": " ",
     "url": "/",
     
     "relUrl": "/"
-  },"9": {
+  },"15": {
     "doc": "Other",
     "title": "UI Components",
     "content": "To make it as easy as possible to write documentation in plain Markdown, most UI components are styled using default Markdown elements with few additional CSS classes needed. ",
     "url": "/docs/Other/#ui-components",
     
     "relUrl": "/docs/Other/#ui-components"
-  },"10": {
+  },"16": {
     "doc": "Other",
     "title": "Other",
     "content": " ",
     "url": "/docs/Other/",
     
     "relUrl": "/docs/Other/"
-  },"11": {
-    "doc": "LeetCode",
-    "title": "UI Components",
-    "content": "To make it as easy as possible to write documentation in plain Markdown, most UI components are styled using default Markdown elements with few additional CSS classes needed. ",
-    "url": "/docs/Other/LeetCode/#ui-components",
-    
-    "relUrl": "/docs/Other/LeetCode/#ui-components"
-  },"12": {
-    "doc": "LeetCode",
-    "title": "LeetCode",
-    "content": " ",
-    "url": "/docs/Other/LeetCode/",
-    
-    "relUrl": "/docs/Other/LeetCode/"
-  },"13": {
-    "doc": "Unreal",
-    "title": "Hello Unreal",
-    "content": " ",
-    "url": "/docs/Hello/Unreal/#hello-unreal",
-    
-    "relUrl": "/docs/Hello/Unreal/#hello-unreal"
-  },"14": {
-    "doc": "Unreal",
-    "title": "Unreal",
-    "content": " ",
-    "url": "/docs/Hello/Unreal/",
-    
-    "relUrl": "/docs/Hello/Unreal/"
-  },"15": {
+  },"17": {
     "doc": "Hello",
     "title": "Hello",
     "content": " ",
     "url": "/docs/Hello/",
     
     "relUrl": "/docs/Hello/"
+  },"18": {
+    "doc": "Unreal",
+    "title": "Hello Unreal",
+    "content": " ",
+    "url": "/docs/Hello/Unreal/#hello-unreal",
+    
+    "relUrl": "/docs/Hello/Unreal/#hello-unreal"
+  },"19": {
+    "doc": "Unreal",
+    "title": "Unreal",
+    "content": " ",
+    "url": "/docs/Hello/Unreal/",
+    
+    "relUrl": "/docs/Hello/Unreal/"
+  },"20": {
+    "doc": "LeetCode",
+    "title": "UI Components",
+    "content": "To make it as easy as possible to write documentation in plain Markdown, most UI components are styled using default Markdown elements with few additional CSS classes needed. ",
+    "url": "/docs/Other/LeetCode/#ui-components",
+    
+    "relUrl": "/docs/Other/LeetCode/#ui-components"
+  },"21": {
+    "doc": "LeetCode",
+    "title": "LeetCode",
+    "content": " ",
+    "url": "/docs/Other/LeetCode/",
+    
+    "relUrl": "/docs/Other/LeetCode/"
+  },"22": {
+    "doc": "Tools",
+    "title": "Tools",
+    "content": " ",
+    "url": "/docs/Other/Tools/",
+    
+    "relUrl": "/docs/Other/Tools/"
   }
 }

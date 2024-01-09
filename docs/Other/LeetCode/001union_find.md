@@ -19,7 +19,7 @@ grand_parent: Other
 并查集的主要优点是在合并和查询操作中具有较高的效率，时间复杂度均为O(log n)。并查集常用于解决图论中的连通性问题，如最小生成树、最大流等算法中。
 
 
-# LeetCode547. 省份数量
+# LeetCode 547. 省份数量
 > 有 n 个城市，其中一些彼此相连，另一些没有相连。如果城市 a 与城市 b 直接相连，且城市 b 与城市 c 直接相连，那么城市 a 与城市 c 间接相连。
 > 
 > 省份 是一组直接或间接相连的城市，组内不含其他没有相连的城市。
@@ -298,6 +298,8 @@ void Test() {
 
 
 # 参考
-[1] LeetCode547. 省份数量: https://leetcode.cn/problems/number-of-provinces/description/
+[1] 并查集 https://zh.wikipedia.org/zh-cn/%E5%B9%B6%E6%9F%A5%E9%9B%86
 
-[2] 并查集: https://zh.wikipedia.org/zh-cn/%E5%B9%B6%E6%9F%A5%E9%9B%86
+[2] LeetCode 547. 省份数量 https://leetcode.cn/problems/number-of-provinces/description/
+
+[2] LeetCode 695. 岛屿的最大面积 https://leetcode.cn/problems/max-area-of-island/description/

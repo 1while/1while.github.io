@@ -74,7 +74,9 @@ bool connected(int indexA, int indexB) {
 ```
 
 ## 2. 应用Kruskal算法
+![](../../../assets/images/docs/kruskal06.png)
 ### 2.1 边权排序，升序排列
+![](../../../assets/images/docs/kruskal07.png)
 ```cpp
 vector<vector<int>> cost;
 std::sort(cost.begin(), cost.end(),
@@ -84,6 +86,7 @@ std::sort(cost.begin(), cost.end(),
 ```
 
 ### 2.2 从最小边开始构建并差集，即最小生成树
+![](../../../assets/images/docs/kruskal08.png)
 ```cpp
 UnionFind uf(cost.size());
 for(const auto &edge: cost) {

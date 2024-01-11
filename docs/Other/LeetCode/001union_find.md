@@ -71,6 +71,7 @@ city[indexC] = city[indexA];
 ```
 
 ## 3. 根省份与查找算法，前面合并之后B和C的省份都变成了A，而A的省份也是A，这里就可以将A确认为根省份了，这里就可以确认查找根省份的算法了：
+![](../../../assets/images/docs/union_find09.png)
 ```cpp
 // 返回省份值，也是一个cityIndex
 int find(int cityIndex) {
@@ -85,6 +86,7 @@ int find(int cityIndex) {
 ```
 
 ## 4. 基于根省份的合并算法，将其中一个城市的根省份赋值给另一个城市的根省份
+![](../../../assets/images/docs/union_find10.png)
 ```cpp
 void merge(int indexA, int indexB) {
     // 先查找A城市的根省份

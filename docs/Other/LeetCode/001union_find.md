@@ -3,6 +3,7 @@ layout: default
 title: 并差集
 parent: LeetCode
 grand_parent: Other
+nav_order: 1
 ---
 
 # 并查集
@@ -197,8 +198,6 @@ int count() {
 #include <set>
 using namespace std;
 
-namespace UnionFindTest {
-
 class UnionFind {
 public:
     UnionFind(int n) : depth(n, 1){
@@ -292,13 +291,11 @@ void Test() {
         {0,0,0,0,0,0,0,0,0,1,0,0,0,0,1}};
     cout << Solution::findCircleNum(isConnected) << endl;
 }
-
-} // namespace UnionFindTest
 ```
 
 
 # 参考
-[1] 并查集 https://zh.wikipedia.org/zh-cn/%E5%B9%B6%E6%9F%A5%E9%9B%86
+[1] 并查集 Disjoint-set data structure https://en.wikipedia.org/wiki/Disjoint-set_data_structure
 
 [2] LeetCode 547. 省份数量 https://leetcode.cn/problems/number-of-provinces/description/
 

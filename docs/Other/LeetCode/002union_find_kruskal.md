@@ -1,8 +1,9 @@
 ---
 layout: default
-title: 并差集 - Kruskal最小生成树
+title: 并差集 - Kruskal算法
 parent: LeetCode
 grand_parent: Other
+nav_order: 2
 ---
 
 # Kruskal算法
@@ -88,7 +89,21 @@ UnionFind uf(cost.size());
 for(const auto &edge: cost) {
     // 为了避免形成环，需要判断两个节点是否已经联通
     if(!uf.connected(edge[0], edge[1])) {
+        // 构建最小生成树
         uf.merge(edge[0], edge[1]);
+    }
+}
+```
+
+### 2.3 最小费用计算，前面构建最小生成树的过程中，将边权加起来即可
+```cpp
+int total_cost = 0;
+for(const auto &edge: cost) {
+    if(!uf.connected(edge[0], edge[1])) {
+        // 构建最小生成树
+        uf.merge(edge[0], edge[1]);
+        // 计算最小费用
+        total_cost += edge[2];
     }
 }
 ```
@@ -134,7 +149,7 @@ class UnionFind {
         return counter;
     }
 
-    bool connected(int indexA, int indexB) {
+    bool connected(int indexA, int indexB) const {
         return find(indexA) == find(indexB);
     }
 
@@ -195,9 +210,9 @@ public:
 
 
 # 参考
-[1] Kruskal's algorithm https://zh.wikipedia.org/wiki/%E5%85%8B%E9%B2%81%E6%96%AF%E5%85%8B%E5%B0%94%E6%BC%94%E7%AE%97%E6%B3%95
+[1] Kruskal's algorithm https://en.wikipedia.org/wiki/Kruskal%27s_algorithm
 
-[2] 并查集 https://zh.wikipedia.org/zh-cn/%E5%B9%B6%E6%9F%A5%E9%9B%86
+[2] 并查集 Disjoint-set data structure https://en.wikipedia.org/wiki/Disjoint-set_data_structure
 
 [3] LeetCode 1135. 最低成本联通所有城市 https://leetcode.cn/problems/connecting-cities-with-minimum-cost/description/
 

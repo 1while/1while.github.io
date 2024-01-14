@@ -3,7 +3,7 @@ layout: default
 title: LeetCode
 nav_order: 10
 has_children: true
-parent: Other
+# parent: Other
 ---
 
 # UI Components

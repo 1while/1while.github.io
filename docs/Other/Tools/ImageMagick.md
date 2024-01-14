@@ -1,8 +1,8 @@
 ---
 layout: default
-title: 利用ImageMagick进行图片压缩
+title: ImageMagick图片压缩
 parent: Tools
-grand_parent: Other
+# grand_parent: Other
 ---
 
 
@@ -54,5 +54,6 @@ clean:
 
 
 # 参考
-* 运行环境：Windows wsl, ubuntu20.04.6
-* https://imagemagick.org/script/command-line-options.php
+[1] 运行环境：Windows wsl, ubuntu20.04.6
+
+[2] imagemagick命令行参数 https://imagemagick.org/script/command-line-options.php

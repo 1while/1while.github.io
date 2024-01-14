@@ -2,7 +2,7 @@
 layout: default
 title: Excel单元格数值统计
 parent: LeetCode
-grand_parent: Other
+# grand_parent: Other
 nav_order: 99
 ---
 

@@ -1,8 +1,8 @@
 ---
 layout: default
-title: 并差集 - Kruskal算法
+title: Kruskal算法
 parent: LeetCode
-grand_parent: Other
+# grand_parent: Other
 nav_order: 2
 ---
 

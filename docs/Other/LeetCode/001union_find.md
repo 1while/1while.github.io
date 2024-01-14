@@ -2,7 +2,7 @@
 layout: default
 title: 并差集
 parent: LeetCode
-grand_parent: Other
+# grand_parent: Other
 nav_order: 1
 ---
 

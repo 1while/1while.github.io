@@ -10,4 +10,4 @@ for /f "delims=" %%i in ('dir /b /a-d ^| findstr /v /b /c:".git"') do (
 
 cd %~dp0
 
-call make html
+@REM call make html

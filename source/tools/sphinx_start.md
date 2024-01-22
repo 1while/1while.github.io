@@ -4,7 +4,6 @@
 ## 新sphinx项目
 sphinx-quickstart
 
-### hello2
 
 ## 生成html预览
 make html

@@ -1,47 +1,224 @@
-<!DOCTYPE html>
+<!doctype html>
+<html class="no-js" lang="zh-cn" data-content_root="">
+  <head><meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <meta name="color-scheme" content="light dark"><meta name="viewport" content="width=device-width, initial-scale=1" />
+<link rel="index" title="索引" href="../genindex.html" /><link rel="search" title="搜索" href="../search.html" /><link rel="next" title="Prim算法" href="003prim.html" /><link rel="prev" title="并查集" href="001union_find.html" />
 
-<html lang="zh-cn">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
-
-    <title>Kruskal算法 &#8212; Furo</title>
-    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/alabaster.css" />
+    <!-- Generated with Sphinx 7.0.1 and Furo 2023.09.10 -->
+        <title>Kruskal算法 - Furo</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/furo.css?digest=369552022d0b975c8e74270ce6eabe0fb7978f24" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/tabs.css" />
     <link rel="stylesheet" type="text/css" href="../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/furo-extensions.css?digest=30d1aed668e5c3a91c3e3bf6a60b675221979f0e" />
     <link rel="stylesheet" type="text/css" href="../_static/pied-piper-admonition.css" />
-    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
-    <script src="../_static/doctools.js"></script>
-    <script src="../_static/sphinx_highlight.js"></script>
-    <script src="../_static/clipboard.min.js"></script>
-    <script src="../_static/copybutton.js"></script>
-    <script src="../_static/tabs.js"></script>
-    <script src="../_static/translations.js"></script>
-    <script src="../_static/design-tabs.js"></script>
-    <link rel="index" title="索引" href="../genindex.html" />
-    <link rel="search" title="搜索" href="../search.html" />
-    <link rel="next" title="Prim算法" href="003prim.html" />
-    <link rel="prev" title="并查集" href="001union_find.html" />
-   
-  <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
+    
+    
+
+
+<style>
+  body {
+    --color-code-background: #f8f8f8;
+  --color-code-foreground: black;
+  
+  }
+  @media not print {
+    body[data-theme="dark"] {
+      --color-code-background: #202020;
+  --color-code-foreground: #d0d0d0;
+  
+    }
+    @media (prefers-color-scheme: dark) {
+      body:not([data-theme="light"]) {
+        --color-code-background: #202020;
+  --color-code-foreground: #d0d0d0;
+  
+      }
+    }
+  }
+</style></head>
+  <body>
+    
+    <script>
+      document.body.dataset.theme = localStorage.getItem("theme") || "auto";
+    </script>
+    
+
+<svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+  <symbol id="svg-toc" viewBox="0 0 24 24">
+    <title>Contents</title>
+    <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 1024 1024">
+      <path d="M408 442h480c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8H408c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8zm-8 204c0 4.4 3.6 8 8 8h480c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8H408c-4.4 0-8 3.6-8 8v56zm504-486H120c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8zm0 632H120c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8zM115.4 518.9L271.7 642c5.8 4.6 14.4.5 14.4-6.9V388.9c0-7.4-8.5-11.5-14.4-6.9L115.4 505.1a8.74 8.74 0 0 0 0 13.8z"/>
+    </svg>
+  </symbol>
+  <symbol id="svg-menu" viewBox="0 0 24 24">
+    <title>Menu</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather-menu">
+      <line x1="3" y1="12" x2="21" y2="12"></line>
+      <line x1="3" y1="6" x2="21" y2="6"></line>
+      <line x1="3" y1="18" x2="21" y2="18"></line>
+    </svg>
+  </symbol>
+  <symbol id="svg-arrow-right" viewBox="0 0 24 24">
+    <title>Expand</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather-chevron-right">
+      <polyline points="9 18 15 12 9 6"></polyline>
+    </svg>
+  </symbol>
+  <symbol id="svg-sun" viewBox="0 0 24 24">
+    <title>Light mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="feather-sun">
+      <circle cx="12" cy="12" r="5"></circle>
+      <line x1="12" y1="1" x2="12" y2="3"></line>
+      <line x1="12" y1="21" x2="12" y2="23"></line>
+      <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+      <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+      <line x1="1" y1="12" x2="3" y2="12"></line>
+      <line x1="21" y1="12" x2="23" y2="12"></line>
+      <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+      <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+    </svg>
+  </symbol>
+  <symbol id="svg-moon" viewBox="0 0 24 24">
+    <title>Dark mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-moon">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+      <path d="M12 3c.132 0 .263 0 .393 0a7.5 7.5 0 0 0 7.92 12.446a9 9 0 1 1 -8.313 -12.454z" />
+    </svg>
+  </symbol>
+  <symbol id="svg-sun-half" viewBox="0 0 24 24">
+    <title>Auto light/dark mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-shadow">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+      <circle cx="12" cy="12" r="9" />
+      <path d="M13 12h5" />
+      <path d="M13 15h4" />
+      <path d="M13 18h1" />
+      <path d="M13 9h4" />
+      <path d="M13 6h1" />
+    </svg>
+  </symbol>
+</svg>
+
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation">
+<input type="checkbox" class="sidebar-toggle" name="__toc" id="__toc">
+<label class="overlay sidebar-overlay" for="__navigation">
+  <div class="visually-hidden">Hide navigation sidebar</div>
+</label>
+<label class="overlay toc-overlay" for="__toc">
+  <div class="visually-hidden">Hide table of contents sidebar</div>
+</label>
+
+
+
+<div class="page">
+  <header class="mobile-header">
+    <div class="header-left">
+      <label class="nav-overlay-icon" for="__navigation">
+        <div class="visually-hidden">Toggle site navigation sidebar</div>
+        <i class="icon"><svg><use href="#svg-menu"></use></svg></i>
+      </label>
+    </div>
+    <div class="header-center">
+      <a href="../index.html"><div class="brand">Furo</div></a>
+    </div>
+    <div class="header-right">
+      <div class="theme-toggle-container theme-toggle-header">
+        <button class="theme-toggle">
+          <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
+          <svg class="theme-icon-when-auto"><use href="#svg-sun-half"></use></svg>
+          <svg class="theme-icon-when-dark"><use href="#svg-moon"></use></svg>
+          <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
+        </button>
+      </div>
+      <label class="toc-overlay-icon toc-header-icon" for="__toc">
+        <div class="visually-hidden">Toggle table of contents sidebar</div>
+        <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
+      </label>
+    </div>
+  </header>
+  <aside class="sidebar-drawer">
+    <div class="sidebar-container">
+      
+      <div class="sidebar-sticky"><a class="sidebar-brand" href="../index.html">
   
   
-  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
-
-  </head><body>
+  <span class="sidebar-brand-text">Furo</span>
   
+</a><form class="sidebar-search-container" method="get" action="../search.html" role="search">
+  <input class="sidebar-search" placeholder="搜索" name="q" aria-label="搜索">
+  <input type="hidden" name="check_keywords" value="yes">
+  <input type="hidden" name="area" value="default">
+</form>
+<div id="searchbox"></div><div class="sidebar-scroll"><div class="sidebar-tree">
+  <p class="caption" role="heading"><span class="caption-text">Development1</span></p>
+<ul class="current">
+<li class="toctree-l1 current has-children"><a class="reference internal" href="index.html">leetcode</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" role="switch" type="checkbox"/><label for="toctree-checkbox-1"><div class="visually-hidden">Toggle navigation of leetcode</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="001union_find.html">并查集</a></li>
+<li class="toctree-l2 current current-page"><a class="current reference internal" href="#">Kruskal算法</a></li>
+<li class="toctree-l2"><a class="reference internal" href="003prim.html">Prim算法</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="dp/index.html">动态规划</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" role="switch" type="checkbox"/><label for="toctree-checkbox-2"><div class="visually-hidden">Toggle navigation of 动态规划</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="dp/004diffpath.html">LeetCode 62. 不同路径</a></li>
+<li class="toctree-l3"><a class="reference internal" href="dp/005maxsub.html">LeetCode 1143. 最长公共子序列</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../tools/index.html">Tools</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" role="switch" type="checkbox"/><label for="toctree-checkbox-3"><div class="visually-hidden">Toggle navigation of Tools</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../tools/sphinx_start.html">sphinx-quickstart</a></li>
+</ul>
+</li>
+</ul>
 
-    <div class="document">
-      <div class="documentwrapper">
-        <div class="bodywrapper">
-          
+</div>
+</div>
 
-          <div class="body" role="main">
-            
-  <section id="kruskal">
-<h1>Kruskal算法<a class="headerlink" href="#kruskal" title="此标题的永久链接">¶</a></h1>
+      </div>
+      
+    </div>
+  </aside>
+  <div class="main">
+    <div class="content">
+      <div class="article-container">
+        <a href="#" class="back-to-top muted-link">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12z"></path>
+          </svg>
+          <span>Back to top</span>
+        </a>
+        <div class="content-icon-container">
+          <div class="edit-this-page">
+  <a class="muted-link" href="https://github.com/pradyunsg/furo/edit/main/docs/leetcode/002union_find_kruskal.md" title="Edit this page">
+    <svg aria-hidden="true" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+      <path d="M4 20h4l10.5 -10.5a1.5 1.5 0 0 0 -4 -4l-10.5 10.5v4" />
+      <line x1="13.5" y1="6.5" x2="17.5" y2="10.5" />
+    </svg>
+    <span class="visually-hidden">Edit this page</span>
+  </a>
+</div><div class="theme-toggle-container theme-toggle-content">
+            <button class="theme-toggle">
+              <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
+              <svg class="theme-icon-when-auto"><use href="#svg-sun-half"></use></svg>
+              <svg class="theme-icon-when-dark"><use href="#svg-moon"></use></svg>
+              <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
+            </button>
+          </div>
+          <label class="toc-overlay-icon toc-content-icon" for="__toc">
+            <div class="visually-hidden">Toggle table of contents sidebar</div>
+            <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
+          </label>
+        </div>
+        <article role="main">
+          <section id="kruskal">
+<h1>Kruskal算法<a class="headerlink" href="#kruskal" title="此标题的永久链接">#</a></h1>
 <p>Kruskal算法是一种常用的最小生成树算法，用于在给定无向连通图中找到最小生成树。最小生成树是一个连通子图，它包含了原图的所有顶点，并且具有最小的总权重或代价。</p>
 <p>Kruskal算法的基本思想是从图中的边集合中逐步选择边，直到形成一个最小生成树。它的步骤如下：</p>
 <ol class="arabic simple">
@@ -54,15 +231,15 @@
 <p>Kruskal算法的关键在于判断边是否会导致形成环路。为了实现这一点，通常使用并查集数据结构来维护顶点之间的连接关系。</p>
 <p>通过使用Kruskal算法，我们可以在一个连通图中找到一棵最小生成树，该树具有最小的总权重或代价。这在许多应用中都是有用的，如网络设计、电力传输、城市规划等。</p>
 <section id="id1">
-<h2>最小生成树问题<a class="headerlink" href="#id1" title="此标题的永久链接">¶</a></h2>
+<h2>最小生成树问题<a class="headerlink" href="#id1" title="此标题的永久链接">#</a></h2>
 <p><img alt="" src="../_images/kruskal01.png" /></p>
 </section>
 <section id="id2">
-<h2>题解<a class="headerlink" href="#id2" title="此标题的永久链接">¶</a></h2>
+<h2>题解<a class="headerlink" href="#id2" title="此标题的永久链接">#</a></h2>
 <section id="id3">
-<h3>1. 特化的并差集问题，根据题目的要求，需要联通所有村庄，套用到并差集上相当于是所有节点都处于同一个集合中，只有一个根节点，这里根据Kruskal算法，一步一步构建出最优并差集解即可<a class="headerlink" href="#id3" title="此标题的永久链接">¶</a></h3>
+<h3>1. 特化的并差集问题，根据题目的要求，需要联通所有村庄，套用到并差集上相当于是所有节点都处于同一个集合中，只有一个根节点，这里根据Kruskal算法，一步一步构建出最优并差集解即可<a class="headerlink" href="#id3" title="此标题的永久链接">#</a></h3>
 <section id="id4">
-<h4>1.1 并差集初始化，自己作为自己的根（为了方便理解，这里没有做查询优化）<a class="headerlink" href="#id4" title="此标题的永久链接">¶</a></h4>
+<h4>1.1 并差集初始化，自己作为自己的根（为了方便理解，这里没有做查询优化）<a class="headerlink" href="#id4" title="此标题的永久链接">#</a></h4>
 <p><img alt="" src="../_images/kruskal02.png" /></p>
 <div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="c1">// MAX_NODE_N节点数量</span>
 <span class="kt">int</span><span class="w"> </span><span class="n">city</span><span class="p">[</span><span class="n">MAX_NODE_N</span><span class="p">];</span>
@@ -76,7 +253,7 @@
 </div>
 </section>
 <section id="id5">
-<h4>1.2 并差集查找，递归查找根节点<a class="headerlink" href="#id5" title="此标题的永久链接">¶</a></h4>
+<h4>1.2 并差集查找，递归查找根节点<a class="headerlink" href="#id5" title="此标题的永久链接">#</a></h4>
 <p><img alt="" src="../_images/kruskal03.png" /></p>
 <div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="c1">// 返回根节点索引</span>
 <span class="kt">int</span><span class="w"> </span><span class="nf">find</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">nodeIndex</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
@@ -92,7 +269,7 @@
 </div>
 </section>
 <section id="id6">
-<h4>1.3 并差集合并，只有根节点参与合并<a class="headerlink" href="#id6" title="此标题的永久链接">¶</a></h4>
+<h4>1.3 并差集合并，只有根节点参与合并<a class="headerlink" href="#id6" title="此标题的永久链接">#</a></h4>
 <ul class="simple">
 <li><p>这里图示第三步中，会递归查找D的根节点A，最后是CA进行合并，C变成新的根节点（因为没有做优化，所以这里不是保持A作为根节点）
 <img alt="" src="../_images/kruskal04.png" /></p></li>
@@ -104,7 +281,7 @@
 </div>
 </section>
 <section id="id7">
-<h4>1.4 并差集查询节点联通性，即判断两个节点是否存在相同的根节点<a class="headerlink" href="#id7" title="此标题的永久链接">¶</a></h4>
+<h4>1.4 并差集查询节点联通性，即判断两个节点是否存在相同的根节点<a class="headerlink" href="#id7" title="此标题的永久链接">#</a></h4>
 <p><img alt="" src="../_images/kruskal05.png" /></p>
 <div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="kt">bool</span><span class="w"> </span><span class="nf">connected</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">indexA</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">indexB</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
 <span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">find</span><span class="p">(</span><span class="n">indexA</span><span class="p">)</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">find</span><span class="p">(</span><span class="n">indexB</span><span class="p">);</span>
@@ -114,10 +291,10 @@
 </section>
 </section>
 <section id="id8">
-<h3>2. 应用Kruskal算法<a class="headerlink" href="#id8" title="此标题的永久链接">¶</a></h3>
+<h3>2. 应用Kruskal算法<a class="headerlink" href="#id8" title="此标题的永久链接">#</a></h3>
 <p><img alt="" src="../_images/kruskal06.png" /></p>
 <section id="id9">
-<h4>2.1 边权排序，升序排列<a class="headerlink" href="#id9" title="此标题的永久链接">¶</a></h4>
+<h4>2.1 边权排序，升序排列<a class="headerlink" href="#id9" title="此标题的永久链接">#</a></h4>
 <p><img alt="" src="../_images/kruskal07.png" /></p>
 <div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">vector</span><span class="o">&lt;</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;&gt;</span><span class="w"> </span><span class="n">cost</span><span class="p">;</span>
 <span class="n">std</span><span class="o">::</span><span class="n">sort</span><span class="p">(</span><span class="n">cost</span><span class="p">.</span><span class="n">begin</span><span class="p">(),</span><span class="w"> </span><span class="n">cost</span><span class="p">.</span><span class="n">end</span><span class="p">(),</span>
@@ -128,7 +305,7 @@
 </div>
 </section>
 <section id="id10">
-<h4>2.2 从最小边开始构建并差集，即最小生成树<a class="headerlink" href="#id10" title="此标题的永久链接">¶</a></h4>
+<h4>2.2 从最小边开始构建并差集，即最小生成树<a class="headerlink" href="#id10" title="此标题的永久链接">#</a></h4>
 <p><img alt="" src="../_images/kruskal08.png" /></p>
 <div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">UnionFind</span><span class="w"> </span><span class="nf">uf</span><span class="p">(</span><span class="n">cost</span><span class="p">.</span><span class="n">size</span><span class="p">());</span>
 <span class="k">for</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="k">auto</span><span class="w"> </span><span class="o">&amp;</span><span class="n">edge</span><span class="o">:</span><span class="w"> </span><span class="n">cost</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
@@ -142,7 +319,7 @@
 </div>
 </section>
 <section id="id11">
-<h4>2.3 最小费用计算，前面构建最小生成树的过程中，将边权加起来即可<a class="headerlink" href="#id11" title="此标题的永久链接">¶</a></h4>
+<h4>2.3 最小费用计算，前面构建最小生成树的过程中，将边权加起来即可<a class="headerlink" href="#id11" title="此标题的永久链接">#</a></h4>
 <div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="kt">int</span><span class="w"> </span><span class="n">total_cost</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
 <span class="k">for</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="k">auto</span><span class="w"> </span><span class="o">&amp;</span><span class="n">edge</span><span class="o">:</span><span class="w"> </span><span class="n">cost</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
 <span class="w">    </span><span class="k">if</span><span class="p">(</span><span class="o">!</span><span class="n">uf</span><span class="p">.</span><span class="n">connected</span><span class="p">(</span><span class="n">edge</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span><span class="w"> </span><span class="n">edge</span><span class="p">[</span><span class="mi">1</span><span class="p">]))</span><span class="w"> </span><span class="p">{</span>
@@ -157,7 +334,7 @@
 </section>
 </section>
 <section id="id12">
-<h3>3. 完整代码<a class="headerlink" href="#id12" title="此标题的永久链接">¶</a></h3>
+<h3>3. 完整代码<a class="headerlink" href="#id12" title="此标题的永久链接">#</a></h3>
 <div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="k">class</span><span class="w"> </span><span class="nc">UnionFind</span><span class="w"> </span><span class="p">{</span>
 <span class="w">  </span><span class="k">public</span><span class="o">:</span>
 <span class="w">    </span><span class="n">UnionFind</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">n</span><span class="p">)</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">depth</span><span class="p">(</span><span class="n">n</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
@@ -258,7 +435,7 @@
 </section>
 </section>
 <section id="id13">
-<h2>参考<a class="headerlink" href="#id13" title="此标题的永久链接">¶</a></h2>
+<h2>参考<a class="headerlink" href="#id13" title="此标题的永久链接">#</a></h2>
 <p>[1] Kruskal’s algorithm https://en.wikipedia.org/wiki/Kruskal%27s_algorithm</p>
 <p>[2] 并查集 Disjoint-set data structure https://en.wikipedia.org/wiki/Disjoint-set_data_structure</p>
 <p>[3] LeetCode 1135. 最低成本联通所有城市 https://leetcode.cn/problems/connecting-cities-with-minimum-cost/description/</p>
@@ -267,103 +444,107 @@
 </section>
 </section>
 
+        </article>
+      </div>
+      <footer>
+        
+        <div class="related-pages">
+          <a class="next-page" href="003prim.html">
+              <div class="page-info">
+                <div class="context">
+                  <span>Next</span>
+                </div>
+                <div class="title">Prim算法</div>
+              </div>
+              <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
+            </a>
+          <a class="prev-page" href="001union_find.html">
+              <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
+              <div class="page-info">
+                <div class="context">
+                  <span>Previous</span>
+                </div>
+                
+                <div class="title">并查集</div>
+                
+              </div>
+            </a>
+        </div>
+        <div class="bottom-of-page">
+          <div class="left-details">
+            <div class="copyright">
+                Copyright &#169; 2024, Weekend
+            </div>
+            Made with <a href="https://www.sphinx-doc.org/">Sphinx</a> and <a class="muted-link" href="https://pradyunsg.me">@pradyunsg</a>'s
+            
+            <a href="https://github.com/pradyunsg/furo">Furo</a>
+            
+          </div>
+          <div class="right-details">
+            <div class="icons">
+              <a class="muted-link " href="https://github.com/pradyunsg/furo" aria-label="GitHub">
+                <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0 0 16 8c0-4.42-3.58-8-8-8z"></path>
+                </svg>
+            </a>
+              
+            </div>
+          </div>
+        </div>
+        
+      </footer>
+    </div>
+    <aside class="toc-drawer">
+      
+      
+      <div class="toc-sticky toc-scroll">
+        <div class="toc-title-container">
+          <span class="toc-title">
+            On this page
+          </span>
+        </div>
+        <div class="toc-tree-container">
+          <div class="toc-tree">
+            <ul>
+<li><a class="reference internal" href="#">Kruskal算法</a><ul>
+<li><a class="reference internal" href="#id1">最小生成树问题</a></li>
+<li><a class="reference internal" href="#id2">题解</a><ul>
+<li><a class="reference internal" href="#id3">1. 特化的并差集问题，根据题目的要求，需要联通所有村庄，套用到并差集上相当于是所有节点都处于同一个集合中，只有一个根节点，这里根据Kruskal算法，一步一步构建出最优并差集解即可</a><ul>
+<li><a class="reference internal" href="#id4">1.1 并差集初始化，自己作为自己的根（为了方便理解，这里没有做查询优化）</a></li>
+<li><a class="reference internal" href="#id5">1.2 并差集查找，递归查找根节点</a></li>
+<li><a class="reference internal" href="#id6">1.3 并差集合并，只有根节点参与合并</a></li>
+<li><a class="reference internal" href="#id7">1.4 并差集查询节点联通性，即判断两个节点是否存在相同的根节点</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id8">2. 应用Kruskal算法</a><ul>
+<li><a class="reference internal" href="#id9">2.1 边权排序，升序排列</a></li>
+<li><a class="reference internal" href="#id10">2.2 从最小边开始构建并差集，即最小生成树</a></li>
+<li><a class="reference internal" href="#id11">2.3 最小费用计算，前面构建最小生成树的过程中，将边权加起来即可</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id12">3. 完整代码</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id13">参考</a></li>
+</ul>
+</li>
+</ul>
 
           </div>
-          
         </div>
       </div>
-      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
-        <div class="sphinxsidebarwrapper">
-<h1 class="logo"><a href="../index.html">Hello</a></h1>
-
-
-
-
-
-
-
-
-<h3>导航</h3>
-<p class="caption" role="heading"><span class="caption-text">Development1</span></p>
-<ul class="current">
-<li class="toctree-l1 current"><a class="reference internal" href="index.html">leetcode</a><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="001union_find.html">并查集</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">Kruskal算法</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#id1">最小生成树问题</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id2">题解</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#id3">1. 特化的并差集问题，根据题目的要求，需要联通所有村庄，套用到并差集上相当于是所有节点都处于同一个集合中，只有一个根节点，这里根据Kruskal算法，一步一步构建出最优并差集解即可</a><ul>
-<li class="toctree-l5"><a class="reference internal" href="#id4">1.1 并差集初始化，自己作为自己的根（为了方便理解，这里没有做查询优化）</a></li>
-<li class="toctree-l5"><a class="reference internal" href="#id5">1.2 并差集查找，递归查找根节点</a></li>
-<li class="toctree-l5"><a class="reference internal" href="#id6">1.3 并差集合并，只有根节点参与合并</a></li>
-<li class="toctree-l5"><a class="reference internal" href="#id7">1.4 并差集查询节点联通性，即判断两个节点是否存在相同的根节点</a></li>
-</ul>
-</li>
-<li class="toctree-l4"><a class="reference internal" href="#id8">2. 应用Kruskal算法</a><ul>
-<li class="toctree-l5"><a class="reference internal" href="#id9">2.1 边权排序，升序排列</a></li>
-<li class="toctree-l5"><a class="reference internal" href="#id10">2.2 从最小边开始构建并差集，即最小生成树</a></li>
-<li class="toctree-l5"><a class="reference internal" href="#id11">2.3 最小费用计算，前面构建最小生成树的过程中，将边权加起来即可</a></li>
-</ul>
-</li>
-<li class="toctree-l4"><a class="reference internal" href="#id12">3. 完整代码</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="#id13">参考</a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="003prim.html">Prim算法</a></li>
-<li class="toctree-l2"><a class="reference internal" href="dp/index.html">动态规划</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="../tools/index.html">Tools</a></li>
-</ul>
-
-<div class="relations">
-<h3>Related Topics</h3>
-<ul>
-  <li><a href="../index.html">Documentation overview</a><ul>
-  <li><a href="index.html">leetcode</a><ul>
-      <li>Previous: <a href="001union_find.html" title="上一章">并查集</a></li>
-      <li>Next: <a href="003prim.html" title="下一章">Prim算法</a></li>
-  </ul></li>
-  </ul></li>
-</ul>
-</div>
-<div id="searchbox" style="display: none" role="search">
-  <h3 id="searchlabel">快速搜索</h3>
-    <div class="searchformwrapper">
-    <form class="search" action="../search.html" method="get">
-      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
-      <input type="submit" value="提交" />
-    </form>
-    </div>
-</div>
-<script>document.getElementById('searchbox').style.display = "block"</script>
-
-
-
-
-
-
-
-
-        </div>
-      </div>
-      <div class="clearer"></div>
-    </div>
-    <div class="footer">
-      &copy;2024, Weekend.
       
-      |
-      Powered by <a href="http://sphinx-doc.org/">Sphinx 7.0.1</a>
-      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.13</a>
       
-      |
-      <a href="../_sources/leetcode/002union_find_kruskal.md.txt"
-          rel="nofollow">Page source</a>
-    </div>
-
-    
-
-    
-  </body>
+    </aside>
+  </div>
+</div><script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/sphinx_highlight.js"></script>
+    <script src="../_static/scripts/furo.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script src="../_static/tabs.js"></script>
+    <script src="../_static/translations.js"></script>
+    <script src="../_static/design-tabs.js"></script>
+    </body>
 </html>

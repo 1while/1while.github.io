@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Posts on 周末杂货铺💤</title>
-    <link>https://vedbaek.github.io/posts/</link>
-    <description>Recent content in Posts on 周末杂货铺💤</description>
+    <title>tools on 周末杂货铺💤</title>
+    <link>https://vedbaek.github.io/tags/tools/</link>
+    <description>Recent content in tools on 周末杂货铺💤</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Thu, 05 May 2022 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://vedbaek.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://vedbaek.github.io/tags/tools/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Surrive in emacs</title>
       <link>https://vedbaek.github.io/posts/tools/try_emacs2/</link>
@@ -42,13 +42,6 @@
       <pubDate>Tue, 08 Feb 2022 22:58:37 +0800</pubDate>
       <guid>https://vedbaek.github.io/posts/tools/try_p10k/</guid>
       <description>ohmyzsh 安装p10k主题 1. 下载仓库 1 git clone --depth=1 git@github.com:romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k 2. 设置主题 1 2 $ vi ~/.zshrc ZSH_THEME=&amp;#34;powerlevel10k/powerlevel10k&amp;#34; 3. 重新加载配置生效 1 $ source ~/.zshrc 4. 加载完配置后默认会自动执行一次个性配置引导 1 2 # 手动执行引导 $ p10k configure 推荐字体安装 nerd https://github.com/ryanoasis/nerd-fonts 1 2 git clone --depth=1 git@github.com:ryanoasis/nerd-fonts.git ./install 参考 powerlevel10k</description>
-    </item>
-    <item>
-      <title>Hugo博客配置</title>
-      <link>https://vedbaek.github.io/posts/tools/try_hugo/</link>
-      <pubDate>Wed, 12 Jan 2022 23:59:49 +0800</pubDate>
-      <guid>https://vedbaek.github.io/posts/tools/try_hugo/</guid>
-      <description>Install 1 2 3 4 5 # for MacOS brew install hugo # for Fedora dnf install hugo latest release https://github.com/gohugoio/hugo/releases 1 2 3 4 5 6 7 8 9 10 11 12 13 14 # download wget https://github.com/gohugoio/hugo/releases/download/v0.93.2/hugo_extended_0.93.2_Linux-64bit.tar.gz # 解压 tar -zxvf hugo_extended_0.93.2_Linux-64bit.tar.gz # 创建软连接 ln -s /Users/Root/Documents/app/hugo0.93.2/hugo /usr/local/bin/hugo # 确认软连接 which hugo # 查看版本 hugo version Theme 1 2 3 4 5 6 # try hogo-book theme git submodule add git@github.</description>
     </item>
     <item>
       <title>git简单上手</title>

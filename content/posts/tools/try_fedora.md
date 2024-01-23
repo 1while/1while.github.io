@@ -2,6 +2,10 @@
 title: "Try fedora"
 date: 2022-03-02T13:08:17+08:00
 draft: true
+categories:
+- tools
+tags: 
+- tools
 ---
 
 # 系统信息

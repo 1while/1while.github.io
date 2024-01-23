@@ -2,6 +2,10 @@
 title: "Try_makefile"
 date: 2022-04-20T21:26:44+08:00
 draft: true
+categories:
+- tools
+tags: 
+- tools
 ---
 
 

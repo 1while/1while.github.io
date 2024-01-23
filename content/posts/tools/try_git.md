@@ -1,8 +1,12 @@
 ---
-title: Try git
+title: git简单上手
 tags: git
 date:   2021-05-23 19:00:00 +0800
-draft: true
+draft: false
+categories:
+- tools
+tags: 
+- tools
 ---
 
 
@@ -211,5 +215,5 @@ done <<< $commits
 ```
 
 # 参考
-* [git add](https://git-scm.com/docs/git-add)
-* [git log](https://git-scm.com/docs/git-log)
+[1] git add https://git-scm.com/docs/git-add
+[2] git log https://git-scm.com/docs/git-log

@@ -1,7 +1,11 @@
 ---
 title: "Try emacs"
 date: 2022-03-30T23:59:38+08:00
-draft: false
+draft: true
+categories:
+- tools
+tags: 
+- tools
 ---
 
 # 安装

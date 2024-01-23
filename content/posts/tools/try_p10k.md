@@ -3,6 +3,10 @@ title: "ohmyzsh安装powerlevel10k主题"
 date: 2022-02-08T22:58:37+08:00
 # bookComments: false
 # bookSearchExclude: false
+categories:
+- tools
+tags: 
+- tools
 ---
 
 

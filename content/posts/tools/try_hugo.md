@@ -1,12 +1,12 @@
 ---
-title: "Try hugo"
+title: Hugo博客配置
 author: "周末💤"
 description: "first blog on hugo"
 date: 2022-01-12T23:59:49+08:00
 lastmod: 2022-01-07
 draft: false
 categories:
-- try
+- tools
 tags: 
 - hugo
 katex: true

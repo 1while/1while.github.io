@@ -1,6 +1,6 @@
 [submodule "themes/hugo-tania"]
 	path = themes/hugo-tania
-	url = git@github.com:WingLim/hugo-tania
+	url = https://github.com/WingLim/hugo-tania.git
 [submodule "public"]
 	path = public
-	url = git@github.com:vedbaek/vedbaek.github.io.git
+	url = https://github.com/vedbaek/vedbaek.github.io.git

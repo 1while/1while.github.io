@@ -2,6 +2,10 @@
 title: "Try ssh"
 date: 2022-03-20T17:18:10+08:00
 draft: true
+categories:
+- tools
+tags: 
+- tools
 ---
 
 

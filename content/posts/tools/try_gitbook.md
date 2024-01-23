@@ -1,7 +1,11 @@
 ---
-title: "Try gitbook"
+title: GitBook配置
 date: 2022-02-08T22:58:37+08:00
-draft: true
+draft: false
+categories:
+- tools
+tags: 
+- tools
 ---
 
 # gitbook常用配置
@@ -64,9 +68,6 @@ sudo n 10.24.1
 sudo npm config set registry=http://registry.npm.taobao.org -g
 gitbook -V
 ```
-
-### 参考:
-* https://nodejs.org/en/download/releases/
 
 # gitbook使用
 ## 创建书籍
@@ -186,7 +187,9 @@ gitbook mobi ./ ./mybook.mobi
 
 
 ## 参考
-[GitBook插件整理](https://www.jianshu.com/p/427b8bb066e6)
+[1] https://nodejs.org/en/download/releases/
+
+[2] GitBook插件整理 https://www.jianshu.com/p/427b8bb066e6
 
 
 

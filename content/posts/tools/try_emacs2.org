@@ -1,6 +1,8 @@
 #+title: Surrive in emacs
 #+draft: false
 #+date: 2022-05-05
+#+categories: tools
+#+tags: tools
 
 
 * Exit

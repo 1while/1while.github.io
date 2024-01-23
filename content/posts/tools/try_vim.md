@@ -1,7 +1,11 @@
 ---
-title: "Try vim"
+title: VIM配置
 date: 2022-04-02T02:32:58+08:00
 draft: false
+categories:
+- tools
+tags: 
+- tools
 ---
 
 # 怎么退出VIM

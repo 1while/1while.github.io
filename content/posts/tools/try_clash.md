@@ -1,7 +1,11 @@
 ---
-title: "Try clash"
+title: Clash配置
 date: 2022-03-02T01:39:49+08:00
 draft: false
+categories:
+- tools
+tags: 
+- tools
 ---
 
 # 下载安装

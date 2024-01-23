@@ -2,6 +2,10 @@
 title: "Try systemctl"
 date: 2022-03-21T22:38:27+08:00
 draft: true
+categories:
+- tools
+tags: 
+- tools
 ---
 
 # Systemd目录（目录有优先级，三个目录中有同名文件时只取最高优先级的目录）
